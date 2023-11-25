@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SQLite;
 
 namespace Language_School_Management
 {
@@ -22,11 +22,17 @@ namespace Language_School_Management
         private void DatenTime_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void Home_Load(object sender, EventArgs e)
         {
-            
+            SQLiteConnection conn = new SQLiteConnection("Data Source=hello.db");
+            conn.Open();
+            SQLiteCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "CREATE TABLE test(name TEXT);";
+            cmd.ExecuteNonQuery();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
