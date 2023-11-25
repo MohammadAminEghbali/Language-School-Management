@@ -40,7 +40,7 @@ namespace Language_School_Management
         {
             DateTime time = DateTime.Now;
             PersianCalendar calender = new PersianCalendar();
-            DatenTime.Text = $@"{calender.GetYear(time).ToString()}/{calender.GetMonth(time).ToString()}/{calender.GetDayOfMonth(time).ToString()} | {time.Hour}:{time.Minute}:{time.Second}";
+            DatenTime.Text = $@"{calender.GetYear(time).ToString()}/{calender.GetMonth(time).ToString()}/{calender.GetDayOfMonth(time).ToString()} | {calender.GetHour(time).ToString("D2")}:{calender.GetMinute(time).ToString("D2")}:{calender.GetSecond(time).ToString("D2")}";
         }
 
         private void button4_Click(object sender, EventArgs e)

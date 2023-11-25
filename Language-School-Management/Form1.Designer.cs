@@ -57,7 +57,7 @@
             this.DatenTime.Location = new System.Drawing.Point(13, 22);
             this.DatenTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DatenTime.Name = "DatenTime";
-            this.DatenTime.Size = new System.Drawing.Size(170, 45);
+            this.DatenTime.Size = new System.Drawing.Size(194, 45);
             this.DatenTime.TabIndex = 1;
             this.DatenTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DatenTime.Click += new System.EventHandler(this.DatenTime_Click);
@@ -96,9 +96,9 @@
             // 
             // scores
             // 
-            this.scores.Location = new System.Drawing.Point(588, 28);
+            this.scores.Location = new System.Drawing.Point(580, 28);
             this.scores.Name = "scores";
-            this.scores.Size = new System.Drawing.Size(101, 39);
+            this.scores.Size = new System.Drawing.Size(109, 39);
             this.scores.TabIndex = 5;
             this.scores.Text = "ثبت نمرات";
             this.scores.UseVisualStyleBackColor = true;
