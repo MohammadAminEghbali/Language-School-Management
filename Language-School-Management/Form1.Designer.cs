@@ -58,7 +58,7 @@
             this.DatenTime.Location = new System.Drawing.Point(13, 22);
             this.DatenTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DatenTime.Name = "DatenTime";
-            this.DatenTime.Size = new System.Drawing.Size(194, 45);
+            this.DatenTime.Size = new System.Drawing.Size(211, 45);
             this.DatenTime.TabIndex = 1;
             this.DatenTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DatenTime.Click += new System.EventHandler(this.DatenTime_Click);
@@ -109,16 +109,16 @@
             // Title
             // 
             this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Vazir", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(243, 31);
+            this.Title.Font = new System.Drawing.Font("Vazir", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(280, 32);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(322, 36);
+            this.Title.Size = new System.Drawing.Size(266, 30);
             this.Title.TabIndex = 6;
             this.Title.Text = "آموزشگاه زبان های خارجه سروش";
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1060, 624);
