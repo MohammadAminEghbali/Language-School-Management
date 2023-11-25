@@ -47,5 +47,12 @@ namespace Language_School_Management
         {
 
         }
+
+        private void students_Click(object sender, EventArgs e)
+        {
+            Form studentsManageForm = new Form();
+
+            studentsManageForm.ShowDialog();
+        }
     }
 }

@@ -75,6 +75,7 @@
             this.students.TabIndex = 2;
             this.students.Text = "زبان آموزان";
             this.students.UseVisualStyleBackColor = true;
+            this.students.Click += new System.EventHandler(this.students_Click);
             // 
             // teachers
             // 
