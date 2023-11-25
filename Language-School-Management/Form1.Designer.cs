@@ -109,16 +109,16 @@
             // Title
             // 
             this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Vazir", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(238, 32);
+            this.Title.Font = new System.Drawing.Font("Vazir", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(243, 31);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(266, 30);
+            this.Title.Size = new System.Drawing.Size(322, 36);
             this.Title.TabIndex = 6;
             this.Title.Text = "آموزشگاه زبان های خارجه سروش";
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1060, 624);
