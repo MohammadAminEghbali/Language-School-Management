@@ -41,5 +41,10 @@ namespace Language_School_Management
             PersianCalendar calender = new PersianCalendar();
             DatenTime.Text = $@"{calender.GetYear(time).ToString()}/{calender.GetMonth(time).ToString()}/{calender.GetDayOfMonth(time).ToString()} | {time.Hour}:{time.Minute}:{time.Second}";
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
