@@ -18,7 +18,7 @@ namespace Language_School_Management
         {
             InitializeComponent();
         }
-
+        
         private void DatenTime_Click(object sender, EventArgs e)
         {
 
@@ -30,8 +30,9 @@ namespace Language_School_Management
             SQLiteConnection conn = new SQLiteConnection("Data Source=hello.db");
             conn.Open();
             SQLiteCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "CREATE TABLE test(name TEXT);";
+            cmd.CommandText = "CREATE TABLE IF NOT EXISTS test(name TEXT);";
             cmd.ExecuteNonQuery();
+
 
         }
 
