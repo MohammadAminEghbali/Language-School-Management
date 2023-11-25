@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SQLite;
 
 namespace Language_School_Management
 {
@@ -27,12 +26,6 @@ namespace Language_School_Management
 
         private void Home_Load(object sender, EventArgs e)
         {
-            SQLiteConnection conn = new SQLiteConnection("Data Source=hello.db");
-            conn.Open();
-            SQLiteCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "CREATE TABLE IF NOT EXISTS test(name TEXT);";
-            cmd.ExecuteNonQuery();
-
 
         }
 
