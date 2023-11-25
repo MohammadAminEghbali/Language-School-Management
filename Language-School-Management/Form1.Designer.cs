@@ -37,6 +37,7 @@
             this.teachers = new System.Windows.Forms.Button();
             this.classes = new System.Windows.Forms.Button();
             this.scores = new System.Windows.Forms.Button();
+            this.Title = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             // 
             // DatenTime
             // 
-            this.DatenTime.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatenTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DatenTime.Location = new System.Drawing.Point(13, 22);
             this.DatenTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DatenTime.Name = "DatenTime";
@@ -104,12 +105,23 @@
             this.scores.UseVisualStyleBackColor = true;
             this.scores.Click += new System.EventHandler(this.button4_Click);
             // 
+            // Title
+            // 
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Vazir", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(238, 32);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(266, 30);
+            this.Title.TabIndex = 6;
+            this.Title.Text = "آموزشگاه زبان های خارجه سروش";
+            // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1060, 624);
+            this.Controls.Add(this.Title);
             this.Controls.Add(this.scores);
             this.Controls.Add(this.classes);
             this.Controls.Add(this.teachers);
@@ -125,6 +137,7 @@
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -137,6 +150,7 @@
         private System.Windows.Forms.Button teachers;
         private System.Windows.Forms.Button classes;
         private System.Windows.Forms.Button scores;
+        private System.Windows.Forms.Label Title;
     }
 }
 
