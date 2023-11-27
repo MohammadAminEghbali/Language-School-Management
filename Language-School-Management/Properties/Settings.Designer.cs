@@ -32,5 +32,15 @@ namespace Language_School_Management.Properties {
                 return ((string)(this["DatabaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Lang-School.accdb")]
+        public string Lang_SchoolConnectionString {
+            get {
+                return ((string)(this["Lang_SchoolConnectionString"]));
+            }
+        }
     }
 }
