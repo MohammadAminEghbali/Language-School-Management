@@ -110,7 +110,7 @@
             // 
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Vazir", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(280, 32);
+            this.Title.Location = new System.Drawing.Point(245, 32);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(266, 30);
             this.Title.TabIndex = 6;
