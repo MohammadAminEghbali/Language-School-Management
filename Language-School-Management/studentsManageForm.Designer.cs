@@ -30,20 +30,19 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.FullNameBox = new System.Windows.Forms.TextBox();
-            this.lblFullName = new System.Windows.Forms.Label();
-            this.IdBox = new System.Windows.Forms.TextBox();
-            this.lblID = new System.Windows.Forms.Label();
-            this.PhoneBox = new System.Windows.Forms.TextBox();
-            this.AddressBox = new System.Windows.Forms.TextBox();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblRegDate = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.AddressBox = new System.Windows.Forms.TextBox();
+            this.PhoneBox = new System.Windows.Forms.TextBox();
+            this.lblID = new System.Windows.Forms.Label();
+            this.IdBox = new System.Windows.Forms.TextBox();
+            this.lblFullName = new System.Windows.Forms.Label();
+            this.FullNameBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -57,9 +56,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.lblRegDate);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.lblAddress);
             this.groupBox1.Controls.Add(this.lblPhone);
             this.groupBox1.Controls.Add(this.AddressBox);
@@ -77,58 +76,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ثبت زبان آموز";
             // 
-            // FullNameBox
+            // lblRegDate
             // 
-            this.FullNameBox.Location = new System.Drawing.Point(33, 31);
-            this.FullNameBox.Name = "FullNameBox";
-            this.FullNameBox.Size = new System.Drawing.Size(305, 32);
-            this.FullNameBox.TabIndex = 0;
-            this.FullNameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.lblRegDate.Location = new System.Drawing.Point(359, 248);
+            this.lblRegDate.Name = "lblRegDate";
+            this.lblRegDate.Size = new System.Drawing.Size(131, 29);
+            this.lblRegDate.TabIndex = 10;
+            this.lblRegDate.Text = "تاریخ";
             // 
-            // lblFullName
+            // dateTimePicker1
             // 
-            this.lblFullName.Location = new System.Drawing.Point(359, 34);
-            this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(131, 29);
-            this.lblFullName.TabIndex = 1;
-            this.lblFullName.Text = "نام و نام خانوادگی";
-            // 
-            // IdBox
-            // 
-            this.IdBox.Location = new System.Drawing.Point(33, 82);
-            this.IdBox.Name = "IdBox";
-            this.IdBox.Size = new System.Drawing.Size(305, 32);
-            this.IdBox.TabIndex = 2;
-            // 
-            // lblID
-            // 
-            this.lblID.Location = new System.Drawing.Point(386, 85);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(104, 29);
-            this.lblID.TabIndex = 3;
-            this.lblID.Text = "کد ملی";
-            // 
-            // PhoneBox
-            // 
-            this.PhoneBox.Location = new System.Drawing.Point(33, 134);
-            this.PhoneBox.Name = "PhoneBox";
-            this.PhoneBox.Size = new System.Drawing.Size(305, 32);
-            this.PhoneBox.TabIndex = 4;
-            // 
-            // AddressBox
-            // 
-            this.AddressBox.Location = new System.Drawing.Point(33, 191);
-            this.AddressBox.Name = "AddressBox";
-            this.AddressBox.Size = new System.Drawing.Size(305, 32);
-            this.AddressBox.TabIndex = 5;
-            // 
-            // lblPhone
-            // 
-            this.lblPhone.Location = new System.Drawing.Point(359, 137);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(131, 29);
-            this.lblPhone.TabIndex = 6;
-            this.lblPhone.Text = "تلفن همراه";
+            this.dateTimePicker1.Location = new System.Drawing.Point(33, 242);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(305, 32);
+            this.dateTimePicker1.TabIndex = 2;
             // 
             // lblAddress
             // 
@@ -138,30 +99,67 @@
             this.lblAddress.TabIndex = 7;
             this.lblAddress.Text = "آدرس";
             // 
-            // pictureBox1
+            // lblPhone
             // 
-            this.pictureBox1.Image = global::Language_School_Management.Properties.Resources.add;
-            this.pictureBox1.Location = new System.Drawing.Point(292, 301);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.lblPhone.Location = new System.Drawing.Point(359, 137);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(131, 29);
+            this.lblPhone.TabIndex = 6;
+            this.lblPhone.Text = "تلفن همراه";
             // 
-            // dateTimePicker1
+            // AddressBox
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(33, 242);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(305, 32);
-            this.dateTimePicker1.TabIndex = 2;
+            this.AddressBox.Location = new System.Drawing.Point(33, 191);
+            this.AddressBox.Name = "AddressBox";
+            this.AddressBox.Size = new System.Drawing.Size(305, 32);
+            this.AddressBox.TabIndex = 5;
             // 
-            // lblRegDate
+            // PhoneBox
             // 
-            this.lblRegDate.Location = new System.Drawing.Point(359, 248);
-            this.lblRegDate.Name = "lblRegDate";
-            this.lblRegDate.Size = new System.Drawing.Size(131, 29);
-            this.lblRegDate.TabIndex = 10;
-            this.lblRegDate.Text = "تاریخ";
+            this.PhoneBox.Location = new System.Drawing.Point(33, 134);
+            this.PhoneBox.Name = "PhoneBox";
+            this.PhoneBox.Size = new System.Drawing.Size(305, 32);
+            this.PhoneBox.TabIndex = 4;
+            // 
+            // lblID
+            // 
+            this.lblID.Location = new System.Drawing.Point(386, 85);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(104, 29);
+            this.lblID.TabIndex = 3;
+            this.lblID.Text = "کد ملی";
+            // 
+            // IdBox
+            // 
+            this.IdBox.Location = new System.Drawing.Point(33, 82);
+            this.IdBox.Name = "IdBox";
+            this.IdBox.Size = new System.Drawing.Size(305, 32);
+            this.IdBox.TabIndex = 2;
+            // 
+            // lblFullName
+            // 
+            this.lblFullName.Location = new System.Drawing.Point(359, 34);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(131, 29);
+            this.lblFullName.TabIndex = 1;
+            this.lblFullName.Text = "نام و نام خانوادگی";
+            // 
+            // FullNameBox
+            // 
+            this.FullNameBox.Location = new System.Drawing.Point(33, 31);
+            this.FullNameBox.Name = "FullNameBox";
+            this.FullNameBox.Size = new System.Drawing.Size(305, 32);
+            this.FullNameBox.TabIndex = 0;
+            this.FullNameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(253, 298);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 31);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "ثبت";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // studentsManageForm
             // 
@@ -177,7 +175,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,8 +191,8 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox IdBox;
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblRegDate;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button1;
     }
 }
