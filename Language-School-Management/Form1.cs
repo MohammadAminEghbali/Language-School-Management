@@ -46,5 +46,18 @@ namespace Language_School_Management
             studentsManageForm studentsManageForm = new studentsManageForm();
             studentsManageForm.ShowDialog();
         }
+
+        private void students_MouseEnter(object sender, EventArgs e)
+        {
+           // students.UseVisualStyleBackColor = false;
+           // students.BackColor = Color.;
+            //students.ForeColor = Color.White;
+        }
+
+        private void students_MouseLeave(object sender, EventArgs e)
+        {
+            //students.UseVisualStyleBackColor = true;
+           // students.ForeColor = Color.Black;
+        }
     }
 }
