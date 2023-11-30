@@ -46,8 +46,16 @@
             this.lblID = new System.Windows.Forms.Label();
             this.bdayBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblDe = new System.Windows.Forms.Label();
+            this.delInfo1 = new System.Windows.Forms.Label();
+            this.delInfo2 = new System.Windows.Forms.Label();
+            this.btnDeleteRecord = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -115,14 +123,14 @@
             // 
             this.AddressBox.Location = new System.Drawing.Point(33, 191);
             this.AddressBox.Name = "AddressBox";
-            this.AddressBox.Size = new System.Drawing.Size(305, 32);
+            this.AddressBox.Size = new System.Drawing.Size(320, 32);
             this.AddressBox.TabIndex = 5;
             // 
             // FatherBox
             // 
             this.FatherBox.Location = new System.Drawing.Point(33, 134);
             this.FatherBox.Name = "FatherBox";
-            this.FatherBox.Size = new System.Drawing.Size(305, 32);
+            this.FatherBox.Size = new System.Drawing.Size(320, 32);
             this.FatherBox.TabIndex = 4;
             // 
             // lblLaName
@@ -137,7 +145,7 @@
             // 
             this.LnameBox.Location = new System.Drawing.Point(33, 82);
             this.LnameBox.Name = "LnameBox";
-            this.LnameBox.Size = new System.Drawing.Size(305, 32);
+            this.LnameBox.Size = new System.Drawing.Size(320, 32);
             this.LnameBox.TabIndex = 2;
             // 
             // lblFname
@@ -152,7 +160,7 @@
             // 
             this.FnameBox.Location = new System.Drawing.Point(33, 31);
             this.FnameBox.Name = "FnameBox";
-            this.FnameBox.Size = new System.Drawing.Size(305, 32);
+            this.FnameBox.Size = new System.Drawing.Size(320, 32);
             this.FnameBox.TabIndex = 0;
             this.FnameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -178,14 +186,14 @@
             // 
             this.boxPhone.Location = new System.Drawing.Point(33, 250);
             this.boxPhone.Name = "boxPhone";
-            this.boxPhone.Size = new System.Drawing.Size(305, 32);
+            this.boxPhone.Size = new System.Drawing.Size(320, 32);
             this.boxPhone.TabIndex = 13;
             // 
             // boxID
             // 
             this.boxID.Location = new System.Drawing.Point(33, 307);
             this.boxID.Name = "boxID";
-            this.boxID.Size = new System.Drawing.Size(305, 32);
+            this.boxID.Size = new System.Drawing.Size(320, 32);
             this.boxID.TabIndex = 14;
             // 
             // lblID
@@ -200,7 +208,7 @@
             // 
             this.bdayBox.Location = new System.Drawing.Point(33, 363);
             this.bdayBox.Name = "bdayBox";
-            this.bdayBox.Size = new System.Drawing.Size(305, 32);
+            this.bdayBox.Size = new System.Drawing.Size(320, 32);
             this.bdayBox.TabIndex = 16;
             // 
             // label1
@@ -211,12 +219,89 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "تاریخ تولد";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.delInfo2);
+            this.groupBox2.Controls.Add(this.btnDeleteRecord);
+            this.groupBox2.Controls.Add(this.delInfo1);
+            this.groupBox2.Controls.Add(this.lblDe);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.groupBox2.Location = new System.Drawing.Point(730, 520);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox2.Size = new System.Drawing.Size(515, 200);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "حذف زبان آموز";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(127, 46);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(292, 32);
+            this.textBox1.TabIndex = 0;
+            // 
+            // lblDe
+            // 
+            this.lblDe.AutoSize = true;
+            this.lblDe.Location = new System.Drawing.Point(447, 49);
+            this.lblDe.Name = "lblDe";
+            this.lblDe.Size = new System.Drawing.Size(58, 25);
+            this.lblDe.TabIndex = 1;
+            this.lblDe.Text = "کد ملی";
+            // 
+            // delInfo1
+            // 
+            this.delInfo1.AutoSize = true;
+            this.delInfo1.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.delInfo1.Location = new System.Drawing.Point(424, 118);
+            this.delInfo1.Name = "delInfo1";
+            this.delInfo1.Size = new System.Drawing.Size(0, 25);
+            this.delInfo1.TabIndex = 2;
+            this.delInfo1.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // delInfo2
+            // 
+            this.delInfo2.AutoSize = true;
+            this.delInfo2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.delInfo2.Location = new System.Drawing.Point(124, 105);
+            this.delInfo2.Name = "delInfo2";
+            this.delInfo2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.delInfo2.Size = new System.Drawing.Size(376, 25);
+            this.delInfo2.TabIndex = 3;
+            this.delInfo2.Text = "راهنما : کد ملی زبان آموز را وارد کرده و دکمه حذف را بزنید";
+            this.delInfo2.Click += new System.EventHandler(this.delInfo2_Click);
+            this.delInfo2.MouseHover += new System.EventHandler(this.delInfo2_MouseHover);
+            // 
+            // btnDeleteRecord
+            // 
+            this.btnDeleteRecord.Location = new System.Drawing.Point(22, 46);
+            this.btnDeleteRecord.Name = "btnDeleteRecord";
+            this.btnDeleteRecord.Size = new System.Drawing.Size(90, 32);
+            this.btnDeleteRecord.TabIndex = 18;
+            this.btnDeleteRecord.Text = "حذف";
+            this.btnDeleteRecord.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(249, 143);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label2.Size = new System.Drawing.Size(251, 25);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "نکته : این عملیات قابل بازگشت نیست";
+            // 
             // studentsManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1266, 783);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "studentsManageForm";
@@ -225,6 +310,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -249,5 +336,12 @@
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox bdayBox;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lblDe;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label delInfo1;
+        private System.Windows.Forms.Label delInfo2;
+        private System.Windows.Forms.Button btnDeleteRecord;
+        private System.Windows.Forms.Label label2;
     }
 }
