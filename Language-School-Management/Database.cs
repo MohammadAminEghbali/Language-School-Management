@@ -16,7 +16,7 @@ namespace Language_School_Management
                 cmd.CommandText = @"
                     CREATE TABLE IF NOT EXISTS students (
                         firstName TEXT, lastName TEXT, fatherName TEXT, nCode TEXT, birthDate TEXT,
-                        phoneNumber TEXT, homePhone TEXT, parentPhone TEXT, homeAddress TEXT
+                        phoneNumber TEXT, homePhone TEXT, parentPhone TEXT, homeAddress TEXT, signDate TEXT
                     );
 
                     CREATE TABLE IF NOT EXISTS teachers (name TEXT);
@@ -34,13 +34,14 @@ namespace Language_School_Management
             string phoneNumber,
             string homePhone,
             string parentPhone,
-            string homeAddress)
+            string homeAddress,
+            string signDate)
         {
             using (SQLiteCommand cmd = conn.CreateCommand())
             {
                 cmd.CommandText = @"
                     INSERT INTO students VALUES(
-                        @firstName, @lastName, @fatherName, @nCode, @birthDate, @phoneNumber, @homePhone, @parentPhone, @homeAddress
+                        @firstName, @lastName, @fatherName, @nCode, @birthDate, @phoneNumber, @homePhone, @parentPhone, @homeAddress, @signDate
                     );
                 ";
 
@@ -53,6 +54,7 @@ namespace Language_School_Management
                 cmd.Parameters.AddWithValue("homePhone", homePhone);
                 cmd.Parameters.AddWithValue("parentPhone", parentPhone);
                 cmd.Parameters.AddWithValue("homeAddress", homeAddress);
+                cmd.Parameters.AddWithValue("signDate", signDate);
 
                 /*var parameters = new { firstName, lastName, fatherName, birthDate, phoneNumber, homePhone, parentPhone, homeAddress };
 
