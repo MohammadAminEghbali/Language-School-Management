@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Language_School_Management
@@ -17,12 +10,7 @@ namespace Language_School_Management
         {
             InitializeComponent();
         }
-        
-        private void DatenTime_Click(object sender, EventArgs e)
-        {
 
-
-        }
 
         private void Home_Load(object sender, EventArgs e)
         {
@@ -36,10 +24,6 @@ namespace Language_School_Management
             DatenTime.Text = $@"{calender.GetYear(time).ToString()}/{calender.GetMonth(time).ToString()}/{calender.GetDayOfMonth(time).ToString()} | {calender.GetHour(time).ToString("D2")}:{calender.GetMinute(time).ToString("D2")}:{calender.GetSecond(time).ToString("D2")}";
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void students_Click(object sender, EventArgs e)
         {

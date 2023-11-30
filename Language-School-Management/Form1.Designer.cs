@@ -61,7 +61,6 @@
             this.DatenTime.Size = new System.Drawing.Size(211, 45);
             this.DatenTime.TabIndex = 1;
             this.DatenTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DatenTime.Click += new System.EventHandler(this.DatenTime_Click);
             // 
             // timer1
             // 
@@ -106,7 +105,6 @@
             this.scores.TabIndex = 5;
             this.scores.Text = "ثبت نمرات";
             this.scores.UseVisualStyleBackColor = true;
-            this.scores.Click += new System.EventHandler(this.button4_Click);
             // 
             // Title
             // 

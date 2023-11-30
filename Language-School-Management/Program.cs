@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Language_School_Management
@@ -14,6 +11,7 @@ namespace Language_School_Management
         [STAThread]
         static void Main()
         {
+            new Database();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Home());
