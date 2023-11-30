@@ -76,6 +76,8 @@
             this.students.Text = "زبان آموزان";
             this.students.UseVisualStyleBackColor = true;
             this.students.Click += new System.EventHandler(this.students_Click);
+            this.students.MouseEnter += new System.EventHandler(this.students_MouseEnter);
+            this.students.MouseLeave += new System.EventHandler(this.students_MouseLeave);
             // 
             // teachers
             // 
