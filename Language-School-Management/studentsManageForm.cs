@@ -29,9 +29,10 @@ namespace Language_School_Management
             LnameBox.Clear();
             FatherBox.Clear();
             AddressBox.Clear();
+            boxParentPhone.Clear();
+            IDbox.Clear();
             boxPhone.Clear();
-            boxID.Clear();
-            bdayBox.Clear();
+            boxHphone.Clear();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -41,10 +42,20 @@ namespace Language_School_Management
 
         private void delInfo2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("ابتدا کد ملی زبان آموز را وارد کرده و دکمه حذف را بزنید ، این عملیات قابل برگشت نیست پس دقت کنید","راهنما",);
+            MessageBox.Show("ابتدا کد ملی زبان آموز را وارد کرده و دکمه حذف را بزنید ، این عملیات قابل برگشت نیست پس دقت کنید","راهنما");
         }
 
         private void delInfo2_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void studentsManageForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             
         }
