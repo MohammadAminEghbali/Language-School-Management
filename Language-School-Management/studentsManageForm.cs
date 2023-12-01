@@ -53,6 +53,12 @@ namespace Language_School_Management
         private void studentsManageForm_Load(object sender, EventArgs e)
         {
             
+            List<Dictionary<string, object>> students = Database.getStudents();
+
+            foreach (Dictionary<string, object> student in students)
+            {
+                dataGridView1.Rows.Add(student.Values.ToArray());
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
