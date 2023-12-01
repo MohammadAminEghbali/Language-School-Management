@@ -83,6 +83,7 @@
             this.lblUpdate = new System.Windows.Forms.Label();
             this.boxIdUpdate = new System.Windows.Forms.TextBox();
             this.ExcelSaveDialog = new System.Windows.Forms.SaveFileDialog();
+            this.excelOutput = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -102,10 +103,11 @@
             this.homePhone,
             this.parentPhone,
             this.homeAddress});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 28);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(693, 411);
+            this.dataGridView1.Size = new System.Drawing.Size(924, 506);
             this.dataGridView1.TabIndex = 0;
             // 
             // firstName
@@ -185,79 +187,90 @@
             this.groupBox1.Controls.Add(this.lblFname);
             this.groupBox1.Controls.Add(this.FnameBox);
             this.groupBox1.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.groupBox1.Location = new System.Drawing.Point(730, 23);
+            this.groupBox1.Location = new System.Drawing.Point(973, 28);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(515, 534);
+            this.groupBox1.Size = new System.Drawing.Size(687, 657);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ثبت زبان آموز";
             // 
             // lblhPhone
             // 
-            this.lblhPhone.Location = new System.Drawing.Point(359, 424);
+            this.lblhPhone.Location = new System.Drawing.Point(479, 522);
+            this.lblhPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblhPhone.Name = "lblhPhone";
-            this.lblhPhone.Size = new System.Drawing.Size(146, 29);
+            this.lblhPhone.Size = new System.Drawing.Size(195, 36);
             this.lblhPhone.TabIndex = 23;
             this.lblhPhone.Text = "تلفن ثابت";
             // 
             // boxHphone
             // 
-            this.boxHphone.Location = new System.Drawing.Point(33, 421);
+            this.boxHphone.Location = new System.Drawing.Point(44, 518);
+            this.boxHphone.Margin = new System.Windows.Forms.Padding(4);
             this.boxHphone.Name = "boxHphone";
-            this.boxHphone.Size = new System.Drawing.Size(320, 32);
+            this.boxHphone.Size = new System.Drawing.Size(425, 32);
             this.boxHphone.TabIndex = 22;
             // 
             // lblPhone
             // 
-            this.lblPhone.Location = new System.Drawing.Point(359, 368);
+            this.lblPhone.Location = new System.Drawing.Point(479, 453);
+            this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(146, 29);
+            this.lblPhone.Size = new System.Drawing.Size(195, 36);
             this.lblPhone.TabIndex = 21;
             this.lblPhone.Text = "تلفن همراه";
             // 
             // boxPhone
             // 
-            this.boxPhone.Location = new System.Drawing.Point(33, 365);
+            this.boxPhone.Location = new System.Drawing.Point(44, 449);
+            this.boxPhone.Margin = new System.Windows.Forms.Padding(4);
             this.boxPhone.Name = "boxPhone";
-            this.boxPhone.Size = new System.Drawing.Size(320, 32);
+            this.boxPhone.Size = new System.Drawing.Size(425, 32);
             this.boxPhone.TabIndex = 20;
             // 
             // lblParentPhone
             // 
-            this.lblParentPhone.Location = new System.Drawing.Point(359, 250);
+            this.lblParentPhone.Location = new System.Drawing.Point(479, 308);
+            this.lblParentPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblParentPhone.Name = "lblParentPhone";
-            this.lblParentPhone.Size = new System.Drawing.Size(146, 29);
+            this.lblParentPhone.Size = new System.Drawing.Size(195, 36);
             this.lblParentPhone.TabIndex = 19;
             this.lblParentPhone.Text = "تلفن والدین";
             // 
             // IDbox
             // 
-            this.IDbox.Location = new System.Drawing.Point(33, 310);
+            this.IDbox.Location = new System.Drawing.Point(44, 382);
+            this.IDbox.Margin = new System.Windows.Forms.Padding(4);
             this.IDbox.Name = "IDbox";
-            this.IDbox.Size = new System.Drawing.Size(320, 32);
+            this.IDbox.Size = new System.Drawing.Size(425, 32);
             this.IDbox.TabIndex = 16;
             // 
             // lblID
             // 
-            this.lblID.Location = new System.Drawing.Point(359, 310);
+            this.lblID.Location = new System.Drawing.Point(479, 382);
+            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(146, 29);
+            this.lblID.Size = new System.Drawing.Size(195, 36);
             this.lblID.TabIndex = 15;
             this.lblID.Text = "کد ملی";
             // 
             // boxParentPhone
             // 
-            this.boxParentPhone.Location = new System.Drawing.Point(33, 250);
+            this.boxParentPhone.Location = new System.Drawing.Point(44, 308);
+            this.boxParentPhone.Margin = new System.Windows.Forms.Padding(4);
             this.boxParentPhone.Name = "boxParentPhone";
-            this.boxParentPhone.Size = new System.Drawing.Size(320, 32);
+            this.boxParentPhone.Size = new System.Drawing.Size(425, 32);
             this.boxParentPhone.TabIndex = 14;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(261, 473);
+            this.btnClear.Location = new System.Drawing.Point(348, 582);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(92, 36);
+            this.btnClear.Size = new System.Drawing.Size(123, 44);
             this.btnClear.TabIndex = 11;
             this.btnClear.Text = "پاکسازی";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -265,71 +278,80 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(33, 473);
+            this.btnSubmit.Location = new System.Drawing.Point(44, 582);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(92, 36);
+            this.btnSubmit.Size = new System.Drawing.Size(123, 44);
             this.btnSubmit.TabIndex = 2;
             this.btnSubmit.Text = "ثبت";
             this.btnSubmit.UseVisualStyleBackColor = true;
             // 
             // lblAddress
             // 
-            this.lblAddress.Location = new System.Drawing.Point(359, 194);
+            this.lblAddress.Location = new System.Drawing.Point(479, 239);
+            this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(146, 29);
+            this.lblAddress.Size = new System.Drawing.Size(195, 36);
             this.lblAddress.TabIndex = 7;
             this.lblAddress.Text = "آدرس محل سکونت";
             // 
             // lblFather
             // 
-            this.lblFather.Location = new System.Drawing.Point(374, 137);
+            this.lblFather.Location = new System.Drawing.Point(499, 169);
+            this.lblFather.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFather.Name = "lblFather";
-            this.lblFather.Size = new System.Drawing.Size(131, 29);
+            this.lblFather.Size = new System.Drawing.Size(175, 36);
             this.lblFather.TabIndex = 6;
             this.lblFather.Text = "نام پدر";
             // 
             // AddressBox
             // 
-            this.AddressBox.Location = new System.Drawing.Point(33, 191);
+            this.AddressBox.Location = new System.Drawing.Point(44, 235);
+            this.AddressBox.Margin = new System.Windows.Forms.Padding(4);
             this.AddressBox.Name = "AddressBox";
-            this.AddressBox.Size = new System.Drawing.Size(320, 32);
+            this.AddressBox.Size = new System.Drawing.Size(425, 32);
             this.AddressBox.TabIndex = 5;
             // 
             // FatherBox
             // 
-            this.FatherBox.Location = new System.Drawing.Point(33, 134);
+            this.FatherBox.Location = new System.Drawing.Point(44, 165);
+            this.FatherBox.Margin = new System.Windows.Forms.Padding(4);
             this.FatherBox.Name = "FatherBox";
-            this.FatherBox.Size = new System.Drawing.Size(320, 32);
+            this.FatherBox.Size = new System.Drawing.Size(425, 32);
             this.FatherBox.TabIndex = 4;
             // 
             // lblLaName
             // 
-            this.lblLaName.Location = new System.Drawing.Point(401, 85);
+            this.lblLaName.Location = new System.Drawing.Point(535, 105);
+            this.lblLaName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLaName.Name = "lblLaName";
-            this.lblLaName.Size = new System.Drawing.Size(104, 29);
+            this.lblLaName.Size = new System.Drawing.Size(139, 36);
             this.lblLaName.TabIndex = 3;
             this.lblLaName.Text = "نام خانوادگی";
             // 
             // LnameBox
             // 
-            this.LnameBox.Location = new System.Drawing.Point(33, 82);
+            this.LnameBox.Location = new System.Drawing.Point(44, 101);
+            this.LnameBox.Margin = new System.Windows.Forms.Padding(4);
             this.LnameBox.Name = "LnameBox";
-            this.LnameBox.Size = new System.Drawing.Size(320, 32);
+            this.LnameBox.Size = new System.Drawing.Size(425, 32);
             this.LnameBox.TabIndex = 2;
             // 
             // lblFname
             // 
-            this.lblFname.Location = new System.Drawing.Point(374, 31);
+            this.lblFname.Location = new System.Drawing.Point(499, 38);
+            this.lblFname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFname.Name = "lblFname";
-            this.lblFname.Size = new System.Drawing.Size(131, 29);
+            this.lblFname.Size = new System.Drawing.Size(175, 36);
             this.lblFname.TabIndex = 1;
             this.lblFname.Text = "نام";
             // 
             // FnameBox
             // 
-            this.FnameBox.Location = new System.Drawing.Point(33, 31);
+            this.FnameBox.Location = new System.Drawing.Point(44, 38);
+            this.FnameBox.Margin = new System.Windows.Forms.Padding(4);
             this.FnameBox.Name = "FnameBox";
-            this.FnameBox.Size = new System.Drawing.Size(320, 32);
+            this.FnameBox.Size = new System.Drawing.Size(425, 32);
             this.FnameBox.TabIndex = 0;
             this.FnameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -342,10 +364,12 @@
             this.groupBox2.Controls.Add(this.lblDe);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.groupBox2.Location = new System.Drawing.Point(730, 572);
+            this.groupBox2.Location = new System.Drawing.Point(973, 704);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(515, 187);
+            this.groupBox2.Size = new System.Drawing.Size(687, 230);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "حذف زبان آموز";
@@ -354,7 +378,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(249, 143);
+            this.label2.Location = new System.Drawing.Point(332, 176);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(251, 25);
@@ -365,7 +390,8 @@
             // 
             this.delInfo2.AutoSize = true;
             this.delInfo2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.delInfo2.Location = new System.Drawing.Point(124, 105);
+            this.delInfo2.Location = new System.Drawing.Point(165, 129);
+            this.delInfo2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.delInfo2.Name = "delInfo2";
             this.delInfo2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.delInfo2.Size = new System.Drawing.Size(376, 25);
@@ -376,9 +402,10 @@
             // 
             // btnDeleteRecord
             // 
-            this.btnDeleteRecord.Location = new System.Drawing.Point(22, 46);
+            this.btnDeleteRecord.Location = new System.Drawing.Point(29, 57);
+            this.btnDeleteRecord.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteRecord.Name = "btnDeleteRecord";
-            this.btnDeleteRecord.Size = new System.Drawing.Size(90, 32);
+            this.btnDeleteRecord.Size = new System.Drawing.Size(120, 39);
             this.btnDeleteRecord.TabIndex = 18;
             this.btnDeleteRecord.Text = "حذف";
             this.btnDeleteRecord.UseVisualStyleBackColor = true;
@@ -387,7 +414,8 @@
             // 
             this.delInfo1.AutoSize = true;
             this.delInfo1.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.delInfo1.Location = new System.Drawing.Point(424, 118);
+            this.delInfo1.Location = new System.Drawing.Point(565, 145);
+            this.delInfo1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.delInfo1.Name = "delInfo1";
             this.delInfo1.Size = new System.Drawing.Size(0, 25);
             this.delInfo1.TabIndex = 2;
@@ -396,7 +424,8 @@
             // lblDe
             // 
             this.lblDe.AutoSize = true;
-            this.lblDe.Location = new System.Drawing.Point(447, 49);
+            this.lblDe.Location = new System.Drawing.Point(596, 60);
+            this.lblDe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDe.Name = "lblDe";
             this.lblDe.Size = new System.Drawing.Size(58, 25);
             this.lblDe.TabIndex = 1;
@@ -404,9 +433,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 46);
+            this.textBox1.Location = new System.Drawing.Point(169, 57);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 32);
+            this.textBox1.Size = new System.Drawing.Size(388, 32);
             this.textBox1.TabIndex = 0;
             // 
             // groupBox3
@@ -430,41 +460,47 @@
             this.groupBox3.Controls.Add(this.lblUpdate);
             this.groupBox3.Controls.Add(this.boxIdUpdate);
             this.groupBox3.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.groupBox3.Location = new System.Drawing.Point(12, 447);
+            this.groupBox3.Location = new System.Drawing.Point(16, 614);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox3.Size = new System.Drawing.Size(703, 285);
+            this.groupBox3.Size = new System.Drawing.Size(937, 351);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ویرایش زبان آموز";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(287, 231);
+            this.button1.Location = new System.Drawing.Point(383, 284);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 32);
+            this.button1.Size = new System.Drawing.Size(139, 39);
             this.button1.TabIndex = 17;
             this.button1.Text = "ویرایش";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // boxHphoneUpdate
             // 
-            this.boxHphoneUpdate.Location = new System.Drawing.Point(22, 189);
+            this.boxHphoneUpdate.Location = new System.Drawing.Point(29, 233);
+            this.boxHphoneUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.boxHphoneUpdate.Name = "boxHphoneUpdate";
-            this.boxHphoneUpdate.Size = new System.Drawing.Size(198, 32);
+            this.boxHphoneUpdate.Size = new System.Drawing.Size(263, 32);
             this.boxHphoneUpdate.TabIndex = 16;
             // 
             // boxPhoneUpdate
             // 
-            this.boxPhoneUpdate.Location = new System.Drawing.Point(409, 185);
+            this.boxPhoneUpdate.Location = new System.Drawing.Point(545, 228);
+            this.boxPhoneUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.boxPhoneUpdate.Name = "boxPhoneUpdate";
-            this.boxPhoneUpdate.Size = new System.Drawing.Size(198, 32);
+            this.boxPhoneUpdate.Size = new System.Drawing.Size(263, 32);
             this.boxPhoneUpdate.TabIndex = 15;
             // 
             // lblHphoneUpdate
             // 
             this.lblHphoneUpdate.AutoSize = true;
-            this.lblHphoneUpdate.Location = new System.Drawing.Point(240, 192);
+            this.lblHphoneUpdate.Location = new System.Drawing.Point(320, 236);
+            this.lblHphoneUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHphoneUpdate.Name = "lblHphoneUpdate";
             this.lblHphoneUpdate.Size = new System.Drawing.Size(78, 25);
             this.lblHphoneUpdate.TabIndex = 14;
@@ -473,7 +509,8 @@
             // lblPhoneUpdate
             // 
             this.lblPhoneUpdate.AutoSize = true;
-            this.lblPhoneUpdate.Location = new System.Drawing.Point(613, 188);
+            this.lblPhoneUpdate.Location = new System.Drawing.Point(817, 231);
+            this.lblPhoneUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhoneUpdate.Name = "lblPhoneUpdate";
             this.lblPhoneUpdate.Size = new System.Drawing.Size(85, 25);
             this.lblPhoneUpdate.TabIndex = 13;
@@ -481,15 +518,17 @@
             // 
             // boxParentPhoneUpdate
             // 
-            this.boxParentPhoneUpdate.Location = new System.Drawing.Point(22, 145);
+            this.boxParentPhoneUpdate.Location = new System.Drawing.Point(29, 178);
+            this.boxParentPhoneUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.boxParentPhoneUpdate.Name = "boxParentPhoneUpdate";
-            this.boxParentPhoneUpdate.Size = new System.Drawing.Size(198, 32);
+            this.boxParentPhoneUpdate.Size = new System.Drawing.Size(263, 32);
             this.boxParentPhoneUpdate.TabIndex = 12;
             // 
             // lblParentPhoneUpdate
             // 
             this.lblParentPhoneUpdate.AutoSize = true;
-            this.lblParentPhoneUpdate.Location = new System.Drawing.Point(228, 148);
+            this.lblParentPhoneUpdate.Location = new System.Drawing.Point(304, 182);
+            this.lblParentPhoneUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblParentPhoneUpdate.Name = "lblParentPhoneUpdate";
             this.lblParentPhoneUpdate.Size = new System.Drawing.Size(90, 25);
             this.lblParentPhoneUpdate.TabIndex = 11;
@@ -497,15 +536,17 @@
             // 
             // boxAddressUpdate
             // 
-            this.boxAddressUpdate.Location = new System.Drawing.Point(409, 142);
+            this.boxAddressUpdate.Location = new System.Drawing.Point(545, 175);
+            this.boxAddressUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.boxAddressUpdate.Name = "boxAddressUpdate";
-            this.boxAddressUpdate.Size = new System.Drawing.Size(198, 32);
+            this.boxAddressUpdate.Size = new System.Drawing.Size(263, 32);
             this.boxAddressUpdate.TabIndex = 10;
             // 
             // lblAddressUpdate
             // 
             this.lblAddressUpdate.AutoSize = true;
-            this.lblAddressUpdate.Location = new System.Drawing.Point(643, 149);
+            this.lblAddressUpdate.Location = new System.Drawing.Point(857, 183);
+            this.lblAddressUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddressUpdate.Name = "lblAddressUpdate";
             this.lblAddressUpdate.Size = new System.Drawing.Size(50, 25);
             this.lblAddressUpdate.TabIndex = 9;
@@ -513,15 +554,17 @@
             // 
             // boxFatherUpdate
             // 
-            this.boxFatherUpdate.Location = new System.Drawing.Point(22, 51);
+            this.boxFatherUpdate.Location = new System.Drawing.Point(29, 63);
+            this.boxFatherUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.boxFatherUpdate.Name = "boxFatherUpdate";
-            this.boxFatherUpdate.Size = new System.Drawing.Size(198, 32);
+            this.boxFatherUpdate.Size = new System.Drawing.Size(263, 32);
             this.boxFatherUpdate.TabIndex = 8;
             // 
             // lblFatherUpdate
             // 
             this.lblFatherUpdate.AutoSize = true;
-            this.lblFatherUpdate.Location = new System.Drawing.Point(226, 53);
+            this.lblFatherUpdate.Location = new System.Drawing.Point(301, 65);
+            this.lblFatherUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFatherUpdate.Name = "lblFatherUpdate";
             this.lblFatherUpdate.Size = new System.Drawing.Size(55, 25);
             this.lblFatherUpdate.TabIndex = 7;
@@ -529,15 +572,17 @@
             // 
             // boxLanameUpdate
             // 
-            this.boxLanameUpdate.Location = new System.Drawing.Point(22, 99);
+            this.boxLanameUpdate.Location = new System.Drawing.Point(29, 122);
+            this.boxLanameUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.boxLanameUpdate.Name = "boxLanameUpdate";
-            this.boxLanameUpdate.Size = new System.Drawing.Size(198, 32);
+            this.boxLanameUpdate.Size = new System.Drawing.Size(263, 32);
             this.boxLanameUpdate.TabIndex = 6;
             // 
             // lblUpdateLaname
             // 
             this.lblUpdateLaname.AutoSize = true;
-            this.lblUpdateLaname.Location = new System.Drawing.Point(226, 102);
+            this.lblUpdateLaname.Location = new System.Drawing.Point(301, 126);
+            this.lblUpdateLaname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUpdateLaname.Name = "lblUpdateLaname";
             this.lblUpdateLaname.Size = new System.Drawing.Size(92, 25);
             this.lblUpdateLaname.TabIndex = 5;
@@ -545,15 +590,17 @@
             // 
             // BoxNameUpdate
             // 
-            this.BoxNameUpdate.Location = new System.Drawing.Point(409, 99);
+            this.BoxNameUpdate.Location = new System.Drawing.Point(545, 122);
+            this.BoxNameUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.BoxNameUpdate.Name = "BoxNameUpdate";
-            this.BoxNameUpdate.Size = new System.Drawing.Size(198, 32);
+            this.BoxNameUpdate.Size = new System.Drawing.Size(263, 32);
             this.BoxNameUpdate.TabIndex = 4;
             // 
             // lblNameUpdate
             // 
             this.lblNameUpdate.AutoSize = true;
-            this.lblNameUpdate.Location = new System.Drawing.Point(662, 102);
+            this.lblNameUpdate.Location = new System.Drawing.Point(883, 126);
+            this.lblNameUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNameUpdate.Name = "lblNameUpdate";
             this.lblNameUpdate.Size = new System.Drawing.Size(31, 25);
             this.lblNameUpdate.TabIndex = 3;
@@ -561,9 +608,10 @@
             // 
             // btnInfoCall
             // 
-            this.btnInfoCall.Location = new System.Drawing.Point(287, 49);
+            this.btnInfoCall.Location = new System.Drawing.Point(383, 60);
+            this.btnInfoCall.Margin = new System.Windows.Forms.Padding(4);
             this.btnInfoCall.Name = "btnInfoCall";
-            this.btnInfoCall.Size = new System.Drawing.Size(104, 32);
+            this.btnInfoCall.Size = new System.Drawing.Size(139, 39);
             this.btnInfoCall.TabIndex = 2;
             this.btnInfoCall.Text = "فراخوانی";
             this.btnInfoCall.UseVisualStyleBackColor = true;
@@ -572,7 +620,8 @@
             // lblUpdate
             // 
             this.lblUpdate.AutoSize = true;
-            this.lblUpdate.Location = new System.Drawing.Point(635, 54);
+            this.lblUpdate.Location = new System.Drawing.Point(847, 66);
+            this.lblUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUpdate.Name = "lblUpdate";
             this.lblUpdate.Size = new System.Drawing.Size(58, 25);
             this.lblUpdate.TabIndex = 1;
@@ -580,21 +629,35 @@
             // 
             // boxIdUpdate
             // 
-            this.boxIdUpdate.Location = new System.Drawing.Point(409, 49);
+            this.boxIdUpdate.Location = new System.Drawing.Point(545, 60);
+            this.boxIdUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.boxIdUpdate.Name = "boxIdUpdate";
-            this.boxIdUpdate.Size = new System.Drawing.Size(198, 32);
+            this.boxIdUpdate.Size = new System.Drawing.Size(263, 32);
             this.boxIdUpdate.TabIndex = 0;
+            // 
+            // excelOutput
+            // 
+            this.excelOutput.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.excelOutput.Location = new System.Drawing.Point(16, 550);
+            this.excelOutput.Name = "excelOutput";
+            this.excelOutput.Size = new System.Drawing.Size(115, 45);
+            this.excelOutput.TabIndex = 4;
+            this.excelOutput.Text = "خروجی اکسل";
+            this.excelOutput.UseVisualStyleBackColor = true;
+            this.excelOutput.Click += new System.EventHandler(this.excelOutput_Click);
             // 
             // studentsManageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1266, 798);
+            this.ClientSize = new System.Drawing.Size(1688, 982);
+            this.Controls.Add(this.excelOutput);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "studentsManageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "مدیریت زبان آموزان";
@@ -667,5 +730,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn parentPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn homeAddress;
         private System.Windows.Forms.SaveFileDialog ExcelSaveDialog;
+        private System.Windows.Forms.Button excelOutput;
     }
 }
