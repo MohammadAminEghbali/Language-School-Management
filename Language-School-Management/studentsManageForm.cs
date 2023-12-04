@@ -70,18 +70,21 @@ namespace Language_School_Management
 
         private void excelOutput_Click(object sender, EventArgs e)
         {
-            
+            ExcelSaveDialog.Title = "Save Excel File";
+            ExcelSaveDialog.Filter = "Excel Files|*.xlsx;*.xls|All Files|*.*";
             ExcelSaveDialog.FileName = "Students.xlsx";
             DialogResult ExcelDialog = ExcelSaveDialog.ShowDialog();
             
             if (ExcelDialog == DialogResult.OK)
             {
                 SaveToExcel(dataGridView1, ExcelSaveDialog.FileName);
+                MessageBox.Show("فایل اکسل اطلاعات شما با موفقیت ذخیره شد","ذخیره شد");
             }
         }
 
         private void SaveToExcel(DataGridView dataGridView, string filePath)
         {
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             using (ExcelPackage package = new ExcelPackage())
             {
                 ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("Sheet1");
@@ -102,5 +105,9 @@ namespace Language_School_Management
             }
         }
 
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

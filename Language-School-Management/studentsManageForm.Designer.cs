@@ -84,6 +84,7 @@
             this.boxIdUpdate = new System.Windows.Forms.TextBox();
             this.ExcelSaveDialog = new System.Windows.Forms.SaveFileDialog();
             this.excelOutput = new System.Windows.Forms.Button();
+            this.pdfOutput = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -272,6 +273,7 @@
             this.btnSubmit.TabIndex = 2;
             this.btnSubmit.Text = "ثبت";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblAddress
             // 
@@ -346,7 +348,7 @@
             this.groupBox2.Location = new System.Drawing.Point(730, 572);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(515, 187);
+            this.groupBox2.Size = new System.Drawing.Size(515, 212);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "حذف زبان آموز";
@@ -589,8 +591,8 @@
             // excelOutput
             // 
             this.excelOutput.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.excelOutput.Location = new System.Drawing.Point(12, 447);
-            this.excelOutput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.excelOutput.Location = new System.Drawing.Point(252, 447);
+            this.excelOutput.Margin = new System.Windows.Forms.Padding(2);
             this.excelOutput.Name = "excelOutput";
             this.excelOutput.Size = new System.Drawing.Size(111, 37);
             this.excelOutput.TabIndex = 4;
@@ -598,12 +600,24 @@
             this.excelOutput.UseVisualStyleBackColor = true;
             this.excelOutput.Click += new System.EventHandler(this.excelOutput_Click);
             // 
+            // pdfOutput
+            // 
+            this.pdfOutput.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pdfOutput.Location = new System.Drawing.Point(377, 447);
+            this.pdfOutput.Margin = new System.Windows.Forms.Padding(2);
+            this.pdfOutput.Name = "pdfOutput";
+            this.pdfOutput.Size = new System.Drawing.Size(111, 37);
+            this.pdfOutput.TabIndex = 5;
+            this.pdfOutput.Text = "خروجی Pdf";
+            this.pdfOutput.UseVisualStyleBackColor = true;
+            // 
             // studentsManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1266, 798);
+            this.Controls.Add(this.pdfOutput);
             this.Controls.Add(this.excelOutput);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -682,5 +696,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn homeAddress;
         private System.Windows.Forms.SaveFileDialog ExcelSaveDialog;
         private System.Windows.Forms.Button excelOutput;
+        private System.Windows.Forms.Button pdfOutput;
     }
 }
