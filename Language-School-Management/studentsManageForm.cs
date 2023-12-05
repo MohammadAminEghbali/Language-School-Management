@@ -1,18 +1,10 @@
-﻿using System;
+﻿using OfficeOpenXml;
+using OfficeOpenXml.Style;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.IO;
-using OfficeOpenXml;
-using iText.Kernel.Pdf;
-using iText.Layout;
-using iText.Layout.Element;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Language_School_Management
 {
@@ -23,7 +15,7 @@ namespace Language_School_Management
             InitializeComponent();
         }
         bool isCorrect;
-        bool isCorrect2;
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -48,17 +40,17 @@ namespace Language_School_Management
 
         private void delInfo2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("ابتدا کد ملی زبان آموز را وارد کرده و دکمه حذف را بزنید ، این عملیات قابل برگشت نیست پس دقت کنید","راهنما");
+            MessageBox.Show("ابتدا کد ملی زبان آموز را وارد کرده و دکمه حذف را بزنید ، این عملیات قابل برگشت نیست پس دقت کنید", "راهنما");
         }
 
         private void delInfo2_MouseHover(object sender, EventArgs e)
         {
-            
+
         }
 
         private void studentsManageForm_Load(object sender, EventArgs e)
         {
-            
+
             List<Dictionary<string, object>> students = Database.getStudents();
 
             foreach (Dictionary<string, object> student in students)
@@ -69,7 +61,7 @@ namespace Language_School_Management
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void excelOutput_Click(object sender, EventArgs e)
@@ -78,14 +70,14 @@ namespace Language_School_Management
             ExcelSaveDialog.Filter = "Excel Files|*.xlsx;*.xls|All Files|*.*";
             ExcelSaveDialog.FileName = "Students.xlsx";
             DialogResult ExcelDialog = ExcelSaveDialog.ShowDialog();
-            
-            
+
+
             if (ExcelDialog == DialogResult.OK)
             {
                 SaveToExcel(dataGridView1, ExcelSaveDialog.FileName);
                 isCorrect = true;
             }
-            if(isCorrect == true)
+            if (isCorrect == true)
             {
                 MessageBox.Show("فایل اکسل اطلاعات شما با موفقیت ذخیره شد", "ذخیره شد");
             }
@@ -97,10 +89,20 @@ namespace Language_School_Management
             using (ExcelPackage package = new ExcelPackage())
             {
                 ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("Sheet1");
+                worksheet.View.RightToLeft = true;
+
+
                 for (int i = 1; i <= dataGridView.Columns.Count; i++)
                 {
                     worksheet.Cells[1, i].Value = dataGridView.Columns[i - 1].HeaderText;
                 }
+
+                ExcelRange cells = worksheet.Cells[1, 1, 1, worksheet.Cells.End.Column];
+
+                cells.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                cells.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                cells.Style.Font.SetFromFont("B Titr", 14);
+
                 for (int i = 1; i <= dataGridView.Rows.Count; i++)
                 {
                     for (int j = 1; j <= dataGridView.Columns.Count; j++)
@@ -109,34 +111,17 @@ namespace Language_School_Management
                     }
                 }
 
+                cells = worksheet.Cells[2, 1, worksheet.Cells.End.Row, worksheet.Cells.End.Column];
+
+                cells.Style.Font.SetFromFont("Vazir", 12);
+                cells.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                cells.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+
+                worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
+                worksheet.Cells[worksheet.Dimension.Address].Style.Numberformat.Format = "@";
+
                 FileInfo output = new FileInfo(filePath);
                 package.SaveAs(output);
-            }
-        }
-
-        private void ExportToPdf(DataGridView dataGridView, string filePath)
-        {
-            using (PdfWriter writer = new PdfWriter(filePath))
-            {
-                using (PdfDocument pdf = new PdfDocument(writer))
-                {
-                    using (Document document = new Document(pdf))
-                    {
-                        iText.Layout.Element.Table table = new iText.Layout.Element.Table(dataGridView.ColumnCount);
-                        foreach (DataGridViewColumn column in dataGridView.Columns)
-                        {
-                            table.AddCell(new Cell().Add(new Paragraph(column.HeaderText)));
-                        }
-                        foreach (DataGridViewRow row in dataGridView.Rows)
-                        {
-                            foreach (DataGridViewCell cell in row.Cells)
-                            {
-                                table.AddCell(new Cell().Add(new Paragraph(cell.Value?.ToString())));
-                            }
-                        }
-                        document.Add(table);
-                    }
-                }
             }
         }
 
@@ -145,22 +130,5 @@ namespace Language_School_Management
 
         }
 
-        private void pdfOutput_Click(object sender, EventArgs e)
-        {
-            pdfSaveDialog.Title = "Save Pdf File";
-            pdfSaveDialog.Filter = "PDF Files|*.pdf";
-            pdfSaveDialog.FileName = "Students.pdf";
-
-            DialogResult pdfResult = pdfSaveDialog.ShowDialog();
-            if (pdfResult == DialogResult.OK)
-            {
-                ExportToPdf(dataGridView1,pdfSaveDialog.FileName);
-                isCorrect2 = true;
-            }
-            if(isCorrect2 == true)
-            {
-                MessageBox.Show("فایل pdf اطلاعات شما با موفقیت ثبت شد", "ذخیره شد");
-            }
-        }
     }
 }

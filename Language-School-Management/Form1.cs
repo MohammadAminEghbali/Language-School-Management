@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -35,15 +33,15 @@ namespace Language_School_Management
 
         private void students_MouseEnter(object sender, EventArgs e)
         {
-           // students.UseVisualStyleBackColor = false;
-           // students.BackColor = Color.;
+            // students.UseVisualStyleBackColor = false;
+            // students.BackColor = Color.;
             //students.ForeColor = Color.White;
         }
 
         private void students_MouseLeave(object sender, EventArgs e)
         {
             //students.UseVisualStyleBackColor = true;
-           // students.ForeColor = Color.Black;
+            // students.ForeColor = Color.Black;
         }
     }
 }

@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Reflection;
-using System.Windows.Forms;
 
 namespace Language_School_Management
 {
@@ -87,7 +83,7 @@ namespace Language_School_Management
             {
                 cmd.CommandText = "SELECT * FROM students WHERE nCode=@nCode";
                 cmd.Parameters.AddWithValue("nCode", nCode);
-                
+
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
