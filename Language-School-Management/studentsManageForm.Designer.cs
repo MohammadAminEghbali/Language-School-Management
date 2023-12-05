@@ -85,6 +85,7 @@
             this.ExcelSaveDialog = new System.Windows.Forms.SaveFileDialog();
             this.excelOutput = new System.Windows.Forms.Button();
             this.pdfOutput = new System.Windows.Forms.Button();
+            this.pdfSaveDialog = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -610,6 +611,7 @@
             this.pdfOutput.TabIndex = 5;
             this.pdfOutput.Text = "خروجی Pdf";
             this.pdfOutput.UseVisualStyleBackColor = true;
+            this.pdfOutput.Click += new System.EventHandler(this.pdfOutput_Click);
             // 
             // studentsManageForm
             // 
@@ -697,5 +699,6 @@
         private System.Windows.Forms.SaveFileDialog ExcelSaveDialog;
         private System.Windows.Forms.Button excelOutput;
         private System.Windows.Forms.Button pdfOutput;
+        private System.Windows.Forms.SaveFileDialog pdfSaveDialog;
     }
 }

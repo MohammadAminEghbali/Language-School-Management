@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.IO;
 using OfficeOpenXml;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
 
 namespace Language_School_Management
 {
@@ -19,7 +22,8 @@ namespace Language_School_Management
         {
             InitializeComponent();
         }
-        
+        bool isCorrect;
+        bool isCorrect2;
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -75,10 +79,15 @@ namespace Language_School_Management
             ExcelSaveDialog.FileName = "Students.xlsx";
             DialogResult ExcelDialog = ExcelSaveDialog.ShowDialog();
             
+            
             if (ExcelDialog == DialogResult.OK)
             {
                 SaveToExcel(dataGridView1, ExcelSaveDialog.FileName);
-                MessageBox.Show("فایل اکسل اطلاعات شما با موفقیت ذخیره شد","ذخیره شد");
+                isCorrect = true;
+            }
+            if(isCorrect == true)
+            {
+                MessageBox.Show("فایل اکسل اطلاعات شما با موفقیت ذخیره شد", "ذخیره شد");
             }
         }
 
@@ -105,9 +114,53 @@ namespace Language_School_Management
             }
         }
 
+        private void ExportToPdf(DataGridView dataGridView, string filePath)
+        {
+            using (PdfWriter writer = new PdfWriter(filePath))
+            {
+                using (PdfDocument pdf = new PdfDocument(writer))
+                {
+                    using (Document document = new Document(pdf))
+                    {
+                        iText.Layout.Element.Table table = new iText.Layout.Element.Table(dataGridView.ColumnCount);
+                        foreach (DataGridViewColumn column in dataGridView.Columns)
+                        {
+                            table.AddCell(new Cell().Add(new Paragraph(column.HeaderText)));
+                        }
+                        foreach (DataGridViewRow row in dataGridView.Rows)
+                        {
+                            foreach (DataGridViewCell cell in row.Cells)
+                            {
+                                table.AddCell(new Cell().Add(new Paragraph(cell.Value?.ToString())));
+                            }
+                        }
+                        document.Add(table);
+                    }
+                }
+            }
+        }
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pdfOutput_Click(object sender, EventArgs e)
+        {
+            pdfSaveDialog.Title = "Save Pdf File";
+            pdfSaveDialog.Filter = "PDF Files|*.pdf";
+            pdfSaveDialog.FileName = "Students.pdf";
+
+            DialogResult pdfResult = pdfSaveDialog.ShowDialog();
+            if (pdfResult == DialogResult.OK)
+            {
+                ExportToPdf(dataGridView1,pdfSaveDialog.FileName);
+                isCorrect2 = true;
+            }
+            if(isCorrect2 == true)
+            {
+                MessageBox.Show("فایل pdf اطلاعات شما با موفقیت ثبت شد", "ذخیره شد");
+            }
         }
     }
 }
