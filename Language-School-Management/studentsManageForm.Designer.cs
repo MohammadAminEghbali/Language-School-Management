@@ -607,9 +607,10 @@
             this.pdfOutput.Location = new System.Drawing.Point(377, 447);
             this.pdfOutput.Margin = new System.Windows.Forms.Padding(2);
             this.pdfOutput.Name = "pdfOutput";
+            this.pdfOutput.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.pdfOutput.Size = new System.Drawing.Size(111, 37);
             this.pdfOutput.TabIndex = 5;
-            this.pdfOutput.Text = "خروجی Pdf";
+            this.pdfOutput.Text = "خروجی PDF";
             this.pdfOutput.UseVisualStyleBackColor = true;
             this.pdfOutput.Click += new System.EventHandler(this.pdfOutput_Click);
             // 
