@@ -43,5 +43,11 @@ namespace Language_School_Management
             //students.UseVisualStyleBackColor = true;
             // students.ForeColor = Color.Black;
         }
+
+        private void teachers_Click(object sender, EventArgs e)
+        {
+            teachersManageForm teachersManageForm = new teachersManageForm();
+            teachersManageForm.ShowDialog();
+        }
     }
 }

@@ -87,6 +87,7 @@
             this.teachers.TabIndex = 3;
             this.teachers.Text = "اساتید";
             this.teachers.UseVisualStyleBackColor = true;
+            this.teachers.Click += new System.EventHandler(this.teachers_Click);
             // 
             // classes
             // 
