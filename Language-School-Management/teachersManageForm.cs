@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
-using OfficeOpenXml;
+﻿using OfficeOpenXml;
 using OfficeOpenXml.Style;
+using System;
+using System.IO;
+using System.Windows.Forms;
 
 namespace Language_School_Management
 {
@@ -39,12 +32,12 @@ namespace Language_School_Management
 
             DialogResult ExcelDialog = ExcelSaveDialog2.ShowDialog();
 
-            if( ExcelDialog == DialogResult.OK )
+            if (ExcelDialog == DialogResult.OK)
             {
                 SaveToExcel(TeachersdataGridView, ExcelSaveDialog2.FileName);
                 isCorrect2 = true;
             }
-            if(isCorrect2 == true)
+            if (isCorrect2 == true)
             {
                 MessageBox.Show("فایل اکسل اطلاعات شما با موفقیت ذخیره شد", "ذخیره شد");
             }
