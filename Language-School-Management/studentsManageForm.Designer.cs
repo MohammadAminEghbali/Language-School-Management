@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,7 +66,7 @@
             this.lblDe = new System.Windows.Forms.Label();
             this.delBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.editbtn = new System.Windows.Forms.Button();
             this.boxHphoneUpdate = new System.Windows.Forms.TextBox();
             this.boxPhoneUpdate = new System.Windows.Forms.TextBox();
             this.lblHphoneUpdate = new System.Windows.Forms.Label();
@@ -100,14 +100,14 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.firstName,
@@ -118,14 +118,14 @@
             this.homePhone,
             this.parentPhone,
             this.homeAddress});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.Location = new System.Drawing.Point(12, 23);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -438,7 +438,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.editbtn);
             this.groupBox3.Controls.Add(this.boxHphoneUpdate);
             this.groupBox3.Controls.Add(this.boxPhoneUpdate);
             this.groupBox3.Controls.Add(this.lblHphoneUpdate);
@@ -465,25 +465,29 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ویرایش زبان آموز";
             // 
-            // button1
+            // editbtn
             // 
-            this.button1.Location = new System.Drawing.Point(174, 228);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 36);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "ویرایش";
-            this.button1.UseVisualStyleBackColor = true;
+            this.editbtn.Enabled = false;
+            this.editbtn.Location = new System.Drawing.Point(22, 232);
+            this.editbtn.Name = "editbtn";
+            this.editbtn.Size = new System.Drawing.Size(104, 36);
+            this.editbtn.TabIndex = 20;
+            this.editbtn.Text = "ویرایش";
+            this.editbtn.UseVisualStyleBackColor = true;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // boxHphoneUpdate
             // 
-            this.boxHphoneUpdate.Location = new System.Drawing.Point(22, 169);
+            this.boxHphoneUpdate.Enabled = false;
+            this.boxHphoneUpdate.Location = new System.Drawing.Point(390, 216);
             this.boxHphoneUpdate.Name = "boxHphoneUpdate";
             this.boxHphoneUpdate.Size = new System.Drawing.Size(198, 32);
             this.boxHphoneUpdate.TabIndex = 19;
             // 
             // boxPhoneUpdate
             // 
-            this.boxPhoneUpdate.Location = new System.Drawing.Point(390, 169);
+            this.boxPhoneUpdate.Enabled = false;
+            this.boxPhoneUpdate.Location = new System.Drawing.Point(390, 174);
             this.boxPhoneUpdate.Name = "boxPhoneUpdate";
             this.boxPhoneUpdate.Size = new System.Drawing.Size(198, 32);
             this.boxPhoneUpdate.TabIndex = 18;
@@ -491,7 +495,7 @@
             // lblHphoneUpdate
             // 
             this.lblHphoneUpdate.AutoSize = true;
-            this.lblHphoneUpdate.Location = new System.Drawing.Point(255, 172);
+            this.lblHphoneUpdate.Location = new System.Drawing.Point(601, 216);
             this.lblHphoneUpdate.Name = "lblHphoneUpdate";
             this.lblHphoneUpdate.Size = new System.Drawing.Size(78, 25);
             this.lblHphoneUpdate.TabIndex = 14;
@@ -500,7 +504,7 @@
             // lblPhoneUpdate
             // 
             this.lblPhoneUpdate.AutoSize = true;
-            this.lblPhoneUpdate.Location = new System.Drawing.Point(594, 172);
+            this.lblPhoneUpdate.Location = new System.Drawing.Point(594, 174);
             this.lblPhoneUpdate.Name = "lblPhoneUpdate";
             this.lblPhoneUpdate.Size = new System.Drawing.Size(85, 25);
             this.lblPhoneUpdate.TabIndex = 13;
@@ -508,7 +512,8 @@
             // 
             // boxParentPhoneUpdate
             // 
-            this.boxParentPhoneUpdate.Location = new System.Drawing.Point(22, 125);
+            this.boxParentPhoneUpdate.Enabled = false;
+            this.boxParentPhoneUpdate.Location = new System.Drawing.Point(22, 175);
             this.boxParentPhoneUpdate.Name = "boxParentPhoneUpdate";
             this.boxParentPhoneUpdate.Size = new System.Drawing.Size(198, 32);
             this.boxParentPhoneUpdate.TabIndex = 17;
@@ -516,7 +521,7 @@
             // lblParentPhoneUpdate
             // 
             this.lblParentPhoneUpdate.AutoSize = true;
-            this.lblParentPhoneUpdate.Location = new System.Drawing.Point(243, 128);
+            this.lblParentPhoneUpdate.Location = new System.Drawing.Point(245, 178);
             this.lblParentPhoneUpdate.Name = "lblParentPhoneUpdate";
             this.lblParentPhoneUpdate.Size = new System.Drawing.Size(90, 25);
             this.lblParentPhoneUpdate.TabIndex = 11;
@@ -524,7 +529,8 @@
             // 
             // boxAddressUpdate
             // 
-            this.boxAddressUpdate.Location = new System.Drawing.Point(390, 124);
+            this.boxAddressUpdate.Enabled = false;
+            this.boxAddressUpdate.Location = new System.Drawing.Point(22, 133);
             this.boxAddressUpdate.Name = "boxAddressUpdate";
             this.boxAddressUpdate.Size = new System.Drawing.Size(198, 32);
             this.boxAddressUpdate.TabIndex = 16;
@@ -532,7 +538,7 @@
             // lblAddressUpdate
             // 
             this.lblAddressUpdate.AutoSize = true;
-            this.lblAddressUpdate.Location = new System.Drawing.Point(629, 127);
+            this.lblAddressUpdate.Location = new System.Drawing.Point(285, 136);
             this.lblAddressUpdate.Name = "lblAddressUpdate";
             this.lblAddressUpdate.Size = new System.Drawing.Size(50, 25);
             this.lblAddressUpdate.TabIndex = 9;
@@ -540,7 +546,8 @@
             // 
             // boxFatherUpdate
             // 
-            this.boxFatherUpdate.Location = new System.Drawing.Point(22, 31);
+            this.boxFatherUpdate.Enabled = false;
+            this.boxFatherUpdate.Location = new System.Drawing.Point(390, 133);
             this.boxFatherUpdate.Name = "boxFatherUpdate";
             this.boxFatherUpdate.Size = new System.Drawing.Size(198, 32);
             this.boxFatherUpdate.TabIndex = 13;
@@ -548,7 +555,7 @@
             // lblFatherUpdate
             // 
             this.lblFatherUpdate.AutoSize = true;
-            this.lblFatherUpdate.Location = new System.Drawing.Point(278, 34);
+            this.lblFatherUpdate.Location = new System.Drawing.Point(624, 136);
             this.lblFatherUpdate.Name = "lblFatherUpdate";
             this.lblFatherUpdate.Size = new System.Drawing.Size(55, 25);
             this.lblFatherUpdate.TabIndex = 7;
@@ -556,7 +563,8 @@
             // 
             // boxLanameUpdate
             // 
-            this.boxLanameUpdate.Location = new System.Drawing.Point(22, 79);
+            this.boxLanameUpdate.Enabled = false;
+            this.boxLanameUpdate.Location = new System.Drawing.Point(22, 92);
             this.boxLanameUpdate.Name = "boxLanameUpdate";
             this.boxLanameUpdate.Size = new System.Drawing.Size(198, 32);
             this.boxLanameUpdate.TabIndex = 15;
@@ -564,7 +572,7 @@
             // lblUpdateLaname
             // 
             this.lblUpdateLaname.AutoSize = true;
-            this.lblUpdateLaname.Location = new System.Drawing.Point(243, 82);
+            this.lblUpdateLaname.Location = new System.Drawing.Point(243, 95);
             this.lblUpdateLaname.Name = "lblUpdateLaname";
             this.lblUpdateLaname.Size = new System.Drawing.Size(92, 25);
             this.lblUpdateLaname.TabIndex = 5;
@@ -572,7 +580,8 @@
             // 
             // BoxNameUpdate
             // 
-            this.BoxNameUpdate.Location = new System.Drawing.Point(390, 79);
+            this.BoxNameUpdate.Enabled = false;
+            this.BoxNameUpdate.Location = new System.Drawing.Point(390, 92);
             this.BoxNameUpdate.Name = "BoxNameUpdate";
             this.BoxNameUpdate.Size = new System.Drawing.Size(198, 32);
             this.BoxNameUpdate.TabIndex = 14;
@@ -580,7 +589,7 @@
             // lblNameUpdate
             // 
             this.lblNameUpdate.AutoSize = true;
-            this.lblNameUpdate.Location = new System.Drawing.Point(648, 82);
+            this.lblNameUpdate.Location = new System.Drawing.Point(648, 95);
             this.lblNameUpdate.Name = "lblNameUpdate";
             this.lblNameUpdate.Size = new System.Drawing.Size(31, 25);
             this.lblNameUpdate.TabIndex = 3;
@@ -588,13 +597,13 @@
             // 
             // btnInfoCall
             // 
-            this.btnInfoCall.Location = new System.Drawing.Point(284, 228);
+            this.btnInfoCall.Location = new System.Drawing.Point(137, 232);
             this.btnInfoCall.Name = "btnInfoCall";
             this.btnInfoCall.Size = new System.Drawing.Size(104, 36);
             this.btnInfoCall.TabIndex = 12;
             this.btnInfoCall.Text = "فراخوانی";
             this.btnInfoCall.UseVisualStyleBackColor = true;
-            this.btnInfoCall.Click += new System.EventHandler(this.button1_Click);
+            this.btnInfoCall.Click += new System.EventHandler(this.btnInfoCall_Click);
             // 
             // lblUpdate
             // 
@@ -616,7 +625,7 @@
             // 
             this.excelOutput.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.excelOutput.Location = new System.Drawing.Point(12, 464);
-            this.excelOutput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.excelOutput.Margin = new System.Windows.Forms.Padding(2);
             this.excelOutput.Name = "excelOutput";
             this.excelOutput.Size = new System.Drawing.Size(111, 37);
             this.excelOutput.TabIndex = 4;
@@ -698,7 +707,7 @@
         private System.Windows.Forms.Label lblPhoneUpdate;
         private System.Windows.Forms.TextBox boxParentPhoneUpdate;
         private System.Windows.Forms.Label lblParentPhoneUpdate;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button editbtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn fatherName;
