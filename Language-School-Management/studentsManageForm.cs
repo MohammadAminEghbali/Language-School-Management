@@ -80,7 +80,7 @@ namespace Language_School_Management
             }
             if (isCorrect == true)
             {
-                MessageBox.Show("فایل اکسل اطلاعات شما با موفقیت ذخیره شد", "ذخیره شد");
+                MessageBox.Show("فایل اکسل اطلاعات شما با موفقیت ذخیره شد", "ذخیره شد",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
 
@@ -146,49 +146,49 @@ namespace Language_School_Management
 
             if (fname == "")
             {
-                MessageBox.Show("نام نمیتواند خالی باشد");
+                MessageBox.Show("نام نمیتواند خالی باشد","مقدار نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
 
             if (lname == "")
             {
-                MessageBox.Show("نام خانوادگی نمیتواند خالی باشد");
+                MessageBox.Show("نام خانوادگی نمیتواند خالی باشد","مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (fathername == "")
             {
-                MessageBox.Show("نام پدر نمیتواند خالی باشد");
+                MessageBox.Show("نام پدر نمیتواند خالی باشد","مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (address == "")
             {
-                MessageBox.Show("ادرس نمیتواند خالی باشد");
+                MessageBox.Show("آدرس نمیتواند خالی باشد","مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (parentphone == "" || parentphone.Length < 11)
             {
-                MessageBox.Show("شماره والدین نمیتواند خالی یا کمتر از 11 رقم باشد");
+                MessageBox.Show("شماره والدین نمیتواند خالی یا کمتر از 11 رقم باشد","مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (nCode == "" || nCode.Length < 10)
             {
-                MessageBox.Show("کد ملی نمیتواند خالی یا کمتر از 10 رقم باشد");
+                MessageBox.Show("کد ملی نمیتواند خالی یا کمتر از 10 رقم باشد","مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (phone == "" || phone.Length < 11)
             {
-                MessageBox.Show("شماره تلفن همراه نمیتواند خالی یا کمتر از 11 رقم باشد");
+                MessageBox.Show("شماره تلفن همراه نمیتواند خالی یا کمتر از 11 رقم باشد","مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (homephone == "" || homephone.Length < 11)
             {
-                MessageBox.Show("شماره تماس خانه نمیتواند خالی یا کمتر از 11 رقم باشد");
+                MessageBox.Show("شماره تماس خانه نمیتواند خالی یا کمتر از 11 رقم باشد","مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -196,13 +196,13 @@ namespace Language_School_Management
             {
                 Database.AddStudent(fname, lname, fathername, nCode, phone, homephone, parentphone, address);
 
-                MessageBox.Show("زبان آموز با موفقیت اضافه شد");
+                MessageBox.Show("زبان آموز با موفقیت اضافه شد","عملیات موفق",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 studentsManageForm_Load(sender, e);
                 btnClear_Click(sender, e);
             }
             else
             {
-                MessageBox.Show("زبان آموز با این کد ملی از قبل وجود دارد");
+                MessageBox.Show("زبان آموز با این کد ملی از قبل وجود دارد","زبان آموز تکراری",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
         }
@@ -212,7 +212,7 @@ namespace Language_School_Management
             string nCode = delBox.Text;
             if (nCode == "" || nCode.Length < 10)
             {
-                MessageBox.Show("کد ملی نمیتواند خالی یا کمتر از 10 رقم باشد");
+                MessageBox.Show("کد ملی نمیتواند خالی یا کمتر از 10 رقم باشد","مقدار نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
 
@@ -230,7 +230,7 @@ namespace Language_School_Management
                 if (result == DialogResult.Yes)
                 {
                     Database.delStudent(nCode);
-                    MessageBox.Show("زبان آموز باموفقیت حذف گردید");
+                    MessageBox.Show("زبان آموز باموفقیت حذف گردید","عملیت موفق",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
                     studentsManageForm_Load(sender, e);
                     delBox.Text = string.Empty;
@@ -238,13 +238,13 @@ namespace Language_School_Management
                 }
                 else
                 {
-                    MessageBox.Show("عملیات لغو شد");
+                    MessageBox.Show("عملیات لغو شد","لغو عملیات",MessageBoxButtons.OK,MessageBoxIcon.Stop);
                 }
 
             }
             else
             {
-                MessageBox.Show("زبان آموز با این کد ملی وجود ندارد");
+                MessageBox.Show("زبان آموز با این کد ملی وجود ندارد","ژبان آموز ثبت نشده",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
     }

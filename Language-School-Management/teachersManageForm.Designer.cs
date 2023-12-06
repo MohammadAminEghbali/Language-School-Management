@@ -30,46 +30,46 @@
         {
             this.TeachersdataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.lblTeachName = new System.Windows.Forms.Label();
-            this.boxTeachName = new System.Windows.Forms.TextBox();
-            this.boxTeachLname = new System.Windows.Forms.TextBox();
-            this.lblTeachLname = new System.Windows.Forms.Label();
-            this.lblTeachFatherName = new System.Windows.Forms.Label();
-            this.boxTeachFathName = new System.Windows.Forms.TextBox();
-            this.lblTeachID = new System.Windows.Forms.Label();
-            this.boxTeachID = new System.Windows.Forms.TextBox();
-            this.boxTeachPhone = new System.Windows.Forms.TextBox();
-            this.lblTeachPhone = new System.Windows.Forms.Label();
-            this.boxTeachDocument = new System.Windows.Forms.TextBox();
-            this.lblTeachDocumnet = new System.Windows.Forms.Label();
-            this.boxTeachAddress = new System.Windows.Forms.TextBox();
             this.lblTeachAddress = new System.Windows.Forms.Label();
+            this.boxTeachAddress = new System.Windows.Forms.TextBox();
+            this.lblTeachDocumnet = new System.Windows.Forms.Label();
+            this.boxTeachDocument = new System.Windows.Forms.TextBox();
+            this.lblTeachPhone = new System.Windows.Forms.Label();
+            this.boxTeachPhone = new System.Windows.Forms.TextBox();
+            this.boxTeachID = new System.Windows.Forms.TextBox();
+            this.lblTeachID = new System.Windows.Forms.Label();
+            this.boxTeachFathName = new System.Windows.Forms.TextBox();
+            this.lblTeachFatherName = new System.Windows.Forms.Label();
+            this.lblTeachLname = new System.Windows.Forms.Label();
+            this.boxTeachLname = new System.Windows.Forms.TextBox();
+            this.boxTeachName = new System.Windows.Forms.TextBox();
+            this.lblTeachName = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BoxTeachIDdel = new System.Windows.Forms.TextBox();
-            this.lblTeachIDdel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnTeachDel = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTeachIDdel = new System.Windows.Forms.Label();
+            this.BoxTeachIDdel = new System.Windows.Forms.TextBox();
             this.btnExcelOutput = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblTeachIdUpdate = new System.Windows.Forms.Label();
-            this.boxTeachIDUpdate = new System.Windows.Forms.TextBox();
-            this.lblTeachFathNameUpdate = new System.Windows.Forms.Label();
-            this.boxFathUpdate = new System.Windows.Forms.TextBox();
-            this.lblNameUpdate = new System.Windows.Forms.Label();
-            this.boxNameUpdate = new System.Windows.Forms.TextBox();
-            this.lblFnameUpdate = new System.Windows.Forms.Label();
-            this.boxFnameUpdate = new System.Windows.Forms.TextBox();
-            this.lblPhoneUpdate = new System.Windows.Forms.Label();
-            this.boxAddressUpdate = new System.Windows.Forms.TextBox();
-            this.boxPhoneUpdate = new System.Windows.Forms.TextBox();
-            this.lblAddressUpdate = new System.Windows.Forms.Label();
+            this.btnCallInfo = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnCallInfo = new System.Windows.Forms.Button();
+            this.lblAddressUpdate = new System.Windows.Forms.Label();
+            this.boxPhoneUpdate = new System.Windows.Forms.TextBox();
+            this.lblPhoneUpdate = new System.Windows.Forms.Label();
+            this.boxAddressUpdate = new System.Windows.Forms.TextBox();
+            this.lblFnameUpdate = new System.Windows.Forms.Label();
+            this.boxFnameUpdate = new System.Windows.Forms.TextBox();
+            this.lblNameUpdate = new System.Windows.Forms.Label();
+            this.boxNameUpdate = new System.Windows.Forms.TextBox();
+            this.lblTeachFathNameUpdate = new System.Windows.Forms.Label();
+            this.boxFathUpdate = new System.Windows.Forms.TextBox();
+            this.lblTeachIdUpdate = new System.Windows.Forms.Label();
+            this.boxTeachIDUpdate = new System.Windows.Forms.TextBox();
             this.ExcelSaveDialog2 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.TeachersdataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -112,111 +112,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ثبت استاد";
             // 
-            // btnSubmit
+            // lblTeachAddress
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(39, 420);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(97, 39);
-            this.btnSubmit.TabIndex = 0;
-            this.btnSubmit.Text = "ثبت";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.lblTeachAddress.AutoSize = true;
+            this.lblTeachAddress.Location = new System.Drawing.Point(414, 358);
+            this.lblTeachAddress.Name = "lblTeachAddress";
+            this.lblTeachAddress.Size = new System.Drawing.Size(50, 25);
+            this.lblTeachAddress.TabIndex = 15;
+            this.lblTeachAddress.Text = "آدرس";
             // 
-            // btnClear
+            // boxTeachAddress
             // 
-            this.btnClear.Location = new System.Drawing.Point(245, 420);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(98, 39);
-            this.btnClear.TabIndex = 1;
-            this.btnClear.Text = "پاکسازی";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // lblTeachName
-            // 
-            this.lblTeachName.AutoSize = true;
-            this.lblTeachName.Location = new System.Drawing.Point(433, 39);
-            this.lblTeachName.Name = "lblTeachName";
-            this.lblTeachName.Size = new System.Drawing.Size(31, 25);
-            this.lblTeachName.TabIndex = 2;
-            this.lblTeachName.Text = "نام";
-            // 
-            // boxTeachName
-            // 
-            this.boxTeachName.Location = new System.Drawing.Point(39, 36);
-            this.boxTeachName.Name = "boxTeachName";
-            this.boxTeachName.Size = new System.Drawing.Size(304, 32);
-            this.boxTeachName.TabIndex = 3;
-            // 
-            // boxTeachLname
-            // 
-            this.boxTeachLname.Location = new System.Drawing.Point(39, 88);
-            this.boxTeachLname.Name = "boxTeachLname";
-            this.boxTeachLname.Size = new System.Drawing.Size(304, 32);
-            this.boxTeachLname.TabIndex = 4;
-            // 
-            // lblTeachLname
-            // 
-            this.lblTeachLname.AutoSize = true;
-            this.lblTeachLname.Location = new System.Drawing.Point(372, 91);
-            this.lblTeachLname.Name = "lblTeachLname";
-            this.lblTeachLname.Size = new System.Drawing.Size(92, 25);
-            this.lblTeachLname.TabIndex = 5;
-            this.lblTeachLname.Text = "نام خانوادگی";
-            // 
-            // lblTeachFatherName
-            // 
-            this.lblTeachFatherName.AutoSize = true;
-            this.lblTeachFatherName.Location = new System.Drawing.Point(409, 143);
-            this.lblTeachFatherName.Name = "lblTeachFatherName";
-            this.lblTeachFatherName.Size = new System.Drawing.Size(55, 25);
-            this.lblTeachFatherName.TabIndex = 6;
-            this.lblTeachFatherName.Text = "نام پدر";
-            // 
-            // boxTeachFathName
-            // 
-            this.boxTeachFathName.Location = new System.Drawing.Point(39, 140);
-            this.boxTeachFathName.Name = "boxTeachFathName";
-            this.boxTeachFathName.Size = new System.Drawing.Size(304, 32);
-            this.boxTeachFathName.TabIndex = 7;
-            // 
-            // lblTeachID
-            // 
-            this.lblTeachID.AutoSize = true;
-            this.lblTeachID.Location = new System.Drawing.Point(406, 196);
-            this.lblTeachID.Name = "lblTeachID";
-            this.lblTeachID.Size = new System.Drawing.Size(58, 25);
-            this.lblTeachID.TabIndex = 8;
-            this.lblTeachID.Text = "کد ملی";
-            // 
-            // boxTeachID
-            // 
-            this.boxTeachID.Location = new System.Drawing.Point(39, 193);
-            this.boxTeachID.Name = "boxTeachID";
-            this.boxTeachID.Size = new System.Drawing.Size(304, 32);
-            this.boxTeachID.TabIndex = 9;
-            // 
-            // boxTeachPhone
-            // 
-            this.boxTeachPhone.Location = new System.Drawing.Point(39, 246);
-            this.boxTeachPhone.Name = "boxTeachPhone";
-            this.boxTeachPhone.Size = new System.Drawing.Size(304, 32);
-            this.boxTeachPhone.TabIndex = 10;
-            // 
-            // lblTeachPhone
-            // 
-            this.lblTeachPhone.AutoSize = true;
-            this.lblTeachPhone.Location = new System.Drawing.Point(379, 249);
-            this.lblTeachPhone.Name = "lblTeachPhone";
-            this.lblTeachPhone.Size = new System.Drawing.Size(85, 25);
-            this.lblTeachPhone.TabIndex = 11;
-            this.lblTeachPhone.Text = "تلفن همراه";
-            // 
-            // boxTeachDocument
-            // 
-            this.boxTeachDocument.Location = new System.Drawing.Point(39, 300);
-            this.boxTeachDocument.Name = "boxTeachDocument";
-            this.boxTeachDocument.Size = new System.Drawing.Size(304, 32);
-            this.boxTeachDocument.TabIndex = 12;
+            this.boxTeachAddress.Location = new System.Drawing.Point(39, 355);
+            this.boxTeachAddress.Name = "boxTeachAddress";
+            this.boxTeachAddress.Size = new System.Drawing.Size(304, 32);
+            this.boxTeachAddress.TabIndex = 7;
             // 
             // lblTeachDocumnet
             // 
@@ -227,21 +137,111 @@
             this.lblTeachDocumnet.TabIndex = 13;
             this.lblTeachDocumnet.Text = "مدرک تحصیلی";
             // 
-            // boxTeachAddress
+            // boxTeachDocument
             // 
-            this.boxTeachAddress.Location = new System.Drawing.Point(39, 355);
-            this.boxTeachAddress.Name = "boxTeachAddress";
-            this.boxTeachAddress.Size = new System.Drawing.Size(304, 32);
-            this.boxTeachAddress.TabIndex = 14;
+            this.boxTeachDocument.Location = new System.Drawing.Point(39, 300);
+            this.boxTeachDocument.Name = "boxTeachDocument";
+            this.boxTeachDocument.Size = new System.Drawing.Size(304, 32);
+            this.boxTeachDocument.TabIndex = 6;
             // 
-            // lblTeachAddress
+            // lblTeachPhone
             // 
-            this.lblTeachAddress.AutoSize = true;
-            this.lblTeachAddress.Location = new System.Drawing.Point(414, 358);
-            this.lblTeachAddress.Name = "lblTeachAddress";
-            this.lblTeachAddress.Size = new System.Drawing.Size(50, 25);
-            this.lblTeachAddress.TabIndex = 15;
-            this.lblTeachAddress.Text = "آدرس";
+            this.lblTeachPhone.AutoSize = true;
+            this.lblTeachPhone.Location = new System.Drawing.Point(379, 249);
+            this.lblTeachPhone.Name = "lblTeachPhone";
+            this.lblTeachPhone.Size = new System.Drawing.Size(85, 25);
+            this.lblTeachPhone.TabIndex = 11;
+            this.lblTeachPhone.Text = "تلفن همراه";
+            // 
+            // boxTeachPhone
+            // 
+            this.boxTeachPhone.Location = new System.Drawing.Point(39, 246);
+            this.boxTeachPhone.Name = "boxTeachPhone";
+            this.boxTeachPhone.Size = new System.Drawing.Size(304, 32);
+            this.boxTeachPhone.TabIndex = 5;
+            // 
+            // boxTeachID
+            // 
+            this.boxTeachID.Location = new System.Drawing.Point(39, 193);
+            this.boxTeachID.Name = "boxTeachID";
+            this.boxTeachID.Size = new System.Drawing.Size(304, 32);
+            this.boxTeachID.TabIndex = 4;
+            // 
+            // lblTeachID
+            // 
+            this.lblTeachID.AutoSize = true;
+            this.lblTeachID.Location = new System.Drawing.Point(406, 196);
+            this.lblTeachID.Name = "lblTeachID";
+            this.lblTeachID.Size = new System.Drawing.Size(58, 25);
+            this.lblTeachID.TabIndex = 8;
+            this.lblTeachID.Text = "کد ملی";
+            // 
+            // boxTeachFathName
+            // 
+            this.boxTeachFathName.Location = new System.Drawing.Point(39, 140);
+            this.boxTeachFathName.Name = "boxTeachFathName";
+            this.boxTeachFathName.Size = new System.Drawing.Size(304, 32);
+            this.boxTeachFathName.TabIndex = 3;
+            // 
+            // lblTeachFatherName
+            // 
+            this.lblTeachFatherName.AutoSize = true;
+            this.lblTeachFatherName.Location = new System.Drawing.Point(409, 143);
+            this.lblTeachFatherName.Name = "lblTeachFatherName";
+            this.lblTeachFatherName.Size = new System.Drawing.Size(55, 25);
+            this.lblTeachFatherName.TabIndex = 6;
+            this.lblTeachFatherName.Text = "نام پدر";
+            // 
+            // lblTeachLname
+            // 
+            this.lblTeachLname.AutoSize = true;
+            this.lblTeachLname.Location = new System.Drawing.Point(372, 91);
+            this.lblTeachLname.Name = "lblTeachLname";
+            this.lblTeachLname.Size = new System.Drawing.Size(92, 25);
+            this.lblTeachLname.TabIndex = 5;
+            this.lblTeachLname.Text = "نام خانوادگی";
+            // 
+            // boxTeachLname
+            // 
+            this.boxTeachLname.Location = new System.Drawing.Point(39, 88);
+            this.boxTeachLname.Name = "boxTeachLname";
+            this.boxTeachLname.Size = new System.Drawing.Size(304, 32);
+            this.boxTeachLname.TabIndex = 2;
+            // 
+            // boxTeachName
+            // 
+            this.boxTeachName.Location = new System.Drawing.Point(39, 36);
+            this.boxTeachName.Name = "boxTeachName";
+            this.boxTeachName.Size = new System.Drawing.Size(304, 32);
+            this.boxTeachName.TabIndex = 1;
+            // 
+            // lblTeachName
+            // 
+            this.lblTeachName.AutoSize = true;
+            this.lblTeachName.Location = new System.Drawing.Point(433, 39);
+            this.lblTeachName.Name = "lblTeachName";
+            this.lblTeachName.Size = new System.Drawing.Size(31, 25);
+            this.lblTeachName.TabIndex = 2;
+            this.lblTeachName.Text = "نام";
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(245, 420);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(98, 39);
+            this.btnClear.TabIndex = 9;
+            this.btnClear.Text = "پاکسازی";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(39, 420);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(97, 39);
+            this.btnSubmit.TabIndex = 8;
+            this.btnSubmit.Text = "ثبت";
+            this.btnSubmit.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -258,31 +258,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "حذف استاد";
             // 
-            // BoxTeachIDdel
+            // btnTeachDel
             // 
-            this.BoxTeachIDdel.Location = new System.Drawing.Point(129, 50);
-            this.BoxTeachIDdel.Name = "BoxTeachIDdel";
-            this.BoxTeachIDdel.Size = new System.Drawing.Size(247, 32);
-            this.BoxTeachIDdel.TabIndex = 16;
-            // 
-            // lblTeachIDdel
-            // 
-            this.lblTeachIDdel.AutoSize = true;
-            this.lblTeachIDdel.Location = new System.Drawing.Point(397, 53);
-            this.lblTeachIDdel.Name = "lblTeachIDdel";
-            this.lblTeachIDdel.Size = new System.Drawing.Size(58, 25);
-            this.lblTeachIDdel.TabIndex = 16;
-            this.lblTeachIDdel.Text = "کد ملی";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(98, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(357, 25);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "راهنما : کد ملی استاد را وارد کرده و دکمه حذف را بزنید ";
+            this.btnTeachDel.Location = new System.Drawing.Point(22, 50);
+            this.btnTeachDel.Name = "btnTeachDel";
+            this.btnTeachDel.Size = new System.Drawing.Size(101, 32);
+            this.btnTeachDel.TabIndex = 20;
+            this.btnTeachDel.Text = "حذف";
+            this.btnTeachDel.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -294,14 +277,31 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "نکته : این عملیات قابل بازگشت نیست ";
             // 
-            // btnTeachDel
+            // label2
             // 
-            this.btnTeachDel.Location = new System.Drawing.Point(22, 50);
-            this.btnTeachDel.Name = "btnTeachDel";
-            this.btnTeachDel.Size = new System.Drawing.Size(101, 32);
-            this.btnTeachDel.TabIndex = 16;
-            this.btnTeachDel.Text = "حذف";
-            this.btnTeachDel.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(98, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(357, 25);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "راهنما : کد ملی استاد را وارد کرده و دکمه حذف را بزنید ";
+            // 
+            // lblTeachIDdel
+            // 
+            this.lblTeachIDdel.AutoSize = true;
+            this.lblTeachIDdel.Location = new System.Drawing.Point(397, 53);
+            this.lblTeachIDdel.Name = "lblTeachIDdel";
+            this.lblTeachIDdel.Size = new System.Drawing.Size(58, 25);
+            this.lblTeachIDdel.TabIndex = 16;
+            this.lblTeachIDdel.Text = "کد ملی";
+            // 
+            // BoxTeachIDdel
+            // 
+            this.BoxTeachIDdel.Location = new System.Drawing.Point(129, 50);
+            this.BoxTeachIDdel.Name = "BoxTeachIDdel";
+            this.BoxTeachIDdel.Size = new System.Drawing.Size(247, 32);
+            this.BoxTeachIDdel.TabIndex = 19;
             // 
             // btnExcelOutput
             // 
@@ -339,69 +339,55 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "حذف استاد";
             // 
-            // lblTeachIdUpdate
+            // btnCallInfo
             // 
-            this.lblTeachIdUpdate.AutoSize = true;
-            this.lblTeachIdUpdate.Location = new System.Drawing.Point(614, 42);
-            this.lblTeachIdUpdate.Name = "lblTeachIdUpdate";
-            this.lblTeachIdUpdate.Size = new System.Drawing.Size(58, 25);
-            this.lblTeachIdUpdate.TabIndex = 19;
-            this.lblTeachIdUpdate.Text = "کد ملی";
+            this.btnCallInfo.Location = new System.Drawing.Point(238, 200);
+            this.btnCallInfo.Name = "btnCallInfo";
+            this.btnCallInfo.Size = new System.Drawing.Size(101, 32);
+            this.btnCallInfo.TabIndex = 11;
+            this.btnCallInfo.Text = "فراخوانی";
+            this.btnCallInfo.UseVisualStyleBackColor = true;
             // 
-            // boxTeachIDUpdate
+            // btnUpdate
             // 
-            this.boxTeachIDUpdate.Location = new System.Drawing.Point(412, 39);
-            this.boxTeachIDUpdate.Name = "boxTeachIDUpdate";
-            this.boxTeachIDUpdate.Size = new System.Drawing.Size(196, 32);
-            this.boxTeachIDUpdate.TabIndex = 20;
+            this.btnUpdate.Location = new System.Drawing.Point(126, 200);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(101, 32);
+            this.btnUpdate.TabIndex = 18;
+            this.btnUpdate.Text = "ویرایش";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // lblTeachFathNameUpdate
+            // textBox1
             // 
-            this.lblTeachFathNameUpdate.AutoSize = true;
-            this.lblTeachFathNameUpdate.Location = new System.Drawing.Point(617, 91);
-            this.lblTeachFathNameUpdate.Name = "lblTeachFathNameUpdate";
-            this.lblTeachFathNameUpdate.Size = new System.Drawing.Size(55, 25);
-            this.lblTeachFathNameUpdate.TabIndex = 21;
-            this.lblTeachFathNameUpdate.Text = "نام پدر";
+            this.textBox1.Location = new System.Drawing.Point(21, 142);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(206, 32);
+            this.textBox1.TabIndex = 16;
             // 
-            // boxFathUpdate
+            // label1
             // 
-            this.boxFathUpdate.Location = new System.Drawing.Point(412, 88);
-            this.boxFathUpdate.Name = "boxFathUpdate";
-            this.boxFathUpdate.Size = new System.Drawing.Size(196, 32);
-            this.boxFathUpdate.TabIndex = 22;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(238, 142);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 25);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "مدرک تحصیلی";
             // 
-            // lblNameUpdate
+            // lblAddressUpdate
             // 
-            this.lblNameUpdate.AutoSize = true;
-            this.lblNameUpdate.Location = new System.Drawing.Point(641, 139);
-            this.lblNameUpdate.Name = "lblNameUpdate";
-            this.lblNameUpdate.Size = new System.Drawing.Size(31, 25);
-            this.lblNameUpdate.TabIndex = 23;
-            this.lblNameUpdate.Text = "نام";
+            this.lblAddressUpdate.AutoSize = true;
+            this.lblAddressUpdate.Location = new System.Drawing.Point(622, 188);
+            this.lblAddressUpdate.Name = "lblAddressUpdate";
+            this.lblAddressUpdate.Size = new System.Drawing.Size(50, 25);
+            this.lblAddressUpdate.TabIndex = 30;
+            this.lblAddressUpdate.Text = "آدرس";
             // 
-            // boxNameUpdate
+            // boxPhoneUpdate
             // 
-            this.boxNameUpdate.Location = new System.Drawing.Point(412, 136);
-            this.boxNameUpdate.Name = "boxNameUpdate";
-            this.boxNameUpdate.Size = new System.Drawing.Size(196, 32);
-            this.boxNameUpdate.TabIndex = 24;
-            // 
-            // lblFnameUpdate
-            // 
-            this.lblFnameUpdate.AutoSize = true;
-            this.lblFnameUpdate.Location = new System.Drawing.Point(252, 42);
-            this.lblFnameUpdate.Name = "lblFnameUpdate";
-            this.lblFnameUpdate.Size = new System.Drawing.Size(92, 25);
-            this.lblFnameUpdate.TabIndex = 25;
-            this.lblFnameUpdate.Text = "نام خانوادگی";
-            // 
-            // boxFnameUpdate
-            // 
-            this.boxFnameUpdate.Location = new System.Drawing.Point(21, 39);
-            this.boxFnameUpdate.Name = "boxFnameUpdate";
-            this.boxFnameUpdate.Size = new System.Drawing.Size(206, 32);
-            this.boxFnameUpdate.TabIndex = 26;
+            this.boxPhoneUpdate.Location = new System.Drawing.Point(21, 90);
+            this.boxPhoneUpdate.Name = "boxPhoneUpdate";
+            this.boxPhoneUpdate.Size = new System.Drawing.Size(206, 32);
+            this.boxPhoneUpdate.TabIndex = 14;
             // 
             // lblPhoneUpdate
             // 
@@ -417,57 +403,71 @@
             this.boxAddressUpdate.Location = new System.Drawing.Point(412, 185);
             this.boxAddressUpdate.Name = "boxAddressUpdate";
             this.boxAddressUpdate.Size = new System.Drawing.Size(196, 32);
-            this.boxAddressUpdate.TabIndex = 28;
+            this.boxAddressUpdate.TabIndex = 17;
             // 
-            // boxPhoneUpdate
+            // lblFnameUpdate
             // 
-            this.boxPhoneUpdate.Location = new System.Drawing.Point(21, 90);
-            this.boxPhoneUpdate.Name = "boxPhoneUpdate";
-            this.boxPhoneUpdate.Size = new System.Drawing.Size(206, 32);
-            this.boxPhoneUpdate.TabIndex = 29;
+            this.lblFnameUpdate.AutoSize = true;
+            this.lblFnameUpdate.Location = new System.Drawing.Point(252, 42);
+            this.lblFnameUpdate.Name = "lblFnameUpdate";
+            this.lblFnameUpdate.Size = new System.Drawing.Size(92, 25);
+            this.lblFnameUpdate.TabIndex = 25;
+            this.lblFnameUpdate.Text = "نام خانوادگی";
             // 
-            // lblAddressUpdate
+            // boxFnameUpdate
             // 
-            this.lblAddressUpdate.AutoSize = true;
-            this.lblAddressUpdate.Location = new System.Drawing.Point(622, 188);
-            this.lblAddressUpdate.Name = "lblAddressUpdate";
-            this.lblAddressUpdate.Size = new System.Drawing.Size(50, 25);
-            this.lblAddressUpdate.TabIndex = 30;
-            this.lblAddressUpdate.Text = "آدرس";
+            this.boxFnameUpdate.Location = new System.Drawing.Point(21, 39);
+            this.boxFnameUpdate.Name = "boxFnameUpdate";
+            this.boxFnameUpdate.Size = new System.Drawing.Size(206, 32);
+            this.boxFnameUpdate.TabIndex = 12;
             // 
-            // textBox1
+            // lblNameUpdate
             // 
-            this.textBox1.Location = new System.Drawing.Point(21, 142);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 32);
-            this.textBox1.TabIndex = 32;
+            this.lblNameUpdate.AutoSize = true;
+            this.lblNameUpdate.Location = new System.Drawing.Point(641, 139);
+            this.lblNameUpdate.Name = "lblNameUpdate";
+            this.lblNameUpdate.Size = new System.Drawing.Size(31, 25);
+            this.lblNameUpdate.TabIndex = 23;
+            this.lblNameUpdate.Text = "نام";
             // 
-            // label1
+            // boxNameUpdate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(238, 142);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 25);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "مدرک تحصیلی";
+            this.boxNameUpdate.Location = new System.Drawing.Point(412, 136);
+            this.boxNameUpdate.Name = "boxNameUpdate";
+            this.boxNameUpdate.Size = new System.Drawing.Size(196, 32);
+            this.boxNameUpdate.TabIndex = 15;
             // 
-            // btnUpdate
+            // lblTeachFathNameUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(126, 200);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(101, 32);
-            this.btnUpdate.TabIndex = 19;
-            this.btnUpdate.Text = "ویرایش";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.lblTeachFathNameUpdate.AutoSize = true;
+            this.lblTeachFathNameUpdate.Location = new System.Drawing.Point(617, 91);
+            this.lblTeachFathNameUpdate.Name = "lblTeachFathNameUpdate";
+            this.lblTeachFathNameUpdate.Size = new System.Drawing.Size(55, 25);
+            this.lblTeachFathNameUpdate.TabIndex = 21;
+            this.lblTeachFathNameUpdate.Text = "نام پدر";
             // 
-            // btnCallInfo
+            // boxFathUpdate
             // 
-            this.btnCallInfo.Location = new System.Drawing.Point(238, 200);
-            this.btnCallInfo.Name = "btnCallInfo";
-            this.btnCallInfo.Size = new System.Drawing.Size(101, 32);
-            this.btnCallInfo.TabIndex = 33;
-            this.btnCallInfo.Text = "فراخوانی";
-            this.btnCallInfo.UseVisualStyleBackColor = true;
+            this.boxFathUpdate.Location = new System.Drawing.Point(412, 88);
+            this.boxFathUpdate.Name = "boxFathUpdate";
+            this.boxFathUpdate.Size = new System.Drawing.Size(196, 32);
+            this.boxFathUpdate.TabIndex = 13;
+            // 
+            // lblTeachIdUpdate
+            // 
+            this.lblTeachIdUpdate.AutoSize = true;
+            this.lblTeachIdUpdate.Location = new System.Drawing.Point(614, 42);
+            this.lblTeachIdUpdate.Name = "lblTeachIdUpdate";
+            this.lblTeachIdUpdate.Size = new System.Drawing.Size(58, 25);
+            this.lblTeachIdUpdate.TabIndex = 19;
+            this.lblTeachIdUpdate.Text = "کد ملی";
+            // 
+            // boxTeachIDUpdate
+            // 
+            this.boxTeachIDUpdate.Location = new System.Drawing.Point(412, 39);
+            this.boxTeachIDUpdate.Name = "boxTeachIDUpdate";
+            this.boxTeachIDUpdate.Size = new System.Drawing.Size(196, 32);
+            this.boxTeachIDUpdate.TabIndex = 10;
             // 
             // teachersManageForm
             // 
