@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +64,7 @@
             this.btnDeleteRecord = new System.Windows.Forms.Button();
             this.delInfo1 = new System.Windows.Forms.Label();
             this.lblDe = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.delBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.boxHphoneUpdate = new System.Windows.Forms.TextBox();
@@ -100,14 +100,14 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.firstName,
@@ -118,14 +118,14 @@
             this.homePhone,
             this.parentPhone,
             this.homeAddress});
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(16, 28);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
@@ -227,7 +227,7 @@
             this.lblhPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblhPhone.Name = "lblhPhone";
             this.lblhPhone.Size = new System.Drawing.Size(195, 36);
-            this.lblhPhone.TabIndex = 23;
+            this.lblhPhone.TabIndex = 14;
             this.lblhPhone.Text = "تلفن ثابت";
             // 
             // boxHphone
@@ -236,7 +236,7 @@
             this.boxHphone.Margin = new System.Windows.Forms.Padding(4);
             this.boxHphone.Name = "boxHphone";
             this.boxHphone.Size = new System.Drawing.Size(425, 32);
-            this.boxHphone.TabIndex = 22;
+            this.boxHphone.TabIndex = 15;
             // 
             // lblPhone
             // 
@@ -244,7 +244,7 @@
             this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(195, 36);
-            this.lblPhone.TabIndex = 21;
+            this.lblPhone.TabIndex = 12;
             this.lblPhone.Text = "تلفن همراه";
             // 
             // boxPhone
@@ -253,7 +253,7 @@
             this.boxPhone.Margin = new System.Windows.Forms.Padding(4);
             this.boxPhone.Name = "boxPhone";
             this.boxPhone.Size = new System.Drawing.Size(425, 32);
-            this.boxPhone.TabIndex = 20;
+            this.boxPhone.TabIndex = 13;
             // 
             // lblParentPhone
             // 
@@ -261,7 +261,7 @@
             this.lblParentPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblParentPhone.Name = "lblParentPhone";
             this.lblParentPhone.Size = new System.Drawing.Size(195, 36);
-            this.lblParentPhone.TabIndex = 19;
+            this.lblParentPhone.TabIndex = 8;
             this.lblParentPhone.Text = "تلفن والدین";
             // 
             // IDbox
@@ -270,7 +270,7 @@
             this.IDbox.Margin = new System.Windows.Forms.Padding(4);
             this.IDbox.Name = "IDbox";
             this.IDbox.Size = new System.Drawing.Size(425, 32);
-            this.IDbox.TabIndex = 16;
+            this.IDbox.TabIndex = 11;
             // 
             // lblID
             // 
@@ -278,7 +278,7 @@
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(195, 36);
-            this.lblID.TabIndex = 15;
+            this.lblID.TabIndex = 10;
             this.lblID.Text = "کد ملی";
             // 
             // boxParentPhone
@@ -287,7 +287,7 @@
             this.boxParentPhone.Margin = new System.Windows.Forms.Padding(4);
             this.boxParentPhone.Name = "boxParentPhone";
             this.boxParentPhone.Size = new System.Drawing.Size(425, 32);
-            this.boxParentPhone.TabIndex = 14;
+            this.boxParentPhone.TabIndex = 9;
             // 
             // btnClear
             // 
@@ -295,7 +295,7 @@
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(123, 44);
-            this.btnClear.TabIndex = 11;
+            this.btnClear.TabIndex = 17;
             this.btnClear.Text = "پاکسازی";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -306,7 +306,7 @@
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(123, 44);
-            this.btnSubmit.TabIndex = 2;
+            this.btnSubmit.TabIndex = 16;
             this.btnSubmit.Text = "ثبت";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -317,7 +317,7 @@
             this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(195, 36);
-            this.lblAddress.TabIndex = 7;
+            this.lblAddress.TabIndex = 6;
             this.lblAddress.Text = "آدرس محل سکونت";
             // 
             // lblFather
@@ -326,7 +326,7 @@
             this.lblFather.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFather.Name = "lblFather";
             this.lblFather.Size = new System.Drawing.Size(175, 36);
-            this.lblFather.TabIndex = 6;
+            this.lblFather.TabIndex = 4;
             this.lblFather.Text = "نام پدر";
             // 
             // AddressBox
@@ -335,7 +335,7 @@
             this.AddressBox.Margin = new System.Windows.Forms.Padding(4);
             this.AddressBox.Name = "AddressBox";
             this.AddressBox.Size = new System.Drawing.Size(425, 32);
-            this.AddressBox.TabIndex = 5;
+            this.AddressBox.TabIndex = 7;
             // 
             // FatherBox
             // 
@@ -343,7 +343,7 @@
             this.FatherBox.Margin = new System.Windows.Forms.Padding(4);
             this.FatherBox.Name = "FatherBox";
             this.FatherBox.Size = new System.Drawing.Size(425, 32);
-            this.FatherBox.TabIndex = 4;
+            this.FatherBox.TabIndex = 5;
             // 
             // lblLaName
             // 
@@ -351,7 +351,7 @@
             this.lblLaName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLaName.Name = "lblLaName";
             this.lblLaName.Size = new System.Drawing.Size(139, 36);
-            this.lblLaName.TabIndex = 3;
+            this.lblLaName.TabIndex = 2;
             this.lblLaName.Text = "نام خانوادگی";
             // 
             // LnameBox
@@ -360,7 +360,7 @@
             this.LnameBox.Margin = new System.Windows.Forms.Padding(4);
             this.LnameBox.Name = "LnameBox";
             this.LnameBox.Size = new System.Drawing.Size(425, 32);
-            this.LnameBox.TabIndex = 2;
+            this.LnameBox.TabIndex = 3;
             // 
             // lblFname
             // 
@@ -368,7 +368,7 @@
             this.lblFname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFname.Name = "lblFname";
             this.lblFname.Size = new System.Drawing.Size(175, 36);
-            this.lblFname.TabIndex = 1;
+            this.lblFname.TabIndex = 0;
             this.lblFname.Text = "نام";
             // 
             // FnameBox
@@ -377,7 +377,7 @@
             this.FnameBox.Margin = new System.Windows.Forms.Padding(4);
             this.FnameBox.Name = "FnameBox";
             this.FnameBox.Size = new System.Drawing.Size(425, 32);
-            this.FnameBox.TabIndex = 0;
+            this.FnameBox.TabIndex = 1;
             this.FnameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // groupBox2
@@ -387,7 +387,7 @@
             this.groupBox2.Controls.Add(this.btnDeleteRecord);
             this.groupBox2.Controls.Add(this.delInfo1);
             this.groupBox2.Controls.Add(this.lblDe);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.delBox);
             this.groupBox2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.groupBox2.Location = new System.Drawing.Point(973, 704);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -431,9 +431,10 @@
             this.btnDeleteRecord.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteRecord.Name = "btnDeleteRecord";
             this.btnDeleteRecord.Size = new System.Drawing.Size(120, 39);
-            this.btnDeleteRecord.TabIndex = 18;
+            this.btnDeleteRecord.TabIndex = 1;
             this.btnDeleteRecord.Text = "حذف";
             this.btnDeleteRecord.UseVisualStyleBackColor = true;
+            this.btnDeleteRecord.Click += new System.EventHandler(this.btnDeleteRecord_Click);
             // 
             // delInfo1
             // 
@@ -456,13 +457,13 @@
             this.lblDe.TabIndex = 1;
             this.lblDe.Text = "کد ملی";
             // 
-            // textBox1
+            // delBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(169, 57);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(388, 32);
-            this.textBox1.TabIndex = 0;
+            this.delBox.Location = new System.Drawing.Point(169, 57);
+            this.delBox.Margin = new System.Windows.Forms.Padding(4);
+            this.delBox.Name = "delBox";
+            this.delBox.Size = new System.Drawing.Size(388, 32);
+            this.delBox.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -719,7 +720,7 @@
         private System.Windows.Forms.TextBox IDbox;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblDe;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox delBox;
         private System.Windows.Forms.Label delInfo1;
         private System.Windows.Forms.Label delInfo2;
         private System.Windows.Forms.Button btnDeleteRecord;

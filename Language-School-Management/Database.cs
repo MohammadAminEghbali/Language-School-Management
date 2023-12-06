@@ -29,12 +29,10 @@ namespace Language_School_Management
             string lastName,
             string fatherName,
             string nCode,
-            string birthDate,
             string phoneNumber,
             string homePhone,
             string parentPhone,
-            string homeAddress,
-            string signDate)
+            string homeAddress)
         {
             using (SQLiteCommand cmd = conn.CreateCommand())
             {
@@ -62,7 +60,7 @@ namespace Language_School_Management
                     cmd.Parameters.AddWithValue(parameter.Name, parameter.GetValue(parameters, null));
                 }*/
 
-                cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();                
             }
         }
 
@@ -77,6 +75,16 @@ namespace Language_School_Management
             }
         }
 
+        public static void delStudent(string nCode)
+        {
+            using (SQLiteCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "DELETE FROM students WHERE nCode=@nCode";
+                cmd.Parameters.AddWithValue("nCode", nCode);
+                cmd.ExecuteNonQuery();
+            }
+
+        }
         public static Dictionary<string, string> getStudent(string nCode)
         {
             using (SQLiteCommand cmd = conn.CreateCommand())

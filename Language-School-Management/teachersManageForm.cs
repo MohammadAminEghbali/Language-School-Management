@@ -84,8 +84,14 @@ namespace Language_School_Management
                 cells.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                 cells.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
-                worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
-                worksheet.Cells[worksheet.Dimension.Address].Style.Numberformat.Format = "@";
+                if (worksheet.Dimension != null)
+                {
+                    cells = worksheet.Cells[worksheet.Dimension.Address];
+
+                    cells.AutoFitColumns();
+                    cells.Style.Numberformat.Format = "@";
+
+                }
 
                 FileInfo output = new FileInfo(filePath);
                 package.SaveAs(output);

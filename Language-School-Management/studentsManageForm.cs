@@ -50,6 +50,7 @@ namespace Language_School_Management
 
         private void studentsManageForm_Load(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
 
             List<Dictionary<string, object>> students = Database.getStudents();
 
@@ -117,8 +118,15 @@ namespace Language_School_Management
                 cells.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                 cells.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
-                worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
-                worksheet.Cells[worksheet.Dimension.Address].Style.Numberformat.Format = "@";
+
+                if (worksheet.Dimension != null)
+                {
+                    cells = worksheet.Cells[worksheet.Dimension.Address];
+
+                    cells.AutoFitColumns();
+                    cells.Style.Numberformat.Format = "@";
+
+                }
 
                 FileInfo output = new FileInfo(filePath);
                 package.SaveAs(output);
@@ -127,8 +135,117 @@ namespace Language_School_Management
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            string fname = FnameBox.Text;
+            string lname = LnameBox.Text;
+            string fathername = FatherBox.Text;
+            string address = AddressBox.Text;
+            string parentphone = boxParentPhone.Text;
+            string nCode = IDbox.Text;
+            string phone = boxPhone.Text;
+            string homephone = boxHphone.Text;
+
+            if (fname == "")
+            {
+                MessageBox.Show("نام نمیتواند خالی باشد");
+                return;
+            }
+
+            if (lname == "")
+            {
+                MessageBox.Show("نام خانوادگی نمیتواند خالی باشد");
+                return;
+            }
+
+            if (fathername == "")
+            {
+                MessageBox.Show("نام پدر نمیتواند خالی باشد");
+                return;
+            }
+
+            if (address == "")
+            {
+                MessageBox.Show("ادرس نمیتواند خالی باشد");
+                return;
+            }
+
+            if (parentphone == "" || parentphone.Length < 11)
+            {
+                MessageBox.Show("شماره والدین نمیتواند خالی یا کمتر از 11 رقم باشد");
+                return;
+            }
+
+            if (nCode == "" || nCode.Length < 10)
+            {
+                MessageBox.Show("کد ملی نمیتواند خالی یا کمتر از 10 رقم باشد");
+                return;
+            }
+
+            if (phone == "" || phone.Length < 11)
+            {
+                MessageBox.Show("شماره تلفن همراه نمیتواند خالی یا کمتر از 11 رقم باشد");
+                return;
+            }
+
+            if (homephone == "" || homephone.Length < 11)
+            {
+                MessageBox.Show("شماره تماس خانه نمیتواند خالی یا کمتر از 11 رقم باشد");
+                return;
+            }
+
+            if (!Database.isStudentExists(nCode))
+            {
+                Database.AddStudent(fname, lname, fathername, nCode, phone, homephone, parentphone, address);
+
+                MessageBox.Show("زبان آموز با موفقیت اضافه شد");
+                studentsManageForm_Load(sender, e);
+                btnClear_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("زبان آموز با این کد ملی از قبل وجود دارد");
+            }
 
         }
 
+        private void btnDeleteRecord_Click(object sender, EventArgs e)
+        {
+            string nCode = delBox.Text;
+            if (nCode == "" || nCode.Length < 10)
+            {
+                MessageBox.Show("کد ملی نمیتواند خالی یا کمتر از 10 رقم باشد");
+                return;
+            }
+
+            if (Database.isStudentExists(nCode))
+            {
+                DialogResult result = MessageBox.Show(
+                    "شما درحال حذف کردن یک زبان آموز هستید\nآیا از انجام این کار مطمئن هستید؟",
+                    "عملیات غیر قابل بازگشت",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button2,
+                    MessageBoxOptions.RightAlign
+                    );
+
+                if (result == DialogResult.Yes)
+                {
+                    Database.delStudent(nCode);
+                    MessageBox.Show("زبان آموز باموفقیت حذف گردید");
+
+                    studentsManageForm_Load(sender, e);
+                    delBox.Text = string.Empty;
+
+                }
+                else
+                {
+                    MessageBox.Show("عملیات لغو شد");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("زبان آموز با این کد ملی وجود ندارد");
+            }
+        }
     }
 }
