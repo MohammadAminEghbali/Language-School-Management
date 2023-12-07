@@ -343,7 +343,7 @@ namespace Language_School_Management
 
             Database.updateStudent(nCode, fname, lname, fathername, phone, homephone, parentphone, address);
 
-            MessageBox.Show("اطلاعات زبان آموز با موفقیت ویراش شد");
+            MessageBox.Show("اطلاعات زبان آموز با موفقیت ویراش شد","عملیات موفق",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             boxIdUpdate.Text = "";
 
