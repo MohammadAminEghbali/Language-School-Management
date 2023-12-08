@@ -7,7 +7,8 @@ namespace Language_School_Management
         internal static SQLiteConnection conn;
     }
 
-    public class Database : Students
+
+    public class Database : BaseDB
     {
         public Database()
         {
@@ -21,7 +22,7 @@ namespace Language_School_Management
                         phoneNumber TEXT, homePhone TEXT, parentPhone TEXT, homeAddress TEXT
                     );
 
-                    CREATE TABLE IF NOT EXISTS students (
+                    CREATE TABLE IF NOT EXISTS teachers (
                         firstName TEXT, lastName TEXT, fatherName TEXT, nCode TEXT,
                         certificate TEXT, phoneNumber TEXT, homeAddress TEXT
                     );

@@ -5,33 +5,32 @@ namespace Language_School_Management
 {
     public class Teachers : BaseDB
     {
-        public static void AddStudent(
+        public static void AddTeacher(
             string firstName,
             string lastName,
             string fatherName,
             string nCode,
+            string certificate,
             string phoneNumber,
-            string homePhone,
-            string parentPhone,
             string homeAddress)
         {
             using (SQLiteCommand cmd = conn.CreateCommand())
             {
                 cmd.CommandText = @"
-            INSERT INTO students VALUES(
-                @firstName, @lastName, @fatherName, @nCode, @phoneNumber, @homePhone, @parentPhone, @homeAddress
-            );
-        ";
+                    INSERT INTO teachers VALUES(
+                        @firstName, @lastName, @fatherName, @nCode, @certificate, @phoneNumber, @homeAddress
+                    );
+                ";
 
                 cmd.Parameters.AddWithValue("firstName", firstName);
                 cmd.Parameters.AddWithValue("lastName", lastName);
                 cmd.Parameters.AddWithValue("fatherName", fatherName);
                 cmd.Parameters.AddWithValue("nCode", nCode);
-                /*cmd.Parameters.AddWithValue("birthDate", birthDate);*/
                 cmd.Parameters.AddWithValue("phoneNumber", phoneNumber);
-                cmd.Parameters.AddWithValue("homePhone", homePhone);
-                cmd.Parameters.AddWithValue("parentPhone", parentPhone);
+                cmd.Parameters.AddWithValue("certificate", certificate);
                 cmd.Parameters.AddWithValue("homeAddress", homeAddress);
+
+                /*cmd.Parameters.AddWithValue("birthDate", birthDate);*/
                 /*cmd.Parameters.AddWithValue("signDate", signDate);*/
 
                 /*var parameters = new { firstName, lastName, fatherName, birthDate, phoneNumber, homePhone, parentPhone, homeAddress };
@@ -45,32 +44,72 @@ namespace Language_School_Management
             }
         }
 
-        public static bool isStudentExists(string nCode)
+        public static void updateTeacher(
+            string nCode,
+            string firstName,
+            string lastName,
+            string fatherName,
+            string certificate,
+            string phoneNumber,
+            string homeAddress)
         {
             using (SQLiteCommand cmd = conn.CreateCommand())
             {
-                cmd.CommandText = "SELECT 1 FROM students WHERE nCode=@nCode";
+                cmd.CommandText = @"
+                    UPDATE teachers SET
+                    firstName=@firstName, lastName=@lastName, fatherName=@fatherName, 
+                    certificate=@certificate, phoneNumber=@phoneNumber, homeAddress=@homeAddress
+                    WHERE nCode=@nCode;
+                ";
+
+                cmd.Parameters.AddWithValue("firstName", firstName);
+                cmd.Parameters.AddWithValue("lastName", lastName);
+                cmd.Parameters.AddWithValue("fatherName", fatherName);
+                cmd.Parameters.AddWithValue("nCode", nCode);
+                cmd.Parameters.AddWithValue("phoneNumber", phoneNumber);
+                cmd.Parameters.AddWithValue("certificate", certificate);
+                cmd.Parameters.AddWithValue("homeAddress", homeAddress);
+
+                /*cmd.Parameters.AddWithValue("birthDate", birthDate);*/
+                /*cmd.Parameters.AddWithValue("signDate", signDate);*/
+
+                /*var parameters = new { firstName, lastName, fatherName, birthDate, phoneNumber, homePhone, parentPhone, homeAddress };
+
+                foreach (PropertyInfo parameter in parameters.GetType().GetProperties())
+                {
+                    cmd.Parameters.AddWithValue(parameter.Name, parameter.GetValue(parameters, null));
+                }*/
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public static bool isTeacherExists(string nCode)
+        {
+            using (SQLiteCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT 1 FROM teachers WHERE nCode=@nCode";
                 cmd.Parameters.AddWithValue("nCode", nCode);
 
                 return cmd.ExecuteScalar() != null ? true : false;
             }
         }
 
-        public static void delStudent(string nCode)
+        public static void delTeacher(string nCode)
         {
             using (SQLiteCommand cmd = conn.CreateCommand())
             {
-                cmd.CommandText = "DELETE FROM students WHERE nCode=@nCode";
+                cmd.CommandText = "DELETE FROM teachers WHERE nCode=@nCode";
                 cmd.Parameters.AddWithValue("nCode", nCode);
                 cmd.ExecuteNonQuery();
             }
 
         }
-        public static Dictionary<string, string> getStudent(string nCode)
+        public static Dictionary<string, string> getTeacher(string nCode)
         {
             using (SQLiteCommand cmd = conn.CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM students WHERE nCode=@nCode";
+                cmd.CommandText = "SELECT * FROM teachers WHERE nCode=@nCode";
                 cmd.Parameters.AddWithValue("nCode", nCode);
 
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
@@ -92,13 +131,13 @@ namespace Language_School_Management
             }
         }
 
-        public static List<Dictionary<string, object>> getStudents()
+        public static List<Dictionary<string, object>> getTeachers()
         {
             using (SQLiteCommand cmd = conn.CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM students";
+                cmd.CommandText = "SELECT * FROM teachers";
 
-                List<Dictionary<string, object>> students = new List<Dictionary<string, object>>();
+                List<Dictionary<string, object>> teachers = new List<Dictionary<string, object>>();
 
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
                 {
@@ -112,13 +151,13 @@ namespace Language_School_Management
                             output.Add(reader.GetName(i), reader[i]);
                         }
 
-                        students.Add(output);
+                        teachers.Add(output);
 
                     }
 
                 }
 
-                return students;
+                return teachers;
             }
         }
     }

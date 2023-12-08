@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.TeachersdataGridView = new System.Windows.Forms.DataGridView();
+            this.fname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fathername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ncode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cert = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblTeachAddress = new System.Windows.Forms.Label();
             this.boxTeachAddress = new System.Windows.Forms.TextBox();
@@ -56,14 +63,14 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnCallInfo = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.boxCertificate = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblAddressUpdate = new System.Windows.Forms.Label();
             this.boxPhoneUpdate = new System.Windows.Forms.TextBox();
             this.lblPhoneUpdate = new System.Windows.Forms.Label();
             this.boxAddressUpdate = new System.Windows.Forms.TextBox();
             this.lblFnameUpdate = new System.Windows.Forms.Label();
-            this.boxFnameUpdate = new System.Windows.Forms.TextBox();
+            this.boxLnameUpdate = new System.Windows.Forms.TextBox();
             this.lblNameUpdate = new System.Windows.Forms.Label();
             this.boxNameUpdate = new System.Windows.Forms.TextBox();
             this.lblTeachFathNameUpdate = new System.Windows.Forms.Label();
@@ -79,12 +86,75 @@
             // 
             // TeachersdataGridView
             // 
+            this.TeachersdataGridView.AllowUserToAddRows = false;
+            this.TeachersdataGridView.AllowUserToDeleteRows = false;
+            this.TeachersdataGridView.AllowUserToOrderColumns = true;
+            this.TeachersdataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.TeachersdataGridView.BackgroundColor = System.Drawing.Color.White;
             this.TeachersdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TeachersdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fname,
+            this.lname,
+            this.fathername,
+            this.ncode,
+            this.cert,
+            this.phone,
+            this.address});
             this.TeachersdataGridView.Location = new System.Drawing.Point(12, 12);
             this.TeachersdataGridView.Name = "TeachersdataGridView";
-            this.TeachersdataGridView.Size = new System.Drawing.Size(689, 419);
+            this.TeachersdataGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TeachersdataGridView.RowHeadersWidth = 51;
+            this.TeachersdataGridView.Size = new System.Drawing.Size(689, 436);
             this.TeachersdataGridView.TabIndex = 0;
+            // 
+            // fname
+            // 
+            this.fname.HeaderText = "نام";
+            this.fname.MinimumWidth = 6;
+            this.fname.Name = "fname";
+            this.fname.Width = 56;
+            // 
+            // lname
+            // 
+            this.lname.HeaderText = "نام خانوادگی";
+            this.lname.MinimumWidth = 6;
+            this.lname.Name = "lname";
+            this.lname.Width = 117;
+            // 
+            // fathername
+            // 
+            this.fathername.HeaderText = "نام پدر";
+            this.fathername.MinimumWidth = 6;
+            this.fathername.Name = "fathername";
+            this.fathername.Width = 80;
+            // 
+            // ncode
+            // 
+            this.ncode.HeaderText = "کد ملی";
+            this.ncode.MinimumWidth = 6;
+            this.ncode.Name = "ncode";
+            this.ncode.Width = 83;
+            // 
+            // cert
+            // 
+            this.cert.HeaderText = "مدرک تحصیلی";
+            this.cert.MinimumWidth = 6;
+            this.cert.Name = "cert";
+            this.cert.Width = 131;
+            // 
+            // phone
+            // 
+            this.phone.HeaderText = "شماره تلفن";
+            this.phone.MinimumWidth = 6;
+            this.phone.Name = "phone";
+            this.phone.Width = 111;
+            // 
+            // address
+            // 
+            this.address.HeaderText = "آدرس";
+            this.address.MinimumWidth = 6;
+            this.address.Name = "address";
+            this.address.Width = 75;
             // 
             // groupBox1
             // 
@@ -242,6 +312,7 @@
             this.btnSubmit.TabIndex = 8;
             this.btnSubmit.Text = "ثبت";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // groupBox2
             // 
@@ -266,6 +337,7 @@
             this.btnTeachDel.TabIndex = 20;
             this.btnTeachDel.Text = "حذف";
             this.btnTeachDel.UseVisualStyleBackColor = true;
+            this.btnTeachDel.Click += new System.EventHandler(this.btnTeachDel_Click);
             // 
             // label3
             // 
@@ -305,7 +377,7 @@
             // 
             // btnExcelOutput
             // 
-            this.btnExcelOutput.Location = new System.Drawing.Point(12, 437);
+            this.btnExcelOutput.Location = new System.Drawing.Point(12, 454);
             this.btnExcelOutput.Name = "btnExcelOutput";
             this.btnExcelOutput.Size = new System.Drawing.Size(107, 35);
             this.btnExcelOutput.TabIndex = 16;
@@ -317,57 +389,61 @@
             // 
             this.groupBox3.Controls.Add(this.btnCallInfo);
             this.groupBox3.Controls.Add(this.btnUpdate);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.boxCertificate);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.lblAddressUpdate);
             this.groupBox3.Controls.Add(this.boxPhoneUpdate);
             this.groupBox3.Controls.Add(this.lblPhoneUpdate);
             this.groupBox3.Controls.Add(this.boxAddressUpdate);
             this.groupBox3.Controls.Add(this.lblFnameUpdate);
-            this.groupBox3.Controls.Add(this.boxFnameUpdate);
+            this.groupBox3.Controls.Add(this.boxLnameUpdate);
             this.groupBox3.Controls.Add(this.lblNameUpdate);
             this.groupBox3.Controls.Add(this.boxNameUpdate);
             this.groupBox3.Controls.Add(this.lblTeachFathNameUpdate);
             this.groupBox3.Controls.Add(this.boxFathUpdate);
             this.groupBox3.Controls.Add(this.lblTeachIdUpdate);
             this.groupBox3.Controls.Add(this.boxTeachIDUpdate);
-            this.groupBox3.Location = new System.Drawing.Point(13, 478);
+            this.groupBox3.Location = new System.Drawing.Point(12, 489);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox3.Size = new System.Drawing.Size(688, 250);
+            this.groupBox3.Size = new System.Drawing.Size(688, 280);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "حذف استاد";
             // 
             // btnCallInfo
             // 
-            this.btnCallInfo.Location = new System.Drawing.Point(238, 200);
+            this.btnCallInfo.Location = new System.Drawing.Point(133, 224);
             this.btnCallInfo.Name = "btnCallInfo";
             this.btnCallInfo.Size = new System.Drawing.Size(101, 32);
             this.btnCallInfo.TabIndex = 11;
             this.btnCallInfo.Text = "فراخوانی";
             this.btnCallInfo.UseVisualStyleBackColor = true;
+            this.btnCallInfo.Click += new System.EventHandler(this.btnCallInfo_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(126, 200);
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.Location = new System.Drawing.Point(21, 224);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(101, 32);
             this.btnUpdate.TabIndex = 18;
             this.btnUpdate.Text = "ویرایش";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // textBox1
+            // boxCertificate
             // 
-            this.textBox1.Location = new System.Drawing.Point(21, 142);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 32);
-            this.textBox1.TabIndex = 16;
+            this.boxCertificate.Enabled = false;
+            this.boxCertificate.Location = new System.Drawing.Point(21, 172);
+            this.boxCertificate.Name = "boxCertificate";
+            this.boxCertificate.Size = new System.Drawing.Size(206, 32);
+            this.boxCertificate.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(238, 142);
+            this.label1.Location = new System.Drawing.Point(238, 172);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 25);
             this.label1.TabIndex = 31;
@@ -376,7 +452,7 @@
             // lblAddressUpdate
             // 
             this.lblAddressUpdate.AutoSize = true;
-            this.lblAddressUpdate.Location = new System.Drawing.Point(622, 188);
+            this.lblAddressUpdate.Location = new System.Drawing.Point(622, 175);
             this.lblAddressUpdate.Name = "lblAddressUpdate";
             this.lblAddressUpdate.Size = new System.Drawing.Size(50, 25);
             this.lblAddressUpdate.TabIndex = 30;
@@ -384,7 +460,8 @@
             // 
             // boxPhoneUpdate
             // 
-            this.boxPhoneUpdate.Location = new System.Drawing.Point(21, 90);
+            this.boxPhoneUpdate.Enabled = false;
+            this.boxPhoneUpdate.Location = new System.Drawing.Point(21, 131);
             this.boxPhoneUpdate.Name = "boxPhoneUpdate";
             this.boxPhoneUpdate.Size = new System.Drawing.Size(206, 32);
             this.boxPhoneUpdate.TabIndex = 14;
@@ -392,7 +469,7 @@
             // lblPhoneUpdate
             // 
             this.lblPhoneUpdate.AutoSize = true;
-            this.lblPhoneUpdate.Location = new System.Drawing.Point(259, 93);
+            this.lblPhoneUpdate.Location = new System.Drawing.Point(259, 134);
             this.lblPhoneUpdate.Name = "lblPhoneUpdate";
             this.lblPhoneUpdate.Size = new System.Drawing.Size(85, 25);
             this.lblPhoneUpdate.TabIndex = 27;
@@ -400,7 +477,8 @@
             // 
             // boxAddressUpdate
             // 
-            this.boxAddressUpdate.Location = new System.Drawing.Point(412, 185);
+            this.boxAddressUpdate.Enabled = false;
+            this.boxAddressUpdate.Location = new System.Drawing.Point(412, 172);
             this.boxAddressUpdate.Name = "boxAddressUpdate";
             this.boxAddressUpdate.Size = new System.Drawing.Size(196, 32);
             this.boxAddressUpdate.TabIndex = 17;
@@ -408,23 +486,24 @@
             // lblFnameUpdate
             // 
             this.lblFnameUpdate.AutoSize = true;
-            this.lblFnameUpdate.Location = new System.Drawing.Point(252, 42);
+            this.lblFnameUpdate.Location = new System.Drawing.Point(252, 94);
             this.lblFnameUpdate.Name = "lblFnameUpdate";
             this.lblFnameUpdate.Size = new System.Drawing.Size(92, 25);
             this.lblFnameUpdate.TabIndex = 25;
             this.lblFnameUpdate.Text = "نام خانوادگی";
             // 
-            // boxFnameUpdate
+            // boxLnameUpdate
             // 
-            this.boxFnameUpdate.Location = new System.Drawing.Point(21, 39);
-            this.boxFnameUpdate.Name = "boxFnameUpdate";
-            this.boxFnameUpdate.Size = new System.Drawing.Size(206, 32);
-            this.boxFnameUpdate.TabIndex = 12;
+            this.boxLnameUpdate.Enabled = false;
+            this.boxLnameUpdate.Location = new System.Drawing.Point(21, 91);
+            this.boxLnameUpdate.Name = "boxLnameUpdate";
+            this.boxLnameUpdate.Size = new System.Drawing.Size(206, 32);
+            this.boxLnameUpdate.TabIndex = 12;
             // 
             // lblNameUpdate
             // 
             this.lblNameUpdate.AutoSize = true;
-            this.lblNameUpdate.Location = new System.Drawing.Point(641, 139);
+            this.lblNameUpdate.Location = new System.Drawing.Point(641, 94);
             this.lblNameUpdate.Name = "lblNameUpdate";
             this.lblNameUpdate.Size = new System.Drawing.Size(31, 25);
             this.lblNameUpdate.TabIndex = 23;
@@ -432,7 +511,8 @@
             // 
             // boxNameUpdate
             // 
-            this.boxNameUpdate.Location = new System.Drawing.Point(412, 136);
+            this.boxNameUpdate.Enabled = false;
+            this.boxNameUpdate.Location = new System.Drawing.Point(412, 91);
             this.boxNameUpdate.Name = "boxNameUpdate";
             this.boxNameUpdate.Size = new System.Drawing.Size(196, 32);
             this.boxNameUpdate.TabIndex = 15;
@@ -440,7 +520,7 @@
             // lblTeachFathNameUpdate
             // 
             this.lblTeachFathNameUpdate.AutoSize = true;
-            this.lblTeachFathNameUpdate.Location = new System.Drawing.Point(617, 91);
+            this.lblTeachFathNameUpdate.Location = new System.Drawing.Point(617, 134);
             this.lblTeachFathNameUpdate.Name = "lblTeachFathNameUpdate";
             this.lblTeachFathNameUpdate.Size = new System.Drawing.Size(55, 25);
             this.lblTeachFathNameUpdate.TabIndex = 21;
@@ -448,7 +528,8 @@
             // 
             // boxFathUpdate
             // 
-            this.boxFathUpdate.Location = new System.Drawing.Point(412, 88);
+            this.boxFathUpdate.Enabled = false;
+            this.boxFathUpdate.Location = new System.Drawing.Point(412, 131);
             this.boxFathUpdate.Name = "boxFathUpdate";
             this.boxFathUpdate.Size = new System.Drawing.Size(196, 32);
             this.boxFathUpdate.TabIndex = 13;
@@ -474,7 +555,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1204, 740);
+            this.ClientSize = new System.Drawing.Size(1204, 785);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnExcelOutput);
             this.Controls.Add(this.groupBox2);
@@ -485,6 +566,7 @@
             this.Name = "teachersManageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "مدیریت اساتید";
+            this.Load += new System.EventHandler(this.teachersManageForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TeachersdataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -531,15 +613,22 @@
         private System.Windows.Forms.Label lblNameUpdate;
         private System.Windows.Forms.TextBox boxNameUpdate;
         private System.Windows.Forms.Label lblFnameUpdate;
-        private System.Windows.Forms.TextBox boxFnameUpdate;
+        private System.Windows.Forms.TextBox boxLnameUpdate;
         private System.Windows.Forms.Label lblPhoneUpdate;
         private System.Windows.Forms.TextBox boxAddressUpdate;
         private System.Windows.Forms.Label lblAddressUpdate;
         private System.Windows.Forms.TextBox boxPhoneUpdate;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox boxCertificate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnCallInfo;
         private System.Windows.Forms.SaveFileDialog ExcelSaveDialog2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fathername;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ncode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cert;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
     }
 }

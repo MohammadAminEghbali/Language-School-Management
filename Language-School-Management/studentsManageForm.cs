@@ -14,8 +14,7 @@ namespace Language_School_Management
         {
             InitializeComponent();
         }
-        bool isCorrect;
-        bool isEditing;
+        bool isCorrect, isEditing;
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -53,7 +52,7 @@ namespace Language_School_Management
         {
             dataGridView1.Rows.Clear();
 
-            List<Dictionary<string, object>> students = Database.getStudents();
+            List<Dictionary<string, object>> students = Students.getStudents();
 
             foreach (Dictionary<string, object> student in students)
             {
@@ -189,9 +188,9 @@ namespace Language_School_Management
                 return;
             }
 
-            if (!Database.isStudentExists(nCode))
+            if (!Students.isStudentExists(nCode))
             {
-                Database.AddStudent(fname, lname, fathername, nCode, phone, homephone, parentphone, address);
+                Students.AddStudent(fname, lname, fathername, nCode, phone, homephone, parentphone, address);
 
                 MessageBox.Show("زبان آموز با موفقیت اضافه شد", "عملیات موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 studentsManageForm_Load(sender, e);
@@ -213,7 +212,7 @@ namespace Language_School_Management
                 return;
             }
 
-            if (Database.isStudentExists(nCode))
+            if (Students.isStudentExists(nCode))
             {
                 DialogResult result = MessageBox.Show(
                     "شما درحال حذف کردن یک زبان آموز هستید\nآیا از انجام این کار مطمئن هستید؟",
@@ -226,7 +225,7 @@ namespace Language_School_Management
 
                 if (result == DialogResult.Yes)
                 {
-                    Database.delStudent(nCode);
+                    Students.delStudent(nCode);
                     MessageBox.Show("زبان آموز باموفقیت حذف گردید", "عملیت موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     studentsManageForm_Load(sender, e);
@@ -287,9 +286,9 @@ namespace Language_School_Management
                     return;
                 }
 
-                if (Database.isStudentExists(nCode))
+                if (Students.isStudentExists(nCode))
                 {
-                    Dictionary<string, string> student = Database.getStudent(nCode);
+                    Dictionary<string, string> student = Students.getStudent(nCode);
 
                     BoxNameUpdate.Text = student["firstName"];
                     BoxNameUpdate.Enabled = true;
@@ -341,9 +340,57 @@ namespace Language_School_Management
             string phone = boxPhoneUpdate.Text;
             string homephone = boxHphoneUpdate.Text;
 
-            Database.updateStudent(nCode, fname, lname, fathername, phone, homephone, parentphone, address);
+            if (fname == "")
+            {
+                MessageBox.Show("نام نمیتواند خالی باشد", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            MessageBox.Show("اطلاعات زبان آموز با موفقیت ویراش شد","عملیات موفق",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            if (lname == "")
+            {
+                MessageBox.Show("نام خانوادگی نمیتواند خالی باشد", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (fathername == "")
+            {
+                MessageBox.Show("نام پدر نمیتواند خالی باشد", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (address == "")
+            {
+                MessageBox.Show("آدرس نمیتواند خالی باشد", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (phone == "" || phone.Length < 11)
+            {
+                MessageBox.Show("شماره تلفن همراه نمیتواند خالی یا کمتر از 11 رقم باشد", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (parentphone == "" || parentphone.Length < 11)
+            {
+                MessageBox.Show("شماره والدین نمیتواند خالی یا کمتر از 11 رقم باشد", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (homephone == "" || homephone.Length < 11)
+            {
+                MessageBox.Show("شماره تماس خانه نمیتواند خالی یا کمتر از 11 رقم باشد", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (nCode == "" || nCode.Length < 10)
+            {
+                MessageBox.Show("کد ملی نمیتواند خالی یا کمتر از 10 رقم باشد", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Students.updateStudent(nCode, fname, lname, fathername, phone, homephone, parentphone, address);
+
+            MessageBox.Show("اطلاعات زبان آموز با موفقیت ویراش شد", "عملیات موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             boxIdUpdate.Text = "";
 
