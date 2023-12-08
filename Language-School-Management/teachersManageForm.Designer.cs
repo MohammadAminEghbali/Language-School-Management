@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TeachersdataGridView = new System.Windows.Forms.DataGridView();
             this.fname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,6 +92,14 @@
             this.TeachersdataGridView.AllowUserToOrderColumns = true;
             this.TeachersdataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.TeachersdataGridView.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TeachersdataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.TeachersdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TeachersdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fname,
@@ -112,49 +121,49 @@
             this.fname.HeaderText = "نام";
             this.fname.MinimumWidth = 6;
             this.fname.Name = "fname";
-            this.fname.Width = 56;
+            this.fname.Width = 55;
             // 
             // lname
             // 
             this.lname.HeaderText = "نام خانوادگی";
             this.lname.MinimumWidth = 6;
             this.lname.Name = "lname";
-            this.lname.Width = 117;
+            this.lname.Width = 115;
             // 
             // fathername
             // 
             this.fathername.HeaderText = "نام پدر";
             this.fathername.MinimumWidth = 6;
             this.fathername.Name = "fathername";
-            this.fathername.Width = 80;
+            this.fathername.Width = 78;
             // 
             // ncode
             // 
             this.ncode.HeaderText = "کد ملی";
             this.ncode.MinimumWidth = 6;
             this.ncode.Name = "ncode";
-            this.ncode.Width = 83;
+            this.ncode.Width = 80;
             // 
             // cert
             // 
             this.cert.HeaderText = "مدرک تحصیلی";
             this.cert.MinimumWidth = 6;
             this.cert.Name = "cert";
-            this.cert.Width = 131;
+            this.cert.Width = 123;
             // 
             // phone
             // 
             this.phone.HeaderText = "شماره تلفن";
             this.phone.MinimumWidth = 6;
             this.phone.Name = "phone";
-            this.phone.Width = 111;
+            this.phone.Width = 99;
             // 
             // address
             // 
             this.address.HeaderText = "آدرس";
             this.address.MinimumWidth = 6;
             this.address.Name = "address";
-            this.address.Width = 75;
+            this.address.Width = 77;
             // 
             // groupBox1
             // 

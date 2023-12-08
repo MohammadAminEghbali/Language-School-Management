@@ -42,7 +42,7 @@ namespace Language_School_Management
             }
             if (isCorrect2 == true)
             {
-                MessageBox.Show("فایل اکسل اطلاعات شما با موفقیت ذخیره شد", "ذخیره شد");
+                MessageBox.Show("فایل اکسل اطلاعات شما با موفقیت ذخیره شد", "ذخیره شد",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
 
@@ -148,7 +148,7 @@ namespace Language_School_Management
 
             if (certificate == "")
             {
-                MessageBox.Show("مدرک تحصیلی", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("مدرک تحصیلی نمیتواند خالی باشد", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -163,13 +163,13 @@ namespace Language_School_Management
             {
                 Teachers.AddTeacher(fname, lname, fathername, nCode, certificate, phone, address);
 
-                MessageBox.Show("زبان آموز با موفقیت اضافه شد", "عملیات موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("استاد با موفقیت اضافه شد", "عملیات موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 teachersManageForm_Load(sender, e);
                 btnClear_Click(sender, e);
             }
             else
             {
-                MessageBox.Show("زبان آموز با این کد ملی از قبل وجود دارد", "زبان آموز تکراری", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("استادی با این کد ملی از قبل وجود دارد", "استاد تکراری", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -187,7 +187,7 @@ namespace Language_School_Management
             if (Teachers.isTeacherExists(nCode))
             {
                 DialogResult result = MessageBox.Show(
-                    "شما درحال حذف کردن یک زبان آموز هستید\nآیا از انجام این کار مطمئن هستید؟",
+                    "شما درحال حذف کردن یک استاد هستید\nآیا از انجام این کار مطمئن هستید؟",
                     "عملیات غیر قابل بازگشت",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning,
@@ -198,7 +198,7 @@ namespace Language_School_Management
                 if (result == DialogResult.Yes)
                 {
                     Teachers.delTeacher(nCode);
-                    MessageBox.Show("زبان آموز باموفقیت حذف گردید", "عملیت موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("استاد با موفقیت حذف گردید", "عملیت موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     teachersManageForm_Load(sender, e);
                     BoxTeachIDdel.Text = string.Empty;
@@ -212,7 +212,7 @@ namespace Language_School_Management
             }
             else
             {
-                MessageBox.Show("زبان آموز با این کد ملی وجود ندارد", "زبان آموز ثبت نشده", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("استادی با این کد ملی وجود ندارد", "استاد ثبت نشده", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -270,7 +270,7 @@ namespace Language_School_Management
 
             Teachers.updateTeacher(nCode, fname, lname, fathername, certificate, phone, address);
 
-            MessageBox.Show("اطلاعات زبان آموز با موفقیت ویراش شد", "عملیات موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("اطلاعات استاد با موفقیت ویراش شد", "عملیات موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             boxTeachIDUpdate.Text = "";
 
@@ -350,7 +350,7 @@ namespace Language_School_Management
                 }
                 else
                 {
-                    MessageBox.Show("زبان آموز با این کد ملی وجود ندارد", "زبان آموز ثبت نشده", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("استادی با این کد ملی وجود ندارد", "استاد ثبت نشده", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
             }
