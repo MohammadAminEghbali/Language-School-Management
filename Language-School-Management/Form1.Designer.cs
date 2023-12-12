@@ -97,6 +97,7 @@
             this.classes.TabIndex = 4;
             this.classes.Text = "کلاس ها";
             this.classes.UseVisualStyleBackColor = true;
+            this.classes.Click += new System.EventHandler(this.classes_Click);
             // 
             // scores
             // 

@@ -49,5 +49,11 @@ namespace Language_School_Management
             teachersManageForm teachersManageForm = new teachersManageForm();
             teachersManageForm.ShowDialog();
         }
+
+        private void classes_Click(object sender, EventArgs e)
+        {
+            ClassManageForm classManageForm = new ClassManageForm();
+            classManageForm.ShowDialog();
+        }
     }
 }

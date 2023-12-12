@@ -106,6 +106,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassManageForm.Designer.cs">
+      <DependentUpon>ClassManageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="DBModels\StudentsModel.cs" />
     <Compile Include="DBModels\TeachersModel.cs" />
@@ -129,6 +135,9 @@
     <Compile Include="teachersManageForm.Designer.cs">
       <DependentUpon>teachersManageForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ClassManageForm.resx">
+      <DependentUpon>ClassManageForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
