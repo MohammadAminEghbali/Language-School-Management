@@ -18,7 +18,7 @@ namespace Language_School_Management
             using (SQLiteCommand cmd = conn.CreateCommand())
             {
                 cmd.CommandText = @"
-                    INSERT INTO students VALUES(
+                    INSERT INTO students(firstName,lastName,fatherName,nCode,phoneNumber,homePhone,parentPhone,homeAddress) VALUES(
                         @firstName, @lastName, @fatherName, @nCode, @phoneNumber, @homePhone, @parentPhone, @homeAddress
                     );
                 ";
@@ -114,7 +114,7 @@ namespace Language_School_Management
         {
             using (SQLiteCommand cmd = conn.CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM students WHERE nCode=@nCode";
+                cmd.CommandText = "SELECT firstName,lastName,fatherName,phoneNumber,homePhone,parentPhone,homeAddress FROM students WHERE nCode=@nCode";
                 cmd.Parameters.AddWithValue("nCode", nCode);
 
                 using (SQLiteDataReader reader = cmd.ExecuteReader())

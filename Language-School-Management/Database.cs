@@ -26,6 +26,17 @@ namespace Language_School_Management
                         firstName TEXT, lastName TEXT, fatherName TEXT, nCode TEXT,
                         certificate TEXT, phoneNumber TEXT, homeAddress TEXT
                     );
+
+                    CREATE TABLE IF NOT EXISTS classes (
+	                    classCode INTEGER UNIQUE,
+	                    className TEXT,
+	                    startTime TEXT,
+	                    endTime TEXT,
+	                    sessions INTEGER,
+	                    teacherName TEXT,
+	                    teacherNcode TEXT,
+	                    PRIMARY KEY(classCode AUTOINCREMENT)
+                    );
                 ";
                 cmd.ExecuteNonQuery();
             }

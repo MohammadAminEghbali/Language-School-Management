@@ -42,7 +42,7 @@ namespace Language_School_Management
             }
             if (isCorrect2 == true)
             {
-                MessageBox.Show("فایل اکسل اطلاعات شما با موفقیت ذخیره شد", "ذخیره شد",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("فایل اکسل اطلاعات شما با موفقیت ذخیره شد", "ذخیره شد", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

@@ -113,6 +113,7 @@
       <DependentUpon>ClassManageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
+    <Compile Include="DBModels\ClassesModel.cs" />
     <Compile Include="DBModels\StudentsModel.cs" />
     <Compile Include="DBModels\TeachersModel.cs" />
     <Compile Include="Form1.cs">
