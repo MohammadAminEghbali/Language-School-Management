@@ -86,6 +86,7 @@
             this.boxIdUpdate = new System.Windows.Forms.TextBox();
             this.ExcelSaveDialog = new System.Windows.Forms.SaveFileDialog();
             this.excelOutput = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -437,6 +438,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.editbtn);
             this.groupBox3.Controls.Add(this.boxHphoneUpdate);
             this.groupBox3.Controls.Add(this.boxPhoneUpdate);
@@ -632,6 +634,17 @@
             this.excelOutput.UseVisualStyleBackColor = true;
             this.excelOutput.Click += new System.EventHandler(this.excelOutput_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Vazir", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(2, 35);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(382, 24);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "راهنما : کد ملی زبان آموز را وارد کرده و دکمه فراخوانی را بزنید";
+            // 
             // studentsManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -718,5 +731,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn homeAddress;
         private System.Windows.Forms.SaveFileDialog ExcelSaveDialog;
         private System.Windows.Forms.Button excelOutput;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TeachersdataGridView = new System.Windows.Forms.DataGridView();
             this.fname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +78,7 @@
             this.lblTeachIdUpdate = new System.Windows.Forms.Label();
             this.boxTeachIDUpdate = new System.Windows.Forms.TextBox();
             this.ExcelSaveDialog2 = new System.Windows.Forms.SaveFileDialog();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TeachersdataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -92,14 +92,6 @@
             this.TeachersdataGridView.AllowUserToOrderColumns = true;
             this.TeachersdataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.TeachersdataGridView.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TeachersdataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.TeachersdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TeachersdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fname,
@@ -121,49 +113,49 @@
             this.fname.HeaderText = "نام";
             this.fname.MinimumWidth = 6;
             this.fname.Name = "fname";
-            this.fname.Width = 55;
+            this.fname.Width = 56;
             // 
             // lname
             // 
             this.lname.HeaderText = "نام خانوادگی";
             this.lname.MinimumWidth = 6;
             this.lname.Name = "lname";
-            this.lname.Width = 115;
+            this.lname.Width = 117;
             // 
             // fathername
             // 
             this.fathername.HeaderText = "نام پدر";
             this.fathername.MinimumWidth = 6;
             this.fathername.Name = "fathername";
-            this.fathername.Width = 78;
+            this.fathername.Width = 80;
             // 
             // ncode
             // 
             this.ncode.HeaderText = "کد ملی";
             this.ncode.MinimumWidth = 6;
             this.ncode.Name = "ncode";
-            this.ncode.Width = 80;
+            this.ncode.Width = 83;
             // 
             // cert
             // 
             this.cert.HeaderText = "مدرک تحصیلی";
             this.cert.MinimumWidth = 6;
             this.cert.Name = "cert";
-            this.cert.Width = 123;
+            this.cert.Width = 131;
             // 
             // phone
             // 
             this.phone.HeaderText = "شماره تلفن";
             this.phone.MinimumWidth = 6;
             this.phone.Name = "phone";
-            this.phone.Width = 99;
+            this.phone.Width = 111;
             // 
             // address
             // 
             this.address.HeaderText = "آدرس";
             this.address.MinimumWidth = 6;
             this.address.Name = "address";
-            this.address.Width = 77;
+            this.address.Width = 75;
             // 
             // groupBox1
             // 
@@ -396,6 +388,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.btnCallInfo);
             this.groupBox3.Controls.Add(this.btnUpdate);
             this.groupBox3.Controls.Add(this.boxCertificate);
@@ -559,6 +552,17 @@
             this.boxTeachIDUpdate.Size = new System.Drawing.Size(196, 32);
             this.boxTeachIDUpdate.TabIndex = 10;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label4.Location = new System.Drawing.Point(16, 42);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label4.Size = new System.Drawing.Size(375, 25);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "راهنما : کد ملی استاد را وارد کرده و دکمه فراخوانی را بزنید";
+            // 
             // teachersManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
@@ -641,5 +645,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cert;
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.Label label4;
     }
 }
