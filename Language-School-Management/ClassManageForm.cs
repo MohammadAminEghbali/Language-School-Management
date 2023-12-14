@@ -186,13 +186,22 @@ namespace Language_School_Management
 
         private void classesDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            eachClassManageForm classManage = new eachClassManageForm(
-                Convert.ToInt32(
-                    classesDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString()
-                    )
-                );
 
-            classManage.ShowDialog();
+            if (0 <= e.RowIndex)
+            {
+                eachClassManageForm classManage = new eachClassManageForm(
+                    Convert.ToInt32(
+                        classesDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString()
+                        )
+                    );
+
+                classManage.ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("هیچ کلاسی وجود ندارد");
+            }
 
         }
 

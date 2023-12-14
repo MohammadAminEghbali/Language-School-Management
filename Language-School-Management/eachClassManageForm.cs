@@ -29,19 +29,39 @@ namespace Language_School_Management
 
         }
 
+        private void studentslist_Refresh()
+        {
+            studntsListBox.Items.Clear();
+            studentslist.Clear();
+
+            List<Dictionary<string, object>> notAded = Classes.GetNotAddedStudents();
+
+            foreach (Dictionary<string, object> keyValuePairs in notAded)
+            {
+                string student = keyValuePairs["firstName"] + " " + keyValuePairs["lastName"] + " - " + keyValuePairs["nCode"];
+
+                studentslist.Add(student);
+                studntsListBox.Items.Add(student);
+            }
+
+        }
+
+        private void studentsDataGridView_Refresh()
+        {
+            studentsDataGridView.Rows.Clear();
+
+            List<Dictionary<string, object>> students = Classes.GetClassStudents(classCode);
+
+            foreach (Dictionary<string, object> student in students)
+            {
+                studentsDataGridView.Rows.Add(student.Values.ToArray());
+            }
+        }
         private void eachClassManageForm_Load(object sender, System.EventArgs e)
         {
             classInfo();
-            foreach (string st in studntsListBox.Items)
-            {
-                studentslist.Add(st);
-            }
-            var a = new AutoCompleteStringCollection();
-            a.AddRange(studentslist.ToArray());
-
-            //searchBox.AutoCompleteCustomSource = a;
-            //searchBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
-
+            studentslist_Refresh();
+            studentsDataGridView_Refresh();
         }
 
         private void textBox1_TextChanged(object sender, System.EventArgs e)
@@ -50,7 +70,7 @@ namespace Language_School_Management
 
             if (!string.IsNullOrEmpty(searchBox.Text))
             {
-                foreach(string st in studentslist)
+                foreach (string st in studentslist)
                 {
                     if (st.StartsWith(searchBox.Text))
                     {
@@ -60,7 +80,7 @@ namespace Language_School_Management
             }
             else
             {
-                foreach(string st in studentslist)
+                foreach (string st in studentslist)
                 {
                     studntsListBox.Items.Add(st);
                 }
@@ -80,6 +100,105 @@ namespace Language_School_Management
                 {
                     studntsListBox.Items.Add(st);
                 }
+            }
+        }
+
+        private void addStudent_Click(object sender, System.EventArgs e)
+        {
+            string nCode = searchBox.Text;
+
+            if (nCode != string.Empty && nCode.All(char.IsDigit) && nCode.Length == 10)
+            {
+                if (Students.isStudentExists(nCode))
+                {
+                    if (!Classes.isStudentInClass(classCode, nCode))
+                    {
+                        if (!Students.isStudentHasClass(nCode))
+                        {
+                            Classes.AddStudentToClass(classCode, nCode);
+
+                            MessageBox.Show("زبان آموز باموفقیت به کلاس اضافه شد");
+                            searchBox.Text = string.Empty;
+
+                            studentslist_Refresh();
+                            studentsDataGridView_Refresh();
+                        }
+                        else
+                        {
+                            MessageBox.Show("زبان اموز در یک کلاس دیگر وجود دارد");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("زبان اموز در این کلاس وجود دارد");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("زبان اموز وجود ندارد.");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("کد ملی معتبر نیست");
+
+            }
+        }
+
+        private void btnDeleteStudent_Click(object sender, System.EventArgs e)
+        {
+            string nCode = boxIDDelete.Text;
+
+            if (nCode != string.Empty && nCode.All(char.IsDigit) && nCode.Length == 10)
+            {
+                if (Students.isStudentExists(nCode))
+                {
+                    if (Classes.isStudentInClass(classCode, nCode))
+                    {
+                        DialogResult result = MessageBox.Show("آیا از حذف زبان آموز از کلاس مطمئن هستید؟", "هشدار", MessageBoxButtons.YesNo);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            Classes.DelStudentFromClass(nCode);
+
+                            MessageBox.Show("زبان آموز باموفقیت از کلاس حذف شد");
+                            boxIDDelete.Text = string.Empty;
+
+                            studentslist_Refresh();
+                            studentsDataGridView_Refresh();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("عملیات با موفقیت لغو شد");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("زبان اموز در این کلاس وجود ندارد");
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("زبان اموز وجود ندارد.");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("کد ملی معتبر نیست");
+
+            }
+        }
+
+        private void studentsDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (0 <= e.RowIndex)
+            {
+                boxIDDelete.Text = studentsDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
             }
         }
     }

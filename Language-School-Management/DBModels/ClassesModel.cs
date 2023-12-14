@@ -127,7 +127,7 @@ namespace Language_School_Management
             {
                 cmd.CommandText = "SELECT * FROM classes";
 
-                List<Dictionary<string, object>> teachers = new List<Dictionary<string, object>>();
+                List<Dictionary<string, object>> classes = new List<Dictionary<string, object>>();
 
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
                 {
@@ -141,13 +141,118 @@ namespace Language_School_Management
                             output.Add(reader.GetName(i), reader[i]);
                         }
 
-                        teachers.Add(output);
+                        classes.Add(output);
 
                     }
 
                 }
 
-                return teachers;
+                return classes;
+            }
+        }
+        public static List<Dictionary<string, object>> GetClassStudents(int classCode)
+        {
+            using (SQLiteCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = @"
+                    SELECT firstName,lastName,fatherName,nCode,phoneNumber,parentPhone
+                    FROM students WHERE classCode=@classCode
+                ";
+
+                cmd.Parameters.AddWithValue("classCode", classCode);
+
+                List<Dictionary<string, object>> students = new List<Dictionary<string, object>>();
+
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                {
+
+                    while (reader.Read())
+                    {
+                        Dictionary<string, object> output = new Dictionary<string, object>();
+
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            output.Add(reader.GetName(i), reader[i]);
+                        }
+
+                        students.Add(output);
+
+                    }
+
+                }
+
+                return students;
+            }
+        }
+
+        public static List<Dictionary<string, object>> GetNotAddedStudents()
+        {
+            using (SQLiteCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = @"
+                    SELECT firstName,lastName,nCode FROM students WHERE classCode=0
+                ";
+
+                List<Dictionary<string, object>> students = new List<Dictionary<string, object>>();
+
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                {
+
+                    while (reader.Read())
+                    {
+                        Dictionary<string, object> output = new Dictionary<string, object>();
+
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            output.Add(reader.GetName(i), reader[i]);
+                        }
+
+                        students.Add(output);
+
+                    }
+
+                }
+
+                return students;
+
+            }
+        }
+
+        public static bool isStudentInClass(int classCode, string nCode)
+        {
+            using (SQLiteCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT 1 FROM students WHERE nCode=@nCode AND classCode=@classCode;";
+
+                cmd.Parameters.AddWithValue("nCode", nCode);
+                cmd.Parameters.AddWithValue("classCode", classCode);
+
+                return cmd.ExecuteScalar() != null ? true : false;
+            }
+        }
+
+        public static void AddStudentToClass(int classCode, string nCode)
+        {
+            using (SQLiteCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "UPDATE students SET classCode=@classCode WHERE nCode=@nCode";
+
+                cmd.Parameters.AddWithValue("classCode", classCode);
+                cmd.Parameters.AddWithValue("nCode", nCode);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public static void DelStudentFromClass(string nCode)
+        {
+            using (SQLiteCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "UPDATE students SET classCode=0 WHERE nCode=@nCode";
+
+                cmd.Parameters.AddWithValue("nCode", nCode);
+
+                cmd.ExecuteNonQuery();
             }
         }
     }

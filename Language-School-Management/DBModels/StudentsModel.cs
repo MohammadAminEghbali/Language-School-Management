@@ -99,6 +99,18 @@ namespace Language_School_Management
             }
         }
 
+        public static bool isStudentHasClass(string nCode)
+        {
+            using (SQLiteCommand cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT 1 FROM students WHERE nCode=@nCode AND classCode != 0;";
+
+                cmd.Parameters.AddWithValue("nCode", nCode);
+
+                return cmd.ExecuteScalar() != null ? true : false;
+            }
+        }
+
         public static void delStudent(string nCode)
         {
             using (SQLiteCommand cmd = conn.CreateCommand())
@@ -153,6 +165,13 @@ namespace Language_School_Management
 
                         for (int i = 0; i < reader.FieldCount; i++)
                         {
+                            string fieldName = reader.GetName(i);
+                            if (fieldName == "classCode" && reader.GetInt32(i) == 0)
+                            {
+                                output.Add(reader.GetName(i), "کلاس تعریف نشده");
+                                continue;
+                            }
+
                             output.Add(reader.GetName(i), reader[i]);
                         }
 

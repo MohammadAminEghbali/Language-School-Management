@@ -19,7 +19,7 @@ namespace Language_School_Management
                 cmd.CommandText = @"
                     CREATE TABLE IF NOT EXISTS students (
                         firstName TEXT, lastName TEXT, fatherName TEXT, nCode TEXT,
-                        phoneNumber TEXT, homePhone TEXT, parentPhone TEXT, homeAddress TEXT
+                        phoneNumber TEXT, homePhone TEXT, parentPhone TEXT, homeAddress TEXT, classCode INTEGER DEFAULT 0
                     );
 
                     CREATE TABLE IF NOT EXISTS teachers (

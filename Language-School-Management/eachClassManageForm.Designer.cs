@@ -28,11 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.studntsListBox = new System.Windows.Forms.ListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.studentsDataGridView = new System.Windows.Forms.DataGridView();
+            this.studentFisrtName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parentPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addStudent = new System.Windows.Forms.Button();
             this.teacherNameKey = new System.Windows.Forms.Label();
             this.teacherNameValue = new System.Windows.Forms.Label();
             this.teacherIDKey = new System.Windows.Forms.Label();
@@ -58,13 +65,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.studentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parentPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -87,14 +88,6 @@
             this.studntsListBox.FormattingEnabled = true;
             this.studntsListBox.HorizontalScrollbar = true;
             this.studntsListBox.ItemHeight = 25;
-            this.studntsListBox.Items.AddRange(new object[] {
-            "محمد امین اقبالی - 1100597473",
-            "رضا کریمی - 1100987466",
-            "مسعود رحیمی - 1110669426",
-            "نیکتا منصوری - 1110669126",
-            "یلدا کیانی - 1166974366",
-            "مطهره مظاهری - 1110119064",
-            "دنیا رهنما - 1100975843"});
             this.studntsListBox.Location = new System.Drawing.Point(7, 23);
             this.studntsListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.studntsListBox.Name = "studntsListBox";
@@ -103,47 +96,93 @@
             this.studntsListBox.TabIndex = 1;
             this.studntsListBox.DoubleClick += new System.EventHandler(this.studntsListBox_DoubleClick);
             // 
-            // dataGridView1
+            // studentsDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.studentName,
+            this.studentsDataGridView.AllowUserToAddRows = false;
+            this.studentsDataGridView.AllowUserToDeleteRows = false;
+            this.studentsDataGridView.AllowUserToOrderColumns = true;
+            this.studentsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.studentsDataGridView.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.studentsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.studentsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.studentFisrtName,
             this.studentLastName,
             this.fatherName,
             this.nCode,
             this.phone,
             this.parentPhone});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(836, 398);
-            this.dataGridView1.TabIndex = 2;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.studentsDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.studentsDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.studentsDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.studentsDataGridView.Name = "studentsDataGridView";
+            this.studentsDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.studentsDataGridView.RowTemplate.Height = 24;
+            this.studentsDataGridView.Size = new System.Drawing.Size(836, 398);
+            this.studentsDataGridView.TabIndex = 2;
+            this.studentsDataGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.studentsDataGridView_CellMouseDoubleClick);
             // 
-            // button1
+            // studentFisrtName
             // 
-            this.button1.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(319, 36);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 39);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "افزودن";
-            this.button1.UseVisualStyleBackColor = true;
+            this.studentFisrtName.HeaderText = "نام";
+            this.studentFisrtName.Name = "studentFisrtName";
+            this.studentFisrtName.Width = 55;
+            // 
+            // studentLastName
+            // 
+            this.studentLastName.HeaderText = "نام خانوادگی";
+            this.studentLastName.Name = "studentLastName";
+            this.studentLastName.Width = 115;
+            // 
+            // fatherName
+            // 
+            this.fatherName.HeaderText = "نام پدر";
+            this.fatherName.Name = "fatherName";
+            this.fatherName.Width = 78;
+            // 
+            // nCode
+            // 
+            this.nCode.HeaderText = "کد ملی";
+            this.nCode.Name = "nCode";
+            this.nCode.Width = 80;
+            // 
+            // phone
+            // 
+            this.phone.HeaderText = "تلفن همراه";
+            this.phone.Name = "phone";
+            this.phone.Width = 98;
+            // 
+            // parentPhone
+            // 
+            this.parentPhone.HeaderText = "تلفن والدین";
+            this.parentPhone.Name = "parentPhone";
+            this.parentPhone.Width = 104;
+            // 
+            // addStudent
+            // 
+            this.addStudent.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addStudent.Location = new System.Drawing.Point(319, 36);
+            this.addStudent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addStudent.Name = "addStudent";
+            this.addStudent.Size = new System.Drawing.Size(113, 39);
+            this.addStudent.TabIndex = 4;
+            this.addStudent.Text = "افزودن";
+            this.addStudent.UseVisualStyleBackColor = true;
+            this.addStudent.Click += new System.EventHandler(this.addStudent_Click);
             // 
             // teacherNameKey
             // 
@@ -284,9 +323,9 @@
             this.groupBox1.Controls.Add(this.classCodeKey);
             this.groupBox1.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.groupBox1.Location = new System.Drawing.Point(869, 12);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox1.Size = new System.Drawing.Size(552, 398);
             this.groupBox1.TabIndex = 15;
@@ -296,7 +335,7 @@
             // classProgress
             // 
             this.classProgress.Location = new System.Drawing.Point(25, 244);
-            this.classProgress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.classProgress.Margin = new System.Windows.Forms.Padding(4);
             this.classProgress.Name = "classProgress";
             this.classProgress.Size = new System.Drawing.Size(313, 28);
             this.classProgress.TabIndex = 19;
@@ -358,9 +397,9 @@
             this.groupBox2.Controls.Add(this.boxIDDelete);
             this.groupBox2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.groupBox2.Location = new System.Drawing.Point(869, 418);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox2.Size = new System.Drawing.Size(552, 332);
             this.groupBox2.TabIndex = 16;
@@ -371,7 +410,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(203, 194);
+            this.label3.Location = new System.Drawing.Point(269, 194);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -383,7 +422,7 @@
             // 
             this.delInfo2.AutoSize = true;
             this.delInfo2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.delInfo2.Location = new System.Drawing.Point(36, 149);
+            this.delInfo2.Location = new System.Drawing.Point(144, 149);
             this.delInfo2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.delInfo2.Name = "delInfo2";
             this.delInfo2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -413,6 +452,7 @@
             this.btnDeleteStudent.TabIndex = 2;
             this.btnDeleteStudent.Text = "حذف";
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // boxIDDelete
             // 
@@ -430,12 +470,12 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.searchBox);
             this.groupBox3.Controls.Add(this.studntsListBox);
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.addStudent);
             this.groupBox3.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.groupBox3.Location = new System.Drawing.Point(12, 418);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox3.Size = new System.Drawing.Size(836, 332);
             this.groupBox3.TabIndex = 17;
@@ -446,7 +486,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(344, 105);
+            this.label5.Location = new System.Drawing.Point(319, 99);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.MaximumSize = new System.Drawing.Size(507, 0);
             this.label5.Name = "label5";
@@ -468,42 +508,6 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "کد ملی";
             // 
-            // studentName
-            // 
-            this.studentName.HeaderText = "نام";
-            this.studentName.Name = "studentName";
-            this.studentName.Width = 55;
-            // 
-            // studentLastName
-            // 
-            this.studentLastName.HeaderText = "نام خانوادگی";
-            this.studentLastName.Name = "studentLastName";
-            this.studentLastName.Width = 106;
-            // 
-            // fatherName
-            // 
-            this.fatherName.HeaderText = "نام پدر";
-            this.fatherName.Name = "fatherName";
-            this.fatherName.Width = 72;
-            // 
-            // nCode
-            // 
-            this.nCode.HeaderText = "کد ملی";
-            this.nCode.Name = "nCode";
-            this.nCode.Width = 74;
-            // 
-            // phone
-            // 
-            this.phone.HeaderText = "تلفن همراه";
-            this.phone.Name = "phone";
-            this.phone.Width = 90;
-            // 
-            // parentPhone
-            // 
-            this.parentPhone.HeaderText = "تلفن والدین";
-            this.parentPhone.Name = "parentPhone";
-            this.parentPhone.Width = 96;
-            // 
             // eachClassManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -513,13 +517,13 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.studentsDataGridView);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "eachClassManageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "مدیریت کلاس";
             this.Load += new System.EventHandler(this.eachClassManageForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -534,8 +538,8 @@
 
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.ListBox studntsListBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView studentsDataGridView;
+        private System.Windows.Forms.Button addStudent;
         private System.Windows.Forms.Label teacherNameKey;
         private System.Windows.Forms.Label teacherNameValue;
         private System.Windows.Forms.Label teacherIDKey;
@@ -561,7 +565,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ProgressBar classProgress;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentFisrtName;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentLastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn fatherName;
         private System.Windows.Forms.DataGridViewTextBoxColumn nCode;
