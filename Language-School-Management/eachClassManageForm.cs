@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Language_School_Management
@@ -13,10 +14,25 @@ namespace Language_School_Management
             InitializeComponent();
         }
 
+        private void classInfo()
+        {
+            Dictionary<string, object> _class = Classes.GetClass(classCode);
+
+
+            classCodeValue.Text = classCode.ToString();
+            className.Text = (string)_class["className"];
+            startTimeValue.Text = (string)_class["startTime"];
+            endTimeVAlue.Text = (string)_class["endTime"];
+            sessionCountValue.Text = _class["sessions"].ToString();
+            teacherNameValue.Text = (string)_class["teacherName"];
+            teacherIDValue.Text = (string)_class["teacherNcode"];
+
+        }
+
         private void eachClassManageForm_Load(object sender, System.EventArgs e)
         {
-
-            foreach(string st in studntsListBox.Items)
+            classInfo();
+            foreach (string st in studntsListBox.Items)
             {
                 studentslist.Add(st);
             }
@@ -45,6 +61,22 @@ namespace Language_School_Management
             else
             {
                 foreach(string st in studentslist)
+                {
+                    studntsListBox.Items.Add(st);
+                }
+            }
+        }
+
+        private void studntsListBox_DoubleClick(object sender, System.EventArgs e)
+        {
+            if (studntsListBox.SelectedItem != null)
+            {
+                string student = studntsListBox.SelectedItem.ToString();
+                string[] strings = student.Split('-');
+                searchBox.Text = strings.Last().Trim();
+
+                studntsListBox.Items.Clear();
+                foreach (string st in studentslist)
                 {
                     studntsListBox.Items.Add(st);
                 }
