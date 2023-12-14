@@ -30,7 +30,7 @@
         {
             this.searchBox = new System.Windows.Forms.TextBox();
             this.studntsListBox = new System.Windows.Forms.ListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ClassDataGridView = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.teacherNameKey = new System.Windows.Forms.Label();
             this.teacherNameValue = new System.Windows.Forms.Label();
@@ -43,21 +43,23 @@
             this.endTimeKey = new System.Windows.Forms.Label();
             this.endTimeVAlue = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.sessionCountKey = new System.Windows.Forms.Label();
-            this.sessionCountValue = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.boxIDDelete = new System.Windows.Forms.TextBox();
-            this.btnDeleteStudent = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ClassNameKey = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.delInfo2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.classProgress = new System.Windows.Forms.ProgressBar();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ClassNameKey = new System.Windows.Forms.Label();
+            this.sessionCountValue = new System.Windows.Forms.Label();
+            this.sessionCountKey = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.delInfo2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnDeleteStudent = new System.Windows.Forms.Button();
+            this.boxIDDelete = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.excelOutput = new System.Windows.Forms.Button();
+            this.ExcelSaveDialog4 = new System.Windows.Forms.SaveFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.ClassDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -68,7 +70,7 @@
             this.searchBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.searchBox.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBox.Location = new System.Drawing.Point(337, 29);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(2);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(221, 32);
             this.searchBox.TabIndex = 3;
@@ -88,29 +90,29 @@
             "یلدا کیانی - 1166974366",
             "مطهره مظاهری - 1110119064",
             "دنیا رهنما - 1100975843"});
-            this.studntsListBox.Location = new System.Drawing.Point(5, 19);
-            this.studntsListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.studntsListBox.Location = new System.Drawing.Point(5, 29);
+            this.studntsListBox.Margin = new System.Windows.Forms.Padding(2);
             this.studntsListBox.Name = "studntsListBox";
             this.studntsListBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.studntsListBox.Size = new System.Drawing.Size(221, 229);
             this.studntsListBox.TabIndex = 1;
             // 
-            // dataGridView1
+            // ClassDataGridView
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 10);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(627, 323);
-            this.dataGridView1.TabIndex = 2;
+            this.ClassDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.ClassDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ClassDataGridView.Location = new System.Drawing.Point(9, 10);
+            this.ClassDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.ClassDataGridView.Name = "ClassDataGridView";
+            this.ClassDataGridView.RowTemplate.Height = 24;
+            this.ClassDataGridView.Size = new System.Drawing.Size(627, 301);
+            this.ClassDataGridView.TabIndex = 2;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(239, 29);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 32);
             this.button1.TabIndex = 4;
@@ -253,86 +255,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "مشخصات کلاس";
             // 
-            // sessionCountKey
+            // classProgress
             // 
-            this.sessionCountKey.AutoSize = true;
-            this.sessionCountKey.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.sessionCountKey.Location = new System.Drawing.Point(300, 196);
-            this.sessionCountKey.Name = "sessionCountKey";
-            this.sessionCountKey.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.sessionCountKey.Size = new System.Drawing.Size(108, 25);
-            this.sessionCountKey.TabIndex = 15;
-            this.sessionCountKey.Text = "تعداد جلسات :";
-            // 
-            // sessionCountValue
-            // 
-            this.sessionCountValue.AutoSize = true;
-            this.sessionCountValue.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.sessionCountValue.Location = new System.Drawing.Point(273, 196);
-            this.sessionCountValue.Name = "sessionCountValue";
-            this.sessionCountValue.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.sessionCountValue.Size = new System.Drawing.Size(21, 25);
-            this.sessionCountValue.TabIndex = 16;
-            this.sessionCountValue.Text = "0";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.delInfo2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.btnDeleteStudent);
-            this.groupBox2.Controls.Add(this.boxIDDelete);
-            this.groupBox2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.groupBox2.Location = new System.Drawing.Point(652, 340);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(414, 270);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "حذف زبان آموز از کلاس";
-            // 
-            // boxIDDelete
-            // 
-            this.boxIDDelete.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.boxIDDelete.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxIDDelete.Location = new System.Drawing.Point(121, 66);
-            this.boxIDDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.boxIDDelete.Name = "boxIDDelete";
-            this.boxIDDelete.Size = new System.Drawing.Size(224, 32);
-            this.boxIDDelete.TabIndex = 1;
-            // 
-            // btnDeleteStudent
-            // 
-            this.btnDeleteStudent.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteStudent.Location = new System.Drawing.Point(19, 66);
-            this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeleteStudent.Name = "btnDeleteStudent";
-            this.btnDeleteStudent.Size = new System.Drawing.Size(89, 32);
-            this.btnDeleteStudent.TabIndex = 2;
-            this.btnDeleteStudent.Text = "حذف";
-            this.btnDeleteStudent.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(350, 69);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(58, 25);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "کد ملی";
-            // 
-            // ClassNameKey
-            // 
-            this.ClassNameKey.AutoSize = true;
-            this.ClassNameKey.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.ClassNameKey.Location = new System.Drawing.Point(336, 81);
-            this.ClassNameKey.Name = "ClassNameKey";
-            this.ClassNameKey.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ClassNameKey.Size = new System.Drawing.Size(72, 25);
-            this.ClassNameKey.TabIndex = 17;
-            this.ClassNameKey.Text = "نام کلاس";
+            this.classProgress.Location = new System.Drawing.Point(19, 198);
+            this.classProgress.Name = "classProgress";
+            this.classProgress.Size = new System.Drawing.Size(235, 23);
+            this.classProgress.TabIndex = 19;
             // 
             // label2
             // 
@@ -345,16 +273,54 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "نام کلاس";
             // 
-            // delInfo2
+            // ClassNameKey
             // 
-            this.delInfo2.AutoSize = true;
-            this.delInfo2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.delInfo2.Location = new System.Drawing.Point(27, 121);
-            this.delInfo2.Name = "delInfo2";
-            this.delInfo2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.delInfo2.Size = new System.Drawing.Size(376, 25);
-            this.delInfo2.TabIndex = 18;
-            this.delInfo2.Text = "راهنما : کد ملی زبان آموز را وارد کرده و دکمه حذف را بزنید";
+            this.ClassNameKey.AutoSize = true;
+            this.ClassNameKey.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.ClassNameKey.Location = new System.Drawing.Point(336, 81);
+            this.ClassNameKey.Name = "ClassNameKey";
+            this.ClassNameKey.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ClassNameKey.Size = new System.Drawing.Size(72, 25);
+            this.ClassNameKey.TabIndex = 17;
+            this.ClassNameKey.Text = "نام کلاس";
+            // 
+            // sessionCountValue
+            // 
+            this.sessionCountValue.AutoSize = true;
+            this.sessionCountValue.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.sessionCountValue.Location = new System.Drawing.Point(273, 196);
+            this.sessionCountValue.Name = "sessionCountValue";
+            this.sessionCountValue.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.sessionCountValue.Size = new System.Drawing.Size(21, 25);
+            this.sessionCountValue.TabIndex = 16;
+            this.sessionCountValue.Text = "0";
+            // 
+            // sessionCountKey
+            // 
+            this.sessionCountKey.AutoSize = true;
+            this.sessionCountKey.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.sessionCountKey.Location = new System.Drawing.Point(300, 196);
+            this.sessionCountKey.Name = "sessionCountKey";
+            this.sessionCountKey.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.sessionCountKey.Size = new System.Drawing.Size(108, 25);
+            this.sessionCountKey.TabIndex = 15;
+            this.sessionCountKey.Text = "تعداد جلسات :";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.delInfo2);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.btnDeleteStudent);
+            this.groupBox2.Controls.Add(this.boxIDDelete);
+            this.groupBox2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.groupBox2.Location = new System.Drawing.Point(652, 340);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox2.Size = new System.Drawing.Size(414, 277);
+            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "حذف زبان آموز از کلاس";
             // 
             // label3
             // 
@@ -367,6 +333,49 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "نکته : این عملیات قابل بازگشت نیست";
             // 
+            // delInfo2
+            // 
+            this.delInfo2.AutoSize = true;
+            this.delInfo2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.delInfo2.Location = new System.Drawing.Point(27, 121);
+            this.delInfo2.Name = "delInfo2";
+            this.delInfo2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.delInfo2.Size = new System.Drawing.Size(376, 25);
+            this.delInfo2.TabIndex = 18;
+            this.delInfo2.Text = "راهنما : کد ملی زبان آموز را وارد کرده و دکمه حذف را بزنید";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(350, 69);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(58, 25);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "کد ملی";
+            // 
+            // btnDeleteStudent
+            // 
+            this.btnDeleteStudent.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteStudent.Location = new System.Drawing.Point(19, 66);
+            this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteStudent.Name = "btnDeleteStudent";
+            this.btnDeleteStudent.Size = new System.Drawing.Size(89, 32);
+            this.btnDeleteStudent.TabIndex = 2;
+            this.btnDeleteStudent.Text = "حذف";
+            this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            // 
+            // boxIDDelete
+            // 
+            this.boxIDDelete.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.boxIDDelete.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxIDDelete.Location = new System.Drawing.Point(121, 66);
+            this.boxIDDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.boxIDDelete.Name = "boxIDDelete";
+            this.boxIDDelete.Size = new System.Drawing.Size(224, 32);
+            this.boxIDDelete.TabIndex = 1;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label5);
@@ -375,24 +384,13 @@
             this.groupBox3.Controls.Add(this.studntsListBox);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.groupBox3.Location = new System.Drawing.Point(9, 340);
+            this.groupBox3.Location = new System.Drawing.Point(9, 352);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox3.Size = new System.Drawing.Size(627, 270);
+            this.groupBox3.Size = new System.Drawing.Size(627, 265);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "افزودن زبان آموز به کلاس";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(563, 33);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(58, 25);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "کد ملی";
             // 
             // label5
             // 
@@ -407,12 +405,28 @@
             this.label5.Text = "راهنما :  لیست زبان آموزانی که در این کلاس ثبت نشده اند در کادر رو به رو قرار دار" +
     "د با وارد کردن کد ملی آن ها و زدن دکمه افزودن آن ها را به این کلاس اضافه کنید";
             // 
-            // classProgress
+            // label4
             // 
-            this.classProgress.Location = new System.Drawing.Point(19, 198);
-            this.classProgress.Name = "classProgress";
-            this.classProgress.Size = new System.Drawing.Size(235, 23);
-            this.classProgress.TabIndex = 19;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label4.Location = new System.Drawing.Point(563, 33);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label4.Size = new System.Drawing.Size(58, 25);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "کد ملی";
+            // 
+            // excelOutput
+            // 
+            this.excelOutput.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.excelOutput.Location = new System.Drawing.Point(9, 315);
+            this.excelOutput.Margin = new System.Windows.Forms.Padding(2);
+            this.excelOutput.Name = "excelOutput";
+            this.excelOutput.Size = new System.Drawing.Size(114, 38);
+            this.excelOutput.TabIndex = 22;
+            this.excelOutput.Text = "خروجی اکسل";
+            this.excelOutput.UseVisualStyleBackColor = true;
+            this.excelOutput.Click += new System.EventHandler(this.excelOutput_Click);
             // 
             // eachClassManageForm
             // 
@@ -420,15 +434,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1078, 629);
+            this.Controls.Add(this.excelOutput);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.ClassDataGridView);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "eachClassManageForm";
             this.Text = "مدیریت کلاس";
             this.Load += new System.EventHandler(this.eachClassManageForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClassDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -443,7 +458,7 @@
 
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.ListBox studntsListBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ClassDataGridView;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label teacherNameKey;
         private System.Windows.Forms.Label teacherNameValue;
@@ -470,5 +485,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ProgressBar classProgress;
+        private System.Windows.Forms.Button excelOutput;
+        private System.Windows.Forms.SaveFileDialog ExcelSaveDialog4;
     }
 }
