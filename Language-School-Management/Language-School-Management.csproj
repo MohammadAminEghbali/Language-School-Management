@@ -116,6 +116,12 @@
     <Compile Include="DBModels\ClassesModel.cs" />
     <Compile Include="DBModels\StudentsModel.cs" />
     <Compile Include="DBModels\TeachersModel.cs" />
+    <Compile Include="eachClassManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eachClassManageForm.Designer.cs">
+      <DependentUpon>eachClassManageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </Compile>
     <EmbeddedResource Include="ClassManageForm.resx">
       <DependentUpon>ClassManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eachClassManageForm.resx">
+      <DependentUpon>eachClassManageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

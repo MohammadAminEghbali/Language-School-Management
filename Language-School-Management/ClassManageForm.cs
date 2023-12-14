@@ -109,12 +109,12 @@ namespace Language_School_Management
                 }
                 catch (FormatException)
                 {
-                    MessageBox.Show("تعداد جلسات باید عدد باشد","مقدار نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("تعداد جلسات باید عدد باشد", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 catch (OverflowException)
                 {
-                    MessageBox.Show("تعداد جلسات معتبر نیست","مقدار نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("تعداد جلسات معتبر نیست", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
@@ -123,13 +123,13 @@ namespace Language_School_Management
 
             if (className == "")
             {
-                MessageBox.Show("نام کلاس نمیتواند خالی باشد","مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("نام کلاس نمیتواند خالی باشد", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (startTime == endTime)
             {
-                MessageBox.Show("ساعت شروع و ساعت پایان نمیتوانند یکسان باشند","ساعات نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("ساعت شروع و ساعت پایان نمیتوانند یکسان باشند", "ساعات نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -154,20 +154,20 @@ namespace Language_School_Management
                     string teacherName = teacher["firstName"] + " " + teacher["lastName"];
 
                     Classes.AddClass(className, startTime, endTime, sessions, teacherName, teacherNcode);
-                    MessageBox.Show("کلاس با موفقیت اضافه شد","عملیات موفق",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("کلاس با موفقیت اضافه شد", "عملیات موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClassManageForm_Load(sender, e);
                     btnClear_Click(sender, e);
 
                 }
                 else
                 {
-                    MessageBox.Show("استاد در لیست اساتید وجود ندارد","استاد وجود ندارد",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("استاد در لیست اساتید وجود ندارد", "استاد وجود ندارد", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             else
             {
-                MessageBox.Show("استاد مورد نظر از قبل در این ساعت کلاس دارد","استاد مشغول",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("استاد مورد نظر از قبل در این ساعت کلاس دارد", "استاد مشغول", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -186,7 +186,14 @@ namespace Language_School_Management
 
         private void classesDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            MessageBox.Show(e.RowIndex.ToString() + e.ColumnIndex.ToString());
+            eachClassManageForm classManage = new eachClassManageForm(
+                Convert.ToInt32(
+                    classesDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString()
+                    )
+                );
+
+            classManage.ShowDialog();
+
         }
 
         private void btnClassDelete_Click(object sender, EventArgs e)
@@ -211,25 +218,25 @@ namespace Language_School_Management
 
                 if (Classes.isClassExists(classCode))
                 {
-                    DialogResult result = MessageBox.Show("ایا از حذف کلاس مطمئن هستید؟", "هشدار", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show("ایا از حذف کلاس مطمئن هستید؟", "هشدار", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (result == DialogResult.Yes)
                     {
                         Classes.DeleteClass(classCode);
-                        MessageBox.Show("کلاس با موفقیت حذف شد","عملیات موفق",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("کلاس با موفقیت حذف شد", "عملیات موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ClassManageForm_Load(sender, e);
                         boxClassDelete.Text = string.Empty;
 
                     }
                     else
                     {
-                        MessageBox.Show("عملیات با موفقیت لغو شد","لغو عملیات",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("عملیات با موفقیت لغو شد", "لغو عملیات", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("کلاس مورد نظر وجود ندارد","کلاس نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("کلاس مورد نظر وجود ندارد", "کلاس نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -325,12 +332,12 @@ namespace Language_School_Management
                 }
                 catch (FormatException)
                 {
-                    MessageBox.Show("تعداد جلسات باید عدد باشد","مقدار نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("تعداد جلسات باید عدد باشد", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 catch (OverflowException)
                 {
-                    MessageBox.Show("تعداد جلسات معتبر نیست","مقدار نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("تعداد جلسات معتبر نیست", "مقدار نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
@@ -345,7 +352,7 @@ namespace Language_School_Management
 
             if (startTime == endTime)
             {
-                MessageBox.Show("ساعت شروع و ساعت پایان نمیتوانند یکسان باشند","ساعات نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("ساعت شروع و ساعت پایان نمیتوانند یکسان باشند", "ساعات نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -370,20 +377,20 @@ namespace Language_School_Management
                     string teacherName = teacher["firstName"] + " " + teacher["lastName"];
 
                     Classes.UpdateClass(classCode, className, startTime, endTime, sessions, teacherName, teacherNcode);
-                    MessageBox.Show("کلاس با موفقیت اضافه شد","عملیات موفق",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("کلاس با موفقیت اضافه شد", "عملیات موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClassManageForm_Load(sender, e);
                     btnInfoCall_Click(sender, e);
 
                 }
                 else
                 {
-                    MessageBox.Show("استاد در لیست اساتید وجود ندارد","استاد نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("استاد در لیست اساتید وجود ندارد", "استاد نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             else
             {
-                MessageBox.Show("این کلاس وجود ندارد","کلاس نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("این کلاس وجود ندارد", "کلاس نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
