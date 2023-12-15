@@ -200,7 +200,7 @@ namespace Language_School_Management
             }
             else
             {
-                MessageBox.Show("هیچ کلاسی وجود ندارد");
+                MessageBox.Show("هیچ کلاسی وجود ندارد", "لیست کلاس خالی", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
