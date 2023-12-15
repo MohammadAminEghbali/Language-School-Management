@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.studntsListBox = new System.Windows.Forms.ListBox();
             this.studentsDataGridView = new System.Windows.Forms.DataGridView();
@@ -77,10 +77,10 @@
             // 
             this.searchBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.searchBox.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBox.Location = new System.Drawing.Point(333, 41);
+            this.searchBox.Location = new System.Drawing.Point(347, 41);
             this.searchBox.Margin = new System.Windows.Forms.Padding(2);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(221, 32);
+            this.searchBox.Size = new System.Drawing.Size(207, 32);
             this.searchBox.TabIndex = 3;
             this.searchBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -94,7 +94,7 @@
             this.studntsListBox.Margin = new System.Windows.Forms.Padding(2);
             this.studntsListBox.Name = "studntsListBox";
             this.studntsListBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.studntsListBox.Size = new System.Drawing.Size(221, 204);
+            this.studntsListBox.Size = new System.Drawing.Size(234, 204);
             this.studntsListBox.TabIndex = 1;
             this.studntsListBox.DoubleClick += new System.EventHandler(this.studntsListBox_DoubleClick);
             // 
@@ -105,14 +105,14 @@
             this.studentsDataGridView.AllowUserToOrderColumns = true;
             this.studentsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.studentsDataGridView.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.studentsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.studentsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.studentsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.studentFisrtName,
@@ -121,14 +121,14 @@
             this.nCode,
             this.phone,
             this.parentPhone});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.studentsDataGridView.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.studentsDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.studentsDataGridView.Location = new System.Drawing.Point(9, 10);
             this.studentsDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.studentsDataGridView.Name = "studentsDataGridView";
@@ -177,10 +177,10 @@
             // addStudent
             // 
             this.addStudent.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addStudent.Location = new System.Drawing.Point(235, 41);
+            this.addStudent.Location = new System.Drawing.Point(258, 41);
             this.addStudent.Margin = new System.Windows.Forms.Padding(2);
             this.addStudent.Name = "addStudent";
-            this.addStudent.Size = new System.Drawing.Size(85, 32);
+            this.addStudent.Size = new System.Drawing.Size(85, 33);
             this.addStudent.TabIndex = 4;
             this.addStudent.Text = "افزودن";
             this.addStudent.UseVisualStyleBackColor = true;
@@ -324,7 +324,7 @@
             // 
             // classProgress
             // 
-            this.classProgress.Location = new System.Drawing.Point(19, 198);
+            this.classProgress.Location = new System.Drawing.Point(10, 196);
             this.classProgress.Name = "classProgress";
             this.classProgress.Size = new System.Drawing.Size(186, 23);
             this.classProgress.Step = 1;
@@ -353,14 +353,13 @@
             // 
             // sessionCountValue
             // 
-            this.sessionCountValue.AutoSize = true;
             this.sessionCountValue.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.sessionCountValue.Location = new System.Drawing.Point(249, 196);
+            this.sessionCountValue.Location = new System.Drawing.Point(202, 196);
             this.sessionCountValue.Name = "sessionCountValue";
-            this.sessionCountValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sessionCountValue.Size = new System.Drawing.Size(21, 25);
+            this.sessionCountValue.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.sessionCountValue.Size = new System.Drawing.Size(97, 25);
             this.sessionCountValue.TabIndex = 16;
-            this.sessionCountValue.Text = "0";
+            this.sessionCountValue.Text = "00 / 00";
             // 
             // sessionCountKey
             // 
@@ -384,7 +383,7 @@
             this.groupBox2.Location = new System.Drawing.Point(652, 370);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(414, 247);
+            this.groupBox2.Size = new System.Drawing.Size(414, 233);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "حذف زبان آموز از کلاس";
@@ -393,7 +392,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(152, 182);
+            this.label3.Location = new System.Drawing.Point(152, 135);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(251, 25);
@@ -404,7 +403,7 @@
             // 
             this.delInfo2.AutoSize = true;
             this.delInfo2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.delInfo2.Location = new System.Drawing.Point(27, 148);
+            this.delInfo2.Location = new System.Drawing.Point(27, 101);
             this.delInfo2.Name = "delInfo2";
             this.delInfo2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.delInfo2.Size = new System.Drawing.Size(376, 25);
@@ -415,7 +414,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(350, 92);
+            this.label1.Location = new System.Drawing.Point(350, 45);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(58, 25);
@@ -425,7 +424,7 @@
             // btnDeleteStudent
             // 
             this.btnDeleteStudent.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteStudent.Location = new System.Drawing.Point(19, 89);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(19, 42);
             this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(89, 32);
@@ -438,7 +437,7 @@
             // 
             this.boxIDDelete.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.boxIDDelete.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxIDDelete.Location = new System.Drawing.Point(121, 89);
+            this.boxIDDelete.Location = new System.Drawing.Point(121, 42);
             this.boxIDDelete.Margin = new System.Windows.Forms.Padding(2);
             this.boxIDDelete.Name = "boxIDDelete";
             this.boxIDDelete.Size = new System.Drawing.Size(224, 32);
@@ -487,10 +486,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(9, 340);
+            this.button1.Location = new System.Drawing.Point(9, 337);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 32);
+            this.button1.Size = new System.Drawing.Size(111, 35);
             this.button1.TabIndex = 22;
             this.button1.Text = "خروجی اکسل";
             this.button1.UseVisualStyleBackColor = true;
@@ -507,7 +506,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.studentsDataGridView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "eachClassManageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "مدیریت کلاس";

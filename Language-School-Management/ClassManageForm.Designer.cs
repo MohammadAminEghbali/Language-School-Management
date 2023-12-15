@@ -52,13 +52,13 @@
             this.teacherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacherNcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.delInfo2 = new System.Windows.Forms.Label();
             this.btnClassDelete = new System.Windows.Forms.Button();
             this.lblClassCodeDelete = new System.Windows.Forms.Label();
             this.boxClassDelete = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.boxEndTimeUpdate = new System.Windows.Forms.DateTimePicker();
             this.boxStartTimeUpdate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -75,7 +75,6 @@
             this.lblClassCodeUpdate = new System.Windows.Forms.Label();
             this.excelOutput = new System.Windows.Forms.Button();
             this.ExcelSaveDialog3 = new System.Windows.Forms.SaveFileDialog();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.classesDataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -298,7 +297,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.delInfo2);
             this.groupBox2.Controls.Add(this.btnClassDelete);
@@ -311,17 +309,6 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "حذف کلاس";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Vazir", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(26, 180);
-            this.label3.Name = "label3";
-            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(400, 24);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "منظور از کد کلاس همان کد یکتایی است که هنگام ثبت وارد کردید";
             // 
             // label2
             // 
@@ -395,6 +382,17 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ویرایش کلاس";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label5.Location = new System.Drawing.Point(11, 44);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label5.Size = new System.Drawing.Size(348, 25);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "راهنما : کد کلاس را وارد کرده و دکمه فراخوانی را بزنید";
             // 
             // boxEndTimeUpdate
             // 
@@ -536,17 +534,6 @@
             this.excelOutput.UseVisualStyleBackColor = true;
             this.excelOutput.Click += new System.EventHandler(this.excelOutput_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(11, 44);
-            this.label5.Name = "label5";
-            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(348, 25);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "راهنما : کد کلاس را وارد کرده و دکمه فراخوانی را بزنید";
-            // 
             // ClassManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
@@ -561,6 +548,7 @@
             this.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.MaximizeBox = false;
             this.Name = "ClassManageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "مدیریت کلاس ها";
@@ -595,7 +583,6 @@
         private System.Windows.Forms.Label lblClassCodeDelete;
         private System.Windows.Forms.TextBox boxClassDelete;
         private System.Windows.Forms.Label delInfo2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnInfoCall;

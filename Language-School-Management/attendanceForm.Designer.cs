@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(attendanceForm));
             this.classesDataGridView = new System.Windows.Forms.DataGridView();
             this.classCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.className = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +39,7 @@
             this.sessions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacherNcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.classesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +79,7 @@
             this.classesDataGridView.Name = "classesDataGridView";
             this.classesDataGridView.ReadOnly = true;
             this.classesDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.classesDataGridView.Size = new System.Drawing.Size(1020, 416);
+            this.classesDataGridView.Size = new System.Drawing.Size(1020, 379);
             this.classesDataGridView.TabIndex = 19;
             this.classesDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.classesDataGridView_CellDoubleClick);
             // 
@@ -130,19 +132,35 @@
             this.teacherNcode.ReadOnly = true;
             this.teacherNcode.Width = 113;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(201, 409);
+            this.label1.MaximumSize = new System.Drawing.Size(850, 0);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(836, 50);
+            this.label1.TabIndex = 20;
+            this.label1.Text = resources.GetString("label1.Text");
+            // 
             // attendanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 447);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1044, 478);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.classesDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "attendanceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "حضور و غیاب";
             this.Load += new System.EventHandler(this.attendanceForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.classesDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -156,5 +174,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sessions;
         private System.Windows.Forms.DataGridViewTextBoxColumn teacherName;
         private System.Windows.Forms.DataGridViewTextBoxColumn teacherNcode;
+        private System.Windows.Forms.Label label1;
     }
 }

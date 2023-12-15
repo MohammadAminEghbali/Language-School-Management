@@ -100,12 +100,12 @@ namespace Language_School_Management
                         Convert.ToInt32(bool.Parse(row.Cells[4].Value.ToString()))
                         );
                 }
-                MessageBox.Show("لیست به روزرسانی شد");
+                MessageBox.Show("لیست به روزرسانی شد","به روزرسانی موفق",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             }
             else
             {
-                MessageBox.Show("لیست خالی است");
+                MessageBox.Show("لیست خالی است","لیست خالی",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
             }
         }
@@ -122,12 +122,12 @@ namespace Language_School_Management
                         row.Cells[3].Value.ToString(),
                         Convert.ToInt32(bool.Parse(row.Cells[4].Value.ToString())));
                 }
-                MessageBox.Show("لیست ثبت شد");
+                MessageBox.Show("لیست ثبت شد","عملیات موفق",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 sessionNumber_ValueChanged(sender, e);
             }
             else
             {
-                MessageBox.Show("لیست خالی است");
+                MessageBox.Show("لیست خالی است","لیست خالی",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
         }
