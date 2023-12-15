@@ -164,7 +164,7 @@ namespace Language_School_Management
                 {
                     if (Classes.isStudentInClass(classCode, nCode))
                     {
-                        DialogResult result = MessageBox.Show("آیا از حذف زبان آموز از کلاس مطمئن هستید؟", "هشدار", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                        DialogResult result = MessageBox.Show("آیا از حذف زبان آموز از کلاس مطمئن هستید؟", "هشدار", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                         if (result == DialogResult.Yes)
                         {

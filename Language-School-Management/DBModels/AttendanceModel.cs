@@ -101,7 +101,7 @@ namespace Language_School_Management
 
                 }
             }
-            
+
             return 0;
         }
     }

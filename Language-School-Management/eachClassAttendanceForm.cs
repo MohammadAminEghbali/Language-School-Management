@@ -36,7 +36,7 @@ namespace Language_School_Management
                     updateBtn.Enabled = true;
                     addBtn.Enabled = false;
 
-                    sessionDate.Text = sessionAttendance[0]["sessionDate"].ToString();
+                    persianDatePicker1.Value = DateTime.Parse(sessionAttendance[0]["sessionDate"].ToString());
 
                     foreach (Dictionary<string, object> st in sessionAttendance)
                     {
@@ -90,44 +90,61 @@ namespace Language_School_Management
         {
             if (studentsDataGridView.Rows.Count > 0)
             {
-                foreach (DataGridViewRow row in studentsDataGridView.Rows)
+                if (persianDatePicker1.Value.ToString() != string.Empty)
                 {
-                    Attendance.UpdateStudentStatus(
-                        classCode,
-                        ((int)sessionNumber.Value),
-                        sessionDate.Text.ToString(),
-                        row.Cells[3].Value.ToString(),
-                        Convert.ToInt32(bool.Parse(row.Cells[4].Value.ToString()))
-                        );
+
+                    foreach (DataGridViewRow row in studentsDataGridView.Rows)
+                    {
+                        Attendance.UpdateStudentStatus(
+                            classCode,
+                            ((int)sessionNumber.Value),
+                            persianDatePicker1.Value.ToString(),
+                            row.Cells[3].Value.ToString(),
+                            Convert.ToInt32(bool.Parse(row.Cells[4].Value.ToString()))
+                            );
+                    }
+                    MessageBox.Show("لیست به روزرسانی شد", "به روزرسانی موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                MessageBox.Show("لیست به روزرسانی شد","به روزرسانی موفق",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                else
+                {
+                    MessageBox.Show("تاریخ نباید خالی باشد");
+                }
 
             }
             else
             {
-                MessageBox.Show("لیست خالی است","لیست خالی",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("لیست خالی است", "لیست خالی", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
 
         private void addBtn_Click(object sender, EventArgs e)
         {
+
             if (studentsDataGridView.Rows.Count > 0)
             {
-                foreach (DataGridViewRow row in studentsDataGridView.Rows)
+                if (persianDatePicker1.Value.ToString() != string.Empty)
                 {
-                    Attendance.AddStudent(classCode,
-                        ((int)sessionNumber.Value),
-                        sessionDate.Text.ToString(),
-                        row.Cells[3].Value.ToString(),
-                        Convert.ToInt32(bool.Parse(row.Cells[4].Value.ToString())));
+                    foreach (DataGridViewRow row in studentsDataGridView.Rows)
+                    {
+                        Attendance.AddStudent(classCode,
+                            ((int)sessionNumber.Value),
+                            persianDatePicker1.Value.ToString(),
+                            row.Cells[3].Value.ToString(),
+                            Convert.ToInt32(bool.Parse(row.Cells[4].Value.ToString())));
+                    }
+                    MessageBox.Show("لیست ثبت شد", "عملیات موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    sessionNumber_ValueChanged(sender, e);
+
                 }
-                MessageBox.Show("لیست ثبت شد","عملیات موفق",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                sessionNumber_ValueChanged(sender, e);
+                else
+                {
+                    MessageBox.Show("تاریخ نباید خالی باشد");
+                }
             }
             else
             {
-                MessageBox.Show("لیست خالی است","لیست خالی",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("لیست خالی است", "لیست خالی", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
