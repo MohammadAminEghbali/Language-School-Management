@@ -36,7 +36,7 @@
             this.students = new System.Windows.Forms.Button();
             this.teachers = new System.Windows.Forms.Button();
             this.classes = new System.Windows.Forms.Button();
-            this.scores = new System.Windows.Forms.Button();
+            this.attendance = new System.Windows.Forms.Button();
             this.Title = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -99,14 +99,15 @@
             this.classes.UseVisualStyleBackColor = true;
             this.classes.Click += new System.EventHandler(this.classes_Click);
             // 
-            // scores
+            // attendance
             // 
-            this.scores.Location = new System.Drawing.Point(580, 28);
-            this.scores.Name = "scores";
-            this.scores.Size = new System.Drawing.Size(109, 39);
-            this.scores.TabIndex = 5;
-            this.scores.Text = "ثبت نمرات";
-            this.scores.UseVisualStyleBackColor = true;
+            this.attendance.Location = new System.Drawing.Point(580, 28);
+            this.attendance.Name = "attendance";
+            this.attendance.Size = new System.Drawing.Size(109, 39);
+            this.attendance.TabIndex = 5;
+            this.attendance.Text = "حضور و غیاب";
+            this.attendance.UseVisualStyleBackColor = true;
+            this.attendance.Click += new System.EventHandler(this.attendance_Click);
             // 
             // Title
             // 
@@ -125,7 +126,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1060, 624);
             this.Controls.Add(this.Title);
-            this.Controls.Add(this.scores);
+            this.Controls.Add(this.attendance);
             this.Controls.Add(this.classes);
             this.Controls.Add(this.teachers);
             this.Controls.Add(this.students);
@@ -153,7 +154,7 @@
         private System.Windows.Forms.Button students;
         private System.Windows.Forms.Button teachers;
         private System.Windows.Forms.Button classes;
-        private System.Windows.Forms.Button scores;
+        private System.Windows.Forms.Button attendance;
         private System.Windows.Forms.Label Title;
     }
 }

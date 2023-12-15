@@ -37,6 +37,13 @@ namespace Language_School_Management
 	                    teacherNcode TEXT,
 	                    PRIMARY KEY(classCode AUTOINCREMENT)
                     );
+                    CREATE TABLE IF NOT EXISTS attendance (
+	                    classCode INTEGER,
+	                    sessionNumber INTEGER,
+	                    sessionDate TEXT,
+	                    studentNcode TEXT,
+	                    status INTEGER
+                    );
                 ";
                 cmd.ExecuteNonQuery();
             }

@@ -1,5 +1,5 @@
-﻿using OfficeOpenXml.Style;
-using OfficeOpenXml;
+﻿using OfficeOpenXml;
+using OfficeOpenXml.Style;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,14 +21,18 @@ namespace Language_School_Management
         {
             Dictionary<string, object> _class = Classes.GetClass(classCode);
 
+            int passed = Attendance.GetClassPassedSessions(classCode);
+            string totalSessions = _class["sessions"].ToString();
 
             classCodeValue.Text = classCode.ToString();
             className.Text = (string)_class["className"];
             startTimeValue.Text = (string)_class["startTime"];
             endTimeVAlue.Text = (string)_class["endTime"];
-            sessionCountValue.Text = _class["sessions"].ToString();
+            sessionCountValue.Text = totalSessions + " / " + passed;
             teacherNameValue.Text = (string)_class["teacherName"];
             teacherIDValue.Text = (string)_class["teacherNcode"];
+            classProgress.Maximum = int.Parse(totalSessions);
+            classProgress.Value = passed;
 
         }
 
@@ -120,7 +124,7 @@ namespace Language_School_Management
                         {
                             Classes.AddStudentToClass(classCode, nCode);
 
-                            MessageBox.Show("زبان آموز باموفقیت به کلاس اضافه شد","عملیات موفق",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                            MessageBox.Show("زبان آموز باموفقیت به کلاس اضافه شد", "عملیات موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             searchBox.Text = string.Empty;
 
                             studentslist_Refresh();
@@ -128,24 +132,24 @@ namespace Language_School_Management
                         }
                         else
                         {
-                            MessageBox.Show("زبان آموز در یک کلاس دیگر وجود دارد","زبان آموز مشغول",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                            MessageBox.Show("زبان آموز در یک کلاس دیگر وجود دارد", "زبان آموز مشغول", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("زبان آموز در این کلاس وجود دارد","زبان آموز تکراری",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MessageBox.Show("زبان آموز در این کلاس وجود دارد", "زبان آموز تکراری", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("زبان آموز وجود ندارد","کد ملی ثبت نشده",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("زبان آموز وجود ندارد", "کد ملی ثبت نشده", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             else
             {
-                MessageBox.Show("کد ملی معتبر نیست","کد ملی نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("کد ملی معتبر نیست", "کد ملی نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
@@ -166,7 +170,7 @@ namespace Language_School_Management
                         {
                             Classes.DelStudentFromClass(nCode);
 
-                            MessageBox.Show("زبان آموز باموفقیت از کلاس حذف شد","عملیات موفق",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                            MessageBox.Show("زبان آموز باموفقیت از کلاس حذف شد", "عملیات موفق", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             boxIDDelete.Text = string.Empty;
 
                             studentslist_Refresh();
@@ -175,24 +179,24 @@ namespace Language_School_Management
                         }
                         else
                         {
-                            MessageBox.Show("عملیات با موفقیت لغو شد","لغو عملیات",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                            MessageBox.Show("عملیات با موفقیت لغو شد", "لغو عملیات", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("زبان آموز در این کلاس وجود ندارد","زبان آموز نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MessageBox.Show("زبان آموز در این کلاس وجود ندارد", "زبان آموز نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
                 }
                 else
                 {
-                    MessageBox.Show("زبان اموز وجود ندارد","زبان آموز نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("زبان اموز وجود ندارد", "زبان آموز نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             else
             {
-                MessageBox.Show("کد ملی معتبر نیست","کد ملی نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("کد ملی معتبر نیست", "کد ملی نامعتبر", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }

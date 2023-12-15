@@ -55,5 +55,12 @@ namespace Language_School_Management
             ClassManageForm classManageForm = new ClassManageForm();
             classManageForm.ShowDialog();
         }
+
+        private void attendance_Click(object sender, EventArgs e)
+        {
+            attendanceForm attendanceform = new attendanceForm();
+
+            attendanceform.ShowDialog();
+        }
     }
 }

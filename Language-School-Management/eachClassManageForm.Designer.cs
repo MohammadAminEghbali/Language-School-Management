@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.studntsListBox = new System.Windows.Forms.ListBox();
             this.studentsDataGridView = new System.Windows.Forms.DataGridView();
@@ -78,7 +78,7 @@
             this.searchBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.searchBox.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBox.Location = new System.Drawing.Point(333, 41);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(2);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(221, 32);
             this.searchBox.TabIndex = 3;
@@ -91,7 +91,7 @@
             this.studntsListBox.HorizontalScrollbar = true;
             this.studntsListBox.ItemHeight = 25;
             this.studntsListBox.Location = new System.Drawing.Point(5, 29);
-            this.studntsListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.studntsListBox.Margin = new System.Windows.Forms.Padding(2);
             this.studntsListBox.Name = "studntsListBox";
             this.studntsListBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.studntsListBox.Size = new System.Drawing.Size(221, 204);
@@ -105,14 +105,14 @@
             this.studentsDataGridView.AllowUserToOrderColumns = true;
             this.studentsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.studentsDataGridView.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.studentsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.studentsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.studentsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.studentFisrtName,
@@ -121,16 +121,16 @@
             this.nCode,
             this.phone,
             this.parentPhone});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.studentsDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.studentsDataGridView.DefaultCellStyle = dataGridViewCellStyle20;
             this.studentsDataGridView.Location = new System.Drawing.Point(9, 10);
-            this.studentsDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.studentsDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.studentsDataGridView.Name = "studentsDataGridView";
             this.studentsDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.studentsDataGridView.RowTemplate.Height = 24;
@@ -178,7 +178,7 @@
             // 
             this.addStudent.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addStudent.Location = new System.Drawing.Point(235, 41);
-            this.addStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addStudent.Margin = new System.Windows.Forms.Padding(2);
             this.addStudent.Name = "addStudent";
             this.addStudent.Size = new System.Drawing.Size(85, 32);
             this.addStudent.TabIndex = 4;
@@ -326,7 +326,8 @@
             // 
             this.classProgress.Location = new System.Drawing.Point(19, 198);
             this.classProgress.Name = "classProgress";
-            this.classProgress.Size = new System.Drawing.Size(235, 23);
+            this.classProgress.Size = new System.Drawing.Size(186, 23);
+            this.classProgress.Step = 1;
             this.classProgress.TabIndex = 19;
             // 
             // className
@@ -354,9 +355,9 @@
             // 
             this.sessionCountValue.AutoSize = true;
             this.sessionCountValue.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.sessionCountValue.Location = new System.Drawing.Point(273, 196);
+            this.sessionCountValue.Location = new System.Drawing.Point(249, 196);
             this.sessionCountValue.Name = "sessionCountValue";
-            this.sessionCountValue.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.sessionCountValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.sessionCountValue.Size = new System.Drawing.Size(21, 25);
             this.sessionCountValue.TabIndex = 16;
             this.sessionCountValue.Text = "0";
@@ -380,10 +381,10 @@
             this.groupBox2.Controls.Add(this.btnDeleteStudent);
             this.groupBox2.Controls.Add(this.boxIDDelete);
             this.groupBox2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.groupBox2.Location = new System.Drawing.Point(652, 340);
+            this.groupBox2.Location = new System.Drawing.Point(652, 370);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(414, 277);
+            this.groupBox2.Size = new System.Drawing.Size(414, 247);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "حذف زبان آموز از کلاس";
@@ -392,7 +393,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(152, 136);
+            this.label3.Location = new System.Drawing.Point(152, 182);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(251, 25);
@@ -403,7 +404,7 @@
             // 
             this.delInfo2.AutoSize = true;
             this.delInfo2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.delInfo2.Location = new System.Drawing.Point(27, 102);
+            this.delInfo2.Location = new System.Drawing.Point(27, 148);
             this.delInfo2.Name = "delInfo2";
             this.delInfo2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.delInfo2.Size = new System.Drawing.Size(376, 25);
@@ -414,7 +415,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(350, 46);
+            this.label1.Location = new System.Drawing.Point(350, 92);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(58, 25);
@@ -424,8 +425,8 @@
             // btnDeleteStudent
             // 
             this.btnDeleteStudent.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteStudent.Location = new System.Drawing.Point(19, 43);
-            this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(19, 89);
+            this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(89, 32);
             this.btnDeleteStudent.TabIndex = 2;
@@ -437,8 +438,8 @@
             // 
             this.boxIDDelete.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.boxIDDelete.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxIDDelete.Location = new System.Drawing.Point(121, 43);
-            this.boxIDDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.boxIDDelete.Location = new System.Drawing.Point(121, 89);
+            this.boxIDDelete.Margin = new System.Windows.Forms.Padding(2);
             this.boxIDDelete.Name = "boxIDDelete";
             this.boxIDDelete.Size = new System.Drawing.Size(224, 32);
             this.boxIDDelete.TabIndex = 1;
@@ -506,7 +507,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.studentsDataGridView);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "eachClassManageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "مدیریت کلاس";

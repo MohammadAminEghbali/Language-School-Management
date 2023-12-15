@@ -106,6 +106,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="attendanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attendanceForm.Designer.cs">
+      <DependentUpon>attendanceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClassManageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,9 +119,16 @@
       <DependentUpon>ClassManageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
+    <Compile Include="DBModels\AttendanceModel.cs" />
     <Compile Include="DBModels\ClassesModel.cs" />
     <Compile Include="DBModels\StudentsModel.cs" />
     <Compile Include="DBModels\TeachersModel.cs" />
+    <Compile Include="eachClassAttendanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eachClassAttendanceForm.Designer.cs">
+      <DependentUpon>eachClassAttendanceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="eachClassManageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,8 +155,14 @@
     <Compile Include="teachersManageForm.Designer.cs">
       <DependentUpon>teachersManageForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="attendanceForm.resx">
+      <DependentUpon>attendanceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClassManageForm.resx">
       <DependentUpon>ClassManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eachClassAttendanceForm.resx">
+      <DependentUpon>eachClassAttendanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="eachClassManageForm.resx">
       <DependentUpon>eachClassManageForm.cs</DependentUpon>
