@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.studentsDataGridView = new System.Windows.Forms.DataGridView();
             this.studentFisrtName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,9 +42,9 @@
             this.updateBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.persianDatePicker1 = new PersianDateTimeControl.PersianDatePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.persianDatePicker1 = new PersianDateTimeControl.PersianDatePicker();
             ((System.ComponentModel.ISupportInitialize)(this.studentsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sessionNumber)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -57,14 +57,14 @@
             this.studentsDataGridView.AllowUserToOrderColumns = true;
             this.studentsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.studentsDataGridView.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.studentsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.studentsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.studentsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.studentFisrtName,
@@ -72,14 +72,14 @@
             this.fatherName,
             this.nCode,
             this.status});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.studentsDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.studentsDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.studentsDataGridView.Location = new System.Drawing.Point(11, 11);
             this.studentsDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.studentsDataGridView.Name = "studentsDataGridView";
@@ -158,7 +158,7 @@
             // 
             this.updateBtn.Enabled = false;
             this.updateBtn.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateBtn.Location = new System.Drawing.Point(142, 149);
+            this.updateBtn.Location = new System.Drawing.Point(150, 149);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(103, 41);
             this.updateBtn.TabIndex = 8;
@@ -196,6 +196,19 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
+            // persianDatePicker1
+            // 
+            this.persianDatePicker1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.persianDatePicker1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.persianDatePicker1.Location = new System.Drawing.Point(113, 88);
+            this.persianDatePicker1.Margin = new System.Windows.Forms.Padding(4);
+            this.persianDatePicker1.MaximumSize = new System.Drawing.Size(300, 28);
+            this.persianDatePicker1.MinimumSize = new System.Drawing.Size(140, 28);
+            this.persianDatePicker1.Name = "persianDatePicker1";
+            this.persianDatePicker1.Size = new System.Drawing.Size(140, 28);
+            this.persianDatePicker1.TabIndex = 12;
+            this.persianDatePicker1.Value = null;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -217,19 +230,6 @@
             this.label3.Size = new System.Drawing.Size(281, 50);
             this.label3.TabIndex = 10;
             this.label3.Text = "جلسه و تاریخ را انتخاب کنید و حضور زبان آموزان را مشخص کرده و دکمه ثبت را بزنید";
-            // 
-            // persianDatePicker1
-            // 
-            this.persianDatePicker1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.persianDatePicker1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.persianDatePicker1.Location = new System.Drawing.Point(113, 88);
-            this.persianDatePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.persianDatePicker1.MaximumSize = new System.Drawing.Size(300, 28);
-            this.persianDatePicker1.MinimumSize = new System.Drawing.Size(140, 28);
-            this.persianDatePicker1.Name = "persianDatePicker1";
-            this.persianDatePicker1.Size = new System.Drawing.Size(140, 28);
-            this.persianDatePicker1.TabIndex = 12;
-            this.persianDatePicker1.Value = null;
             // 
             // eachClassAttendanceForm
             // 

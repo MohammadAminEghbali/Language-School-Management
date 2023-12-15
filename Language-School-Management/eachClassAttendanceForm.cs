@@ -107,7 +107,7 @@ namespace Language_School_Management
                 }
                 else
                 {
-                    MessageBox.Show("تاریخ نباید خالی باشد");
+                    MessageBox.Show("تاریخ نباید خالی باشد","تاریخ نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
 
             }
@@ -139,7 +139,7 @@ namespace Language_School_Management
                 }
                 else
                 {
-                    MessageBox.Show("تاریخ نباید خالی باشد");
+                    MessageBox.Show("تاریخ نباید خالی باشد","تاریخ نامعتبر",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
             else
