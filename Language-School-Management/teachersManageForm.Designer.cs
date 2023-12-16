@@ -61,6 +61,7 @@
             this.BoxTeachIDdel = new System.Windows.Forms.TextBox();
             this.btnExcelOutput = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnCallInfo = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.boxCertificate = new System.Windows.Forms.TextBox();
@@ -78,7 +79,6 @@
             this.lblTeachIdUpdate = new System.Windows.Forms.Label();
             this.boxTeachIDUpdate = new System.Windows.Forms.TextBox();
             this.ExcelSaveDialog2 = new System.Windows.Forms.SaveFileDialog();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TeachersdataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -411,7 +411,18 @@
             this.groupBox3.Size = new System.Drawing.Size(688, 280);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "حذف استاد";
+            this.groupBox3.Text = "ویرایش استاد";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label4.Location = new System.Drawing.Point(16, 42);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label4.Size = new System.Drawing.Size(375, 25);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "راهنما : کد ملی استاد را وارد کرده و دکمه فراخوانی را بزنید";
             // 
             // btnCallInfo
             // 
@@ -551,17 +562,6 @@
             this.boxTeachIDUpdate.Name = "boxTeachIDUpdate";
             this.boxTeachIDUpdate.Size = new System.Drawing.Size(196, 32);
             this.boxTeachIDUpdate.TabIndex = 10;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(16, 42);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(375, 25);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "راهنما : کد ملی استاد را وارد کرده و دکمه فراخوانی را بزنید";
             // 
             // teachersManageForm
             // 
